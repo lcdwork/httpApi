@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.crplingxi.httpapi.webapp.dao.HcvRateRealTimeMapper">
+  <resultMap id="BaseResultMap" type="com.crplingxi.httpapi.webapp.domain.HcvRateRealTime">
+    <!--@mbg.generated-->
+    <!--@Table HCV_RATE_REAL_TIME-->
+    <id column="ID" jdbcType="VARCHAR" property="id" />
+    <result column="TOTALHARRMUA" jdbcType="DECIMAL" property="totalharrmua" />
+    <result column="HARRM2UA" jdbcType="DECIMAL" property="harrm2ua" />
+    <result column="HARRM3UA" jdbcType="DECIMAL" property="harrm3ua" />
+    <result column="HARRM4UA" jdbcType="DECIMAL" property="harrm4ua" />
+    <result column="HARRM5UA" jdbcType="DECIMAL" property="harrm5ua" />
+    <result column="HARRM6UA" jdbcType="DECIMAL" property="harrm6ua" />
+    <result column="HARRM7UA" jdbcType="DECIMAL" property="harrm7ua" />
+    <result column="HARRM8UA" jdbcType="DECIMAL" property="harrm8ua" />
+    <result column="HARRM9UA" jdbcType="DECIMAL" property="harrm9ua" />
+    <result column="HARRM10UA" jdbcType="DECIMAL" property="harrm10ua" />
+    <result column="HARRM11UA" jdbcType="DECIMAL" property="harrm11ua" />
+    <result column="HARRM12UA" jdbcType="DECIMAL" property="harrm12ua" />
+    <result column="HARRM13UA" jdbcType="DECIMAL" property="harrm13ua" />
+    <result column="HARRM14UA" jdbcType="DECIMAL" property="harrm14ua" />
+    <result column="HARRM15UA" jdbcType="DECIMAL" property="harrm15ua" />
+    <result column="HARRM16UA" jdbcType="DECIMAL" property="harrm16ua" />
+    <result column="HARRM17UA" jdbcType="DECIMAL" property="harrm17ua" />
+    <result column="HARRM18UA" jdbcType="DECIMAL" property="harrm18ua" />
+    <result column="HARRM19UA" jdbcType="DECIMAL" property="harrm19ua" />
+    <result column="HARRM20UA" jdbcType="DECIMAL" property="harrm20ua" />
+    <result column="HARRM21UA" jdbcType="DECIMAL" property="harrm21ua" />
+    <result column="HARRM22UA" jdbcType="DECIMAL" property="harrm22ua" />
+    <result column="HARRM23UA" jdbcType="DECIMAL" property="harrm23ua" />
+    <result column="HARRM24UA" jdbcType="DECIMAL" property="harrm24ua" />
+    <result column="HARRM25UA" jdbcType="DECIMAL" property="harrm25ua" />
+    <result column="HARRM26UA" jdbcType="DECIMAL" property="harrm26ua" />
+    <result column="HARRM27UA" jdbcType="DECIMAL" property="harrm27ua" />
+    <result column="HARRM28UA" jdbcType="DECIMAL" property="harrm28ua" />
+    <result column="HARRM29UA" jdbcType="DECIMAL" property="harrm29ua" />
+    <result column="HARRM30UA" jdbcType="DECIMAL" property="harrm30ua" />
+    <result column="HARRM31UA" jdbcType="DECIMAL" property="harrm31ua" />
+    <result column="TOTALHARRMUB" jdbcType="DECIMAL" property="totalharrmub" />
+    <result column="HARRM2UB" jdbcType="DECIMAL" property="harrm2ub" />
+    <result column="HARRM3UB" jdbcType="DECIMAL" property="harrm3ub" />
+    <result column="HARRM4UB" jdbcType="DECIMAL" property="harrm4ub" />
+    <result column="HARRM5UB" jdbcType="DECIMAL" property="harrm5ub" />
+    <result column="HARRM6UB" jdbcType="DECIMAL" property="harrm6ub" />
+    <result column="HARRM7UB" jdbcType="DECIMAL" property="harrm7ub" />
+    <result column="HARRM8UB" jdbcType="DECIMAL" property="harrm8ub" />
+    <result column="HARRM9UB" jdbcType="DECIMAL" property="harrm9ub" />
+    <result column="HARRM10UB" jdbcType="DECIMAL" property="harrm10ub" />
+    <result column="HARRM11UB" jdbcType="DECIMAL" property="harrm11ub" />
+    <result column="HARRM12UB" jdbcType="DECIMAL" property="harrm12ub" />
+    <result column="HARRM13UB" jdbcType="DECIMAL" property="harrm13ub" />
+    <result column="HARRM14UB" jdbcType="DECIMAL" property="harrm14ub" />
+    <result column="HARRM15UB" jdbcType="DECIMAL" property="harrm15ub" />
+    <result column="HARRM16UB" jdbcType="DECIMAL" property="harrm16ub" />
+    <result column="HARRM17UB" jdbcType="DECIMAL" property="harrm17ub" />
+    <result column="HARRM18UB" jdbcType="DECIMAL" property="harrm18ub" />
+    <result column="HARRM19UB" jdbcType="DECIMAL" property="harrm19ub" />
+    <result column="HARRM20UB" jdbcType="DECIMAL" property="harrm20ub" />
+    <result column="HARRM21UB" jdbcType="DECIMAL" property="harrm21ub" />
+    <result column="HARRM22UB" jdbcType="DECIMAL" property="harrm22ub" />
+    <result column="HARRM23UB" jdbcType="DECIMAL" property="harrm23ub" />
+    <result column="HARRM24UB" jdbcType="DECIMAL" property="harrm24ub" />
+    <result column="HARRM25UB" jdbcType="DECIMAL" property="harrm25ub" />
+    <result column="HARRM26UB" jdbcType="DECIMAL" property="harrm26ub" />
+    <result column="HARRM27UB" jdbcType="DECIMAL" property="harrm27ub" />
+    <result column="HARRM28UB" jdbcType="DECIMAL" property="harrm28ub" />
+    <result column="HARRM29UB" jdbcType="DECIMAL" property="harrm29ub" />
+    <result column="HARRM30UB" jdbcType="DECIMAL" property="harrm30ub" />
+    <result column="HARRM31UB" jdbcType="DECIMAL" property="harrm31ub" />
+    <result column="TOTALHARRMUC" jdbcType="DECIMAL" property="totalharrmuc" />
+    <result column="HARRM2UC" jdbcType="DECIMAL" property="harrm2uc" />
+    <result column="HARRM3UC" jdbcType="DECIMAL" property="harrm3uc" />
+    <result column="HARRM4UC" jdbcType="DECIMAL" property="harrm4uc" />
+    <result column="HARRM5UC" jdbcType="DECIMAL" property="harrm5uc" />
+    <result column="HARRM6UC" jdbcType="DECIMAL" property="harrm6uc" />
+    <result column="HARRM7UC" jdbcType="DECIMAL" property="harrm7uc" />
+    <result column="HARRM8UC" jdbcType="DECIMAL" property="harrm8uc" />
+    <result column="HARRM9UC" jdbcType="DECIMAL" property="harrm9uc" />
+    <result column="HARRM10UC" jdbcType="DECIMAL" property="harrm10uc" />
+    <result column="HARRM11UC" jdbcType="DECIMAL" property="harrm11uc" />
+    <result column="HARRM12UC" jdbcType="DECIMAL" property="harrm12uc" />
+    <result column="HARRM13UC" jdbcType="DECIMAL" property="harrm13uc" />
+    <result column="HARRM14UC" jdbcType="DECIMAL" property="harrm14uc" />
+    <result column="HARRM15UC" jdbcType="DECIMAL" property="harrm15uc" />
+    <result column="HARRM16UC" jdbcType="DECIMAL" property="harrm16uc" />
+    <result column="HARRM17UC" jdbcType="DECIMAL" property="harrm17uc" />
+    <result column="HARRM18UC" jdbcType="DECIMAL" property="harrm18uc" />
+    <result column="HARRM19UC" jdbcType="DECIMAL" property="harrm19uc" />
+    <result column="HARRM20UC" jdbcType="DECIMAL" property="harrm20uc" />
+    <result column="HARRM21UC" jdbcType="DECIMAL" property="harrm21uc" />
+    <result column="HARRM22UC" jdbcType="DECIMAL" property="harrm22uc" />
+    <result column="HARRM23UC" jdbcType="DECIMAL" property="harrm23uc" />
+    <result column="HARRM24UC" jdbcType="DECIMAL" property="harrm24uc" />
+    <result column="HARRM25UC" jdbcType="DECIMAL" property="harrm25uc" />
+    <result column="HARRM26UC" jdbcType="DECIMAL" property="harrm26uc" />
+    <result column="HARRM27UC" jdbcType="DECIMAL" property="harrm27uc" />
+    <result column="HARRM28UC" jdbcType="DECIMAL" property="harrm28uc" />
+    <result column="HARRM29UC" jdbcType="DECIMAL" property="harrm29uc" />
+    <result column="HARRM30UC" jdbcType="DECIMAL" property="harrm30uc" />
+    <result column="HARRM31UC" jdbcType="DECIMAL" property="harrm31uc" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--@mbg.generated-->
+    ID, TOTALHARRMUA, HARRM2UA, HARRM3UA, HARRM4UA, HARRM5UA, HARRM6UA, HARRM7UA, HARRM8UA, 
+    HARRM9UA, HARRM10UA, HARRM11UA, HARRM12UA, HARRM13UA, HARRM14UA, HARRM15UA, HARRM16UA, 
+    HARRM17UA, HARRM18UA, HARRM19UA, HARRM20UA, HARRM21UA, HARRM22UA, HARRM23UA, HARRM24UA, 
+    HARRM25UA, HARRM26UA, HARRM27UA, HARRM28UA, HARRM29UA, HARRM30UA, HARRM31UA, TOTALHARRMUB, 
+    HARRM2UB, HARRM3UB, HARRM4UB, HARRM5UB, HARRM6UB, HARRM7UB, HARRM8UB, HARRM9UB, HARRM10UB, 
+    HARRM11UB, HARRM12UB, HARRM13UB, HARRM14UB, HARRM15UB, HARRM16UB, HARRM17UB, HARRM18UB, 
+    HARRM19UB, HARRM20UB, HARRM21UB, HARRM22UB, HARRM23UB, HARRM24UB, HARRM25UB, HARRM26UB, 
+    HARRM27UB, HARRM28UB, HARRM29UB, HARRM30UB, HARRM31UB, TOTALHARRMUC, HARRM2UC, HARRM3UC, 
+    HARRM4UC, HARRM5UC, HARRM6UC, HARRM7UC, HARRM8UC, HARRM9UC, HARRM10UC, HARRM11UC, 
+    HARRM12UC, HARRM13UC, HARRM14UC, HARRM15UC, HARRM16UC, HARRM17UC, HARRM18UC, HARRM19UC, 
+    HARRM20UC, HARRM21UC, HARRM22UC, HARRM23UC, HARRM24UC, HARRM25UC, HARRM26UC, HARRM27UC, 
+    HARRM28UC, HARRM29UC, HARRM30UC, HARRM31UC
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
+    <!--@mbg.generated-->
+    select 
+    <include refid="Base_Column_List" />
+    from HCV_RATE_REAL_TIME
+    where ID = #{id,jdbcType=VARCHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
+    <!--@mbg.generated-->
+    delete from HCV_RATE_REAL_TIME
+    where ID = #{id,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="com.crplingxi.httpapi.webapp.domain.HcvRateRealTime">
+    <!--@mbg.generated-->
+    insert into HCV_RATE_REAL_TIME (ID, TOTALHARRMUA, HARRM2UA, 
+      HARRM3UA, HARRM4UA, HARRM5UA, 
+      HARRM6UA, HARRM7UA, HARRM8UA, 
+      HARRM9UA, HARRM10UA, HARRM11UA, 
+      HARRM12UA, HARRM13UA, HARRM14UA, 
+      HARRM15UA, HARRM16UA, HARRM17UA, 
+      HARRM18UA, HARRM19UA, HARRM20UA, 
+      HARRM21UA, HARRM22UA, HARRM23UA, 
+      HARRM24UA, HARRM25UA, HARRM26UA, 
+      HARRM27UA, HARRM28UA, HARRM29UA, 
+      HARRM30UA, HARRM31UA, TOTALHARRMUB, 
+      HARRM2UB, HARRM3UB, HARRM4UB, 
+      HARRM5UB, HARRM6UB, HARRM7UB, 
+      HARRM8UB, HARRM9UB, HARRM10UB, 
+      HARRM11UB, HARRM12UB, HARRM13UB, 
+      HARRM14UB, HARRM15UB, HARRM16UB, 
+      HARRM17UB, HARRM18UB, HARRM19UB, 
+      HARRM20UB, HARRM21UB, HARRM22UB, 
+      HARRM23UB, HARRM24UB, HARRM25UB, 
+      HARRM26UB, HARRM27UB, HARRM28UB, 
+      HARRM29UB, HARRM30UB, HARRM31UB, 
+      TOTALHARRMUC, HARRM2UC, HARRM3UC, 
+      HARRM4UC, HARRM5UC, HARRM6UC, 
+      HARRM7UC, HARRM8UC, HARRM9UC, 
+      HARRM10UC, HARRM11UC, HARRM12UC, 
+      HARRM13UC, HARRM14UC, HARRM15UC, 
+      HARRM16UC, HARRM17UC, HARRM18UC, 
+      HARRM19UC, HARRM20UC, HARRM21UC, 
+      HARRM22UC, HARRM23UC, HARRM24UC, 
+      HARRM25UC, HARRM26UC, HARRM27UC, 
+      HARRM28UC, HARRM29UC, HARRM30UC, 
+      HARRM31UC)
+    values (#{id,jdbcType=VARCHAR}, #{totalharrmua,jdbcType=DECIMAL}, #{harrm2ua,jdbcType=DECIMAL}, 
+      #{harrm3ua,jdbcType=DECIMAL}, #{harrm4ua,jdbcType=DECIMAL}, #{harrm5ua,jdbcType=DECIMAL}, 
+      #{harrm6ua,jdbcType=DECIMAL}, #{harrm7ua,jdbcType=DECIMAL}, #{harrm8ua,jdbcType=DECIMAL}, 
+      #{harrm9ua,jdbcType=DECIMAL}, #{harrm10ua,jdbcType=DECIMAL}, #{harrm11ua,jdbcType=DECIMAL}, 
+      #{harrm12ua,jdbcType=DECIMAL}, #{harrm13ua,jdbcType=DECIMAL}, #{harrm14ua,jdbcType=DECIMAL}, 
+      #{harrm15ua,jdbcType=DECIMAL}, #{harrm16ua,jdbcType=DECIMAL}, #{harrm17ua,jdbcType=DECIMAL}, 
+      #{harrm18ua,jdbcType=DECIMAL}, #{harrm19ua,jdbcType=DECIMAL}, #{harrm20ua,jdbcType=DECIMAL}, 
+      #{harrm21ua,jdbcType=DECIMAL}, #{harrm22ua,jdbcType=DECIMAL}, #{harrm23ua,jdbcType=DECIMAL}, 
+      #{harrm24ua,jdbcType=DECIMAL}, #{harrm25ua,jdbcType=DECIMAL}, #{harrm26ua,jdbcType=DECIMAL}, 
+      #{harrm27ua,jdbcType=DECIMAL}, #{harrm28ua,jdbcType=DECIMAL}, #{harrm29ua,jdbcType=DECIMAL}, 
+      #{harrm30ua,jdbcType=DECIMAL}, #{harrm31ua,jdbcType=DECIMAL}, #{totalharrmub,jdbcType=DECIMAL}, 
+      #{harrm2ub,jdbcType=DECIMAL}, #{harrm3ub,jdbcType=DECIMAL}, #{harrm4ub,jdbcType=DECIMAL}, 
+      #{harrm5ub,jdbcType=DECIMAL}, #{harrm6ub,jdbcType=DECIMAL}, #{harrm7ub,jdbcType=DECIMAL}, 
+      #{harrm8ub,jdbcType=DECIMAL}, #{harrm9ub,jdbcType=DECIMAL}, #{harrm10ub,jdbcType=DECIMAL}, 
+      #{harrm11ub,jdbcType=DECIMAL}, #{harrm12ub,jdbcType=DECIMAL}, #{harrm13ub,jdbcType=DECIMAL}, 
+      #{harrm14ub,jdbcType=DECIMAL}, #{harrm15ub,jdbcType=DECIMAL}, #{harrm16ub,jdbcType=DECIMAL}, 
+      #{harrm17ub,jdbcType=DECIMAL}, #{harrm18ub,jdbcType=DECIMAL}, #{harrm19ub,jdbcType=DECIMAL}, 
+      #{harrm20ub,jdbcType=DECIMAL}, #{harrm21ub,jdbcType=DECIMAL}, #{harrm22ub,jdbcType=DECIMAL}, 
+      #{harrm23ub,jdbcType=DECIMAL}, #{harrm24ub,jdbcType=DECIMAL}, #{harrm25ub,jdbcType=DECIMAL}, 
+      #{harrm26ub,jdbcType=DECIMAL}, #{harrm27ub,jdbcType=DECIMAL}, #{harrm28ub,jdbcType=DECIMAL}, 
+      #{harrm29ub,jdbcType=DECIMAL}, #{harrm30ub,jdbcType=DECIMAL}, #{harrm31ub,jdbcType=DECIMAL}, 
+      #{totalharrmuc,jdbcType=DECIMAL}, #{harrm2uc,jdbcType=DECIMAL}, #{harrm3uc,jdbcType=DECIMAL}, 
+      #{harrm4uc,jdbcType=DECIMAL}, #{harrm5uc,jdbcType=DECIMAL}, #{harrm6uc,jdbcType=DECIMAL}, 
+      #{harrm7uc,jdbcType=DECIMAL}, #{harrm8uc,jdbcType=DECIMAL}, #{harrm9uc,jdbcType=DECIMAL}, 
+      #{harrm10uc,jdbcType=DECIMAL}, #{harrm11uc,jdbcType=DECIMAL}, #{harrm12uc,jdbcType=DECIMAL}, 
+      #{harrm13uc,jdbcType=DECIMAL}, #{harrm14uc,jdbcType=DECIMAL}, #{harrm15uc,jdbcType=DECIMAL}, 
+      #{harrm16uc,jdbcType=DECIMAL}, #{harrm17uc,jdbcType=DECIMAL}, #{harrm18uc,jdbcType=DECIMAL}, 
+      #{harrm19uc,jdbcType=DECIMAL}, #{harrm20uc,jdbcType=DECIMAL}, #{harrm21uc,jdbcType=DECIMAL}, 
+      #{harrm22uc,jdbcType=DECIMAL}, #{harrm23uc,jdbcType=DECIMAL}, #{harrm24uc,jdbcType=DECIMAL}, 
+      #{harrm25uc,jdbcType=DECIMAL}, #{harrm26uc,jdbcType=DECIMAL}, #{harrm27uc,jdbcType=DECIMAL}, 
+      #{harrm28uc,jdbcType=DECIMAL}, #{harrm29uc,jdbcType=DECIMAL}, #{harrm30uc,jdbcType=DECIMAL}, 
+      #{harrm31uc,jdbcType=DECIMAL})
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="com.crplingxi.httpapi.webapp.domain.HcvRateRealTime">
+    <!--@mbg.generated-->
+    update HCV_RATE_REAL_TIME
+    set TOTALHARRMUA = #{totalharrmua,jdbcType=DECIMAL},
+      HARRM2UA = #{harrm2ua,jdbcType=DECIMAL},
+      HARRM3UA = #{harrm3ua,jdbcType=DECIMAL},
+      HARRM4UA = #{harrm4ua,jdbcType=DECIMAL},
+      HARRM5UA = #{harrm5ua,jdbcType=DECIMAL},
+      HARRM6UA = #{harrm6ua,jdbcType=DECIMAL},
+      HARRM7UA = #{harrm7ua,jdbcType=DECIMAL},
+      HARRM8UA = #{harrm8ua,jdbcType=DECIMAL},
+      HARRM9UA = #{harrm9ua,jdbcType=DECIMAL},
+      HARRM10UA = #{harrm10ua,jdbcType=DECIMAL},
+      HARRM11UA = #{harrm11ua,jdbcType=DECIMAL},
+      HARRM12UA = #{harrm12ua,jdbcType=DECIMAL},
+      HARRM13UA = #{harrm13ua,jdbcType=DECIMAL},
+      HARRM14UA = #{harrm14ua,jdbcType=DECIMAL},
+      HARRM15UA = #{harrm15ua,jdbcType=DECIMAL},
+      HARRM16UA = #{harrm16ua,jdbcType=DECIMAL},
+      HARRM17UA = #{harrm17ua,jdbcType=DECIMAL},
+      HARRM18UA = #{harrm18ua,jdbcType=DECIMAL},
+      HARRM19UA = #{harrm19ua,jdbcType=DECIMAL},
+      HARRM20UA = #{harrm20ua,jdbcType=DECIMAL},
+      HARRM21UA = #{harrm21ua,jdbcType=DECIMAL},
+      HARRM22UA = #{harrm22ua,jdbcType=DECIMAL},
+      HARRM23UA = #{harrm23ua,jdbcType=DECIMAL},
+      HARRM24UA = #{harrm24ua,jdbcType=DECIMAL},
+      HARRM25UA = #{harrm25ua,jdbcType=DECIMAL},
+      HARRM26UA = #{harrm26ua,jdbcType=DECIMAL},
+      HARRM27UA = #{harrm27ua,jdbcType=DECIMAL},
+      HARRM28UA = #{harrm28ua,jdbcType=DECIMAL},
+      HARRM29UA = #{harrm29ua,jdbcType=DECIMAL},
+      HARRM30UA = #{harrm30ua,jdbcType=DECIMAL},
+      HARRM31UA = #{harrm31ua,jdbcType=DECIMAL},
+      TOTALHARRMUB = #{totalharrmub,jdbcType=DECIMAL},
+      HARRM2UB = #{harrm2ub,jdbcType=DECIMAL},
+      HARRM3UB = #{harrm3ub,jdbcType=DECIMAL},
+      HARRM4UB = #{harrm4ub,jdbcType=DECIMAL},
+      HARRM5UB = #{harrm5ub,jdbcType=DECIMAL},
+      HARRM6UB = #{harrm6ub,jdbcType=DECIMAL},
+      HARRM7UB = #{harrm7ub,jdbcType=DECIMAL},
+      HARRM8UB = #{harrm8ub,jdbcType=DECIMAL},
+      HARRM9UB = #{harrm9ub,jdbcType=DECIMAL},
+      HARRM10UB = #{harrm10ub,jdbcType=DECIMAL},
+      HARRM11UB = #{harrm11ub,jdbcType=DECIMAL},
+      HARRM12UB = #{harrm12ub,jdbcType=DECIMAL},
+      HARRM13UB = #{harrm13ub,jdbcType=DECIMAL},
+      HARRM14UB = #{harrm14ub,jdbcType=DECIMAL},
+      HARRM15UB = #{harrm15ub,jdbcType=DECIMAL},
+      HARRM16UB = #{harrm16ub,jdbcType=DECIMAL},
+      HARRM17UB = #{harrm17ub,jdbcType=DECIMAL},
+      HARRM18UB = #{harrm18ub,jdbcType=DECIMAL},
+      HARRM19UB = #{harrm19ub,jdbcType=DECIMAL},
+      HARRM20UB = #{harrm20ub,jdbcType=DECIMAL},
+      HARRM21UB = #{harrm21ub,jdbcType=DECIMAL},
+      HARRM22UB = #{harrm22ub,jdbcType=DECIMAL},
+      HARRM23UB = #{harrm23ub,jdbcType=DECIMAL},
+      HARRM24UB = #{harrm24ub,jdbcType=DECIMAL},
+      HARRM25UB = #{harrm25ub,jdbcType=DECIMAL},
+      HARRM26UB = #{harrm26ub,jdbcType=DECIMAL},
+      HARRM27UB = #{harrm27ub,jdbcType=DECIMAL},
+      HARRM28UB = #{harrm28ub,jdbcType=DECIMAL},
+      HARRM29UB = #{harrm29ub,jdbcType=DECIMAL},
+      HARRM30UB = #{harrm30ub,jdbcType=DECIMAL},
+      HARRM31UB = #{harrm31ub,jdbcType=DECIMAL},
+      TOTALHARRMUC = #{totalharrmuc,jdbcType=DECIMAL},
+      HARRM2UC = #{harrm2uc,jdbcType=DECIMAL},
+      HARRM3UC = #{harrm3uc,jdbcType=DECIMAL},
+      HARRM4UC = #{harrm4uc,jdbcType=DECIMAL},
+      HARRM5UC = #{harrm5uc,jdbcType=DECIMAL},
+      HARRM6UC = #{harrm6uc,jdbcType=DECIMAL},
+      HARRM7UC = #{harrm7uc,jdbcType=DECIMAL},
+      HARRM8UC = #{harrm8uc,jdbcType=DECIMAL},
+      HARRM9UC = #{harrm9uc,jdbcType=DECIMAL},
+      HARRM10UC = #{harrm10uc,jdbcType=DECIMAL},
+      HARRM11UC = #{harrm11uc,jdbcType=DECIMAL},
+      HARRM12UC = #{harrm12uc,jdbcType=DECIMAL},
+      HARRM13UC = #{harrm13uc,jdbcType=DECIMAL},
+      HARRM14UC = #{harrm14uc,jdbcType=DECIMAL},
+      HARRM15UC = #{harrm15uc,jdbcType=DECIMAL},
+      HARRM16UC = #{harrm16uc,jdbcType=DECIMAL},
+      HARRM17UC = #{harrm17uc,jdbcType=DECIMAL},
+      HARRM18UC = #{harrm18uc,jdbcType=DECIMAL},
+      HARRM19UC = #{harrm19uc,jdbcType=DECIMAL},
+      HARRM20UC = #{harrm20uc,jdbcType=DECIMAL},
+      HARRM21UC = #{harrm21uc,jdbcType=DECIMAL},
+      HARRM22UC = #{harrm22uc,jdbcType=DECIMAL},
+      HARRM23UC = #{harrm23uc,jdbcType=DECIMAL},
+      HARRM24UC = #{harrm24uc,jdbcType=DECIMAL},
+      HARRM25UC = #{harrm25uc,jdbcType=DECIMAL},
+      HARRM26UC = #{harrm26uc,jdbcType=DECIMAL},
+      HARRM27UC = #{harrm27uc,jdbcType=DECIMAL},
+      HARRM28UC = #{harrm28uc,jdbcType=DECIMAL},
+      HARRM29UC = #{harrm29uc,jdbcType=DECIMAL},
+      HARRM30UC = #{harrm30uc,jdbcType=DECIMAL},
+      HARRM31UC = #{harrm31uc,jdbcType=DECIMAL}
+    where ID = #{id,jdbcType=VARCHAR}
+  </update>
+</mapper>

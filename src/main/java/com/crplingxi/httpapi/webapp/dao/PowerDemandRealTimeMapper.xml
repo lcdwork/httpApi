@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.crplingxi.httpapi.webapp.dao.PowerDemandRealTimeMapper">
+  <resultMap id="BaseResultMap" type="com.crplingxi.httpapi.webapp.domain.PowerDemandRealTime">
+    <!--@mbg.generated-->
+    <!--@Table POWER_DEMAND_REAL_TIME-->
+    <id column="ID" jdbcType="VARCHAR" property="id" />
+    <result column="KWHLXCEMTIME" jdbcType="TIMESTAMP" property="kwhlxcemtime" />
+    <result column="KWHLEXEMTIME" jdbcType="TIMESTAMP" property="kwhlexemtime" />
+    <result column="KWHLIDEM" jdbcType="DECIMAL" property="kwhlidem" />
+    <result column="KWHLIDEMTIME" jdbcType="TIMESTAMP" property="kwhlidemtime" />
+    <result column="KVARHLIDEM" jdbcType="DECIMAL" property="kvarhlidem" />
+    <result column="KVARHLIDEMTIME" jdbcType="TIMESTAMP" property="kvarhlidemtime" />
+    <result column="KWHLEDEM" jdbcType="DECIMAL" property="kwhledem" />
+    <result column="KWHLEDEMTIME" jdbcType="TIMESTAMP" property="kwhledemtime" />
+    <result column="KVARHLEDEM" jdbcType="DECIMAL" property="kvarhledem" />
+    <result column="KVARHLEDEMTIME" jdbcType="TIMESTAMP" property="kvarhledemtime" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--@mbg.generated-->
+    ID, KWHLXCEMTIME, KWHLEXEMTIME, KWHLIDEM, KWHLIDEMTIME, KVARHLIDEM, KVARHLIDEMTIME, 
+    KWHLEDEM, KWHLEDEMTIME, KVARHLEDEM, KVARHLEDEMTIME
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
+    <!--@mbg.generated-->
+    select 
+    <include refid="Base_Column_List" />
+    from POWER_DEMAND_REAL_TIME
+    where ID = #{id,jdbcType=VARCHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
+    <!--@mbg.generated-->
+    delete from POWER_DEMAND_REAL_TIME
+    where ID = #{id,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="com.crplingxi.httpapi.webapp.domain.PowerDemandRealTime">
+    <!--@mbg.generated-->
+    insert into POWER_DEMAND_REAL_TIME (ID, KWHLXCEMTIME, KWHLEXEMTIME, 
+      KWHLIDEM, KWHLIDEMTIME, KVARHLIDEM, 
+      KVARHLIDEMTIME, KWHLEDEM, KWHLEDEMTIME, 
+      KVARHLEDEM, KVARHLEDEMTIME)
+    values (#{id,jdbcType=VARCHAR}, #{kwhlxcemtime,jdbcType=TIMESTAMP}, #{kwhlexemtime,jdbcType=TIMESTAMP}, 
+      #{kwhlidem,jdbcType=DECIMAL}, #{kwhlidemtime,jdbcType=TIMESTAMP}, #{kvarhlidem,jdbcType=DECIMAL}, 
+      #{kvarhlidemtime,jdbcType=TIMESTAMP}, #{kwhledem,jdbcType=DECIMAL}, #{kwhledemtime,jdbcType=TIMESTAMP}, 
+      #{kvarhledem,jdbcType=DECIMAL}, #{kvarhledemtime,jdbcType=TIMESTAMP})
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="com.crplingxi.httpapi.webapp.domain.PowerDemandRealTime">
+    <!--@mbg.generated-->
+    update POWER_DEMAND_REAL_TIME
+    set KWHLXCEMTIME = #{kwhlxcemtime,jdbcType=TIMESTAMP},
+      KWHLEXEMTIME = #{kwhlexemtime,jdbcType=TIMESTAMP},
+      KWHLIDEM = #{kwhlidem,jdbcType=DECIMAL},
+      KWHLIDEMTIME = #{kwhlidemtime,jdbcType=TIMESTAMP},
+      KVARHLIDEM = #{kvarhlidem,jdbcType=DECIMAL},
+      KVARHLIDEMTIME = #{kvarhlidemtime,jdbcType=TIMESTAMP},
+      KWHLEDEM = #{kwhledem,jdbcType=DECIMAL},
+      KWHLEDEMTIME = #{kwhledemtime,jdbcType=TIMESTAMP},
+      KVARHLEDEM = #{kvarhledem,jdbcType=DECIMAL},
+      KVARHLEDEMTIME = #{kvarhledemtime,jdbcType=TIMESTAMP}
+    where ID = #{id,jdbcType=VARCHAR}
+  </update>
+</mapper>

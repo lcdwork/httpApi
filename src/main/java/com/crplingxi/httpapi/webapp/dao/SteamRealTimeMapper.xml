@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.crplingxi.httpapi.webapp.dao.SteamRealTimeMapper">
+  <resultMap id="BaseResultMap" type="com.crplingxi.httpapi.webapp.domain.SteamRealTime">
+    <!--@mbg.generated-->
+    <!--@Table STEAM_REAL_TIME-->
+    <id column="ID" jdbcType="VARCHAR" property="id" />
+    <result column="STEAMIF" jdbcType="DECIMAL" property="steamif" />
+    <result column="STEAMSF" jdbcType="DECIMAL" property="steamsf" />
+    <result column="STEAMTEMP" jdbcType="DECIMAL" property="steamtemp" />
+    <result column="STEAMPR" jdbcType="DECIMAL" property="steampr" />
+    <result column="STEAMSH" jdbcType="DECIMAL" property="steamsh" />
+    <result column="STEAMIH" jdbcType="DECIMAL" property="steamih" />
+    <result column="DENS" jdbcType="DECIMAL" property="dens" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--@mbg.generated-->
+    ID, STEAMIF, STEAMSF, STEAMTEMP, STEAMPR, STEAMSH, STEAMIH, DENS
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
+    <!--@mbg.generated-->
+    select 
+    <include refid="Base_Column_List" />
+    from STEAM_REAL_TIME
+    where ID = #{id,jdbcType=VARCHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
+    <!--@mbg.generated-->
+    delete from STEAM_REAL_TIME
+    where ID = #{id,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="com.crplingxi.httpapi.webapp.domain.SteamRealTime">
+    <!--@mbg.generated-->
+    insert into STEAM_REAL_TIME (ID, STEAMIF, STEAMSF, 
+      STEAMTEMP, STEAMPR, STEAMSH, 
+      STEAMIH, DENS)
+    values (#{id,jdbcType=VARCHAR}, #{steamif,jdbcType=DECIMAL}, #{steamsf,jdbcType=DECIMAL}, 
+      #{steamtemp,jdbcType=DECIMAL}, #{steampr,jdbcType=DECIMAL}, #{steamsh,jdbcType=DECIMAL}, 
+      #{steamih,jdbcType=DECIMAL}, #{dens,jdbcType=DECIMAL})
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="com.crplingxi.httpapi.webapp.domain.SteamRealTime">
+    <!--@mbg.generated-->
+    update STEAM_REAL_TIME
+    set STEAMIF = #{steamif,jdbcType=DECIMAL},
+      STEAMSF = #{steamsf,jdbcType=DECIMAL},
+      STEAMTEMP = #{steamtemp,jdbcType=DECIMAL},
+      STEAMPR = #{steampr,jdbcType=DECIMAL},
+      STEAMSH = #{steamsh,jdbcType=DECIMAL},
+      STEAMIH = #{steamih,jdbcType=DECIMAL},
+      DENS = #{dens,jdbcType=DECIMAL}
+    where ID = #{id,jdbcType=VARCHAR}
+  </update>
+</mapper>

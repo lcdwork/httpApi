@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.crplingxi.httpapi.webapp.dao.TrafficRealTimeMapper">
+  <resultMap id="BaseResultMap" type="com.crplingxi.httpapi.webapp.domain.TrafficRealTime">
+    <!--@mbg.generated-->
+    <!--@Table TRAFFIC_REAL_TIME-->
+    <id column="ID" jdbcType="VARCHAR" property="id" />
+    <result column="IV" jdbcType="DECIMAL" property="iv" />
+    <result column="IFR" jdbcType="DECIMAL" property="ifr" />
+    <result column="CD" jdbcType="DECIMAL" property="cd" />
+    <result column="P" jdbcType="DECIMAL" property="p" />
+    <result column="TPR" jdbcType="DECIMAL" property="tpr" />
+    <result column="CV" jdbcType="DECIMAL" property="cv" />
+    <result column="DAYSYSTEMCOP" jdbcType="DECIMAL" property="daysystemcop" />
+    <result column="MONSYSTEMCOP" jdbcType="DECIMAL" property="monsystemcop" />
+    <result column="YEARSYSTEMCOP" jdbcType="DECIMAL" property="yearsystemcop" />
+    <result column="INSTSYSTEMCOP" jdbcType="DECIMAL" property="instsystemcop" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--@mbg.generated-->
+    ID, IV, IFR, CD, P, TPR, CV, DAYSYSTEMCOP, MONSYSTEMCOP, YEARSYSTEMCOP, INSTSYSTEMCOP
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
+    <!--@mbg.generated-->
+    select 
+    <include refid="Base_Column_List" />
+    from TRAFFIC_REAL_TIME
+    where ID = #{id,jdbcType=VARCHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
+    <!--@mbg.generated-->
+    delete from TRAFFIC_REAL_TIME
+    where ID = #{id,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="com.crplingxi.httpapi.webapp.domain.TrafficRealTime">
+    <!--@mbg.generated-->
+    insert into TRAFFIC_REAL_TIME (ID, IV, IFR, 
+      CD, P, TPR, CV, 
+      DAYSYSTEMCOP, MONSYSTEMCOP, YEARSYSTEMCOP, 
+      INSTSYSTEMCOP)
+    values (#{id,jdbcType=VARCHAR}, #{iv,jdbcType=DECIMAL}, #{ifr,jdbcType=DECIMAL}, 
+      #{cd,jdbcType=DECIMAL}, #{p,jdbcType=DECIMAL}, #{tpr,jdbcType=DECIMAL}, #{cv,jdbcType=DECIMAL}, 
+      #{daysystemcop,jdbcType=DECIMAL}, #{monsystemcop,jdbcType=DECIMAL}, #{yearsystemcop,jdbcType=DECIMAL}, 
+      #{instsystemcop,jdbcType=DECIMAL})
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="com.crplingxi.httpapi.webapp.domain.TrafficRealTime">
+    <!--@mbg.generated-->
+    update TRAFFIC_REAL_TIME
+    set IV = #{iv,jdbcType=DECIMAL},
+      IFR = #{ifr,jdbcType=DECIMAL},
+      CD = #{cd,jdbcType=DECIMAL},
+      P = #{p,jdbcType=DECIMAL},
+      TPR = #{tpr,jdbcType=DECIMAL},
+      CV = #{cv,jdbcType=DECIMAL},
+      DAYSYSTEMCOP = #{daysystemcop,jdbcType=DECIMAL},
+      MONSYSTEMCOP = #{monsystemcop,jdbcType=DECIMAL},
+      YEARSYSTEMCOP = #{yearsystemcop,jdbcType=DECIMAL},
+      INSTSYSTEMCOP = #{instsystemcop,jdbcType=DECIMAL}
+    where ID = #{id,jdbcType=VARCHAR}
+  </update>
+</mapper>

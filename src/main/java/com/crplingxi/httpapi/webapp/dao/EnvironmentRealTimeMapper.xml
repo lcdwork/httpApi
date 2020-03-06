@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.crplingxi.httpapi.webapp.dao.EnvironmentRealTimeMapper">
+  <resultMap id="BaseResultMap" type="com.crplingxi.httpapi.webapp.domain.EnvironmentRealTime">
+    <!--@mbg.generated-->
+    <!--@Table ENVIRONMENT_REAL_TIME-->
+    <id column="ID" jdbcType="VARCHAR" property="id" />
+    <result column="ENVTPR" jdbcType="DECIMAL" property="envtpr" />
+    <result column="ENVP" jdbcType="DECIMAL" property="envp" />
+    <result column="DUST" jdbcType="DECIMAL" property="dust" />
+    <result column="H" jdbcType="DECIMAL" property="h" />
+    <result column="WS" jdbcType="DECIMAL" property="ws" />
+    <result column="WC" jdbcType="VARCHAR" property="wc" />
+    <result column="WD" jdbcType="VARCHAR" property="wd" />
+    <result column="CCO2" jdbcType="DECIMAL" property="cco2" />
+    <result column="GZQD" jdbcType="DECIMAL" property="gzqd" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--@mbg.generated-->
+    ID, ENVTPR, ENVP, DUST, H, WS, WC, WD, CCO2, GZQD
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
+    <!--@mbg.generated-->
+    select 
+    <include refid="Base_Column_List" />
+    from ENVIRONMENT_REAL_TIME
+    where ID = #{id,jdbcType=VARCHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
+    <!--@mbg.generated-->
+    delete from ENVIRONMENT_REAL_TIME
+    where ID = #{id,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="com.crplingxi.httpapi.webapp.domain.EnvironmentRealTime">
+    <!--@mbg.generated-->
+    insert into ENVIRONMENT_REAL_TIME (ID, ENVTPR, ENVP, 
+      DUST, H, WS, WC, 
+      WD, CCO2, GZQD)
+    values (#{id,jdbcType=VARCHAR}, #{envtpr,jdbcType=DECIMAL}, #{envp,jdbcType=DECIMAL}, 
+      #{dust,jdbcType=DECIMAL}, #{h,jdbcType=DECIMAL}, #{ws,jdbcType=DECIMAL}, #{wc,jdbcType=VARCHAR}, 
+      #{wd,jdbcType=VARCHAR}, #{cco2,jdbcType=DECIMAL}, #{gzqd,jdbcType=DECIMAL})
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="com.crplingxi.httpapi.webapp.domain.EnvironmentRealTime">
+    <!--@mbg.generated-->
+    update ENVIRONMENT_REAL_TIME
+    set ENVTPR = #{envtpr,jdbcType=DECIMAL},
+      ENVP = #{envp,jdbcType=DECIMAL},
+      DUST = #{dust,jdbcType=DECIMAL},
+      H = #{h,jdbcType=DECIMAL},
+      WS = #{ws,jdbcType=DECIMAL},
+      WC = #{wc,jdbcType=VARCHAR},
+      WD = #{wd,jdbcType=VARCHAR},
+      CCO2 = #{cco2,jdbcType=DECIMAL},
+      GZQD = #{gzqd,jdbcType=DECIMAL}
+    where ID = #{id,jdbcType=VARCHAR}
+  </update>
+</mapper>

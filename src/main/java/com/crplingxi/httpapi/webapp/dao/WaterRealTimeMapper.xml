@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.crplingxi.httpapi.webapp.dao.WaterRealTimeMapper">
+  <resultMap id="BaseResultMap" type="com.crplingxi.httpapi.webapp.domain.WaterRealTime">
+    <!--@mbg.generated-->
+    <!--@Table WATER_REAL_TIME-->
+    <id column="ID" jdbcType="VARCHAR" property="id" />
+    <result column="WATERIF" jdbcType="DECIMAL" property="waterif" />
+    <result column="WATERSF" jdbcType="DECIMAL" property="watersf" />
+    <result column="WATERTEMP" jdbcType="DECIMAL" property="watertemp" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--@mbg.generated-->
+    ID, WATERIF, WATERSF, WATERTEMP
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
+    <!--@mbg.generated-->
+    select 
+    <include refid="Base_Column_List" />
+    from WATER_REAL_TIME
+    where ID = #{id,jdbcType=VARCHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
+    <!--@mbg.generated-->
+    delete from WATER_REAL_TIME
+    where ID = #{id,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="com.crplingxi.httpapi.webapp.domain.WaterRealTime">
+    <!--@mbg.generated-->
+    insert into WATER_REAL_TIME (ID, WATERIF, WATERSF, 
+      WATERTEMP)
+    values (#{id,jdbcType=VARCHAR}, #{waterif,jdbcType=DECIMAL}, #{watersf,jdbcType=DECIMAL}, 
+      #{watertemp,jdbcType=DECIMAL})
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="com.crplingxi.httpapi.webapp.domain.WaterRealTime">
+    <!--@mbg.generated-->
+    update WATER_REAL_TIME
+    set WATERIF = #{waterif,jdbcType=DECIMAL},
+      WATERSF = #{watersf,jdbcType=DECIMAL},
+      WATERTEMP = #{watertemp,jdbcType=DECIMAL}
+    where ID = #{id,jdbcType=VARCHAR}
+  </update>
+</mapper>

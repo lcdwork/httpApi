@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.crplingxi.httpapi.webapp.dao.AirRealTimeMapper">
+  <resultMap id="BaseResultMap" type="com.crplingxi.httpapi.webapp.domain.AirRealTime">
+    <!--@mbg.generated-->
+    <!--@Table AIR_REAL_TIME-->
+    <id column="ID" jdbcType="VARCHAR" property="id" />
+    <result column="CSO2" jdbcType="DECIMAL" property="cso2" />
+    <result column="CNOX" jdbcType="DECIMAL" property="cnox" />
+    <result column="CCO" jdbcType="DECIMAL" property="cco" />
+    <result column="C" jdbcType="DECIMAL" property="c" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--@mbg.generated-->
+    ID, CSO2, CNOX, CCO, "C"
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
+    <!--@mbg.generated-->
+    select
+    <include refid="Base_Column_List" />
+    from AIR_REAL_TIME
+    where ID = #{id,jdbcType=VARCHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
+    <!--@mbg.generated-->
+    delete from AIR_REAL_TIME
+    where ID = #{id,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="com.crplingxi.httpapi.webapp.domain.AirRealTime">
+    <!--@mbg.generated-->
+    insert into AIR_REAL_TIME (ID, CSO2, CNOX,
+      CCO, "C")
+    values (#{id,jdbcType=VARCHAR}, #{cso2,jdbcType=DECIMAL}, #{cnox,jdbcType=DECIMAL},
+      #{cco,jdbcType=DECIMAL}, #{c,jdbcType=DECIMAL})
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="com.crplingxi.httpapi.webapp.domain.AirRealTime">
+    <!--@mbg.generated-->
+    update AIR_REAL_TIME
+    set CSO2 = #{cso2,jdbcType=DECIMAL},
+      CNOX = #{cnox,jdbcType=DECIMAL},
+      CCO = #{cco,jdbcType=DECIMAL},
+      "C" = #{c,jdbcType=DECIMAL}
+    where ID = #{id,jdbcType=VARCHAR}
+  </update>
+</mapper>

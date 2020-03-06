@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.crplingxi.httpapi.webapp.dao.HccRealTimeMapper">
+  <resultMap id="BaseResultMap" type="com.crplingxi.httpapi.webapp.domain.HccRealTime">
+    <!--@mbg.generated-->
+    <!--@Table HCC_REAL_TIME-->
+    <id column="ID" jdbcType="VARCHAR" property="id" />
+    <result column="HARM2IA" jdbcType="DECIMAL" property="harm2ia" />
+    <result column="HARM3IA" jdbcType="DECIMAL" property="harm3ia" />
+    <result column="HARM4IA" jdbcType="DECIMAL" property="harm4ia" />
+    <result column="HARM5IA" jdbcType="DECIMAL" property="harm5ia" />
+    <result column="HARM6IA" jdbcType="DECIMAL" property="harm6ia" />
+    <result column="HARM7IA" jdbcType="DECIMAL" property="harm7ia" />
+    <result column="HARM8IA" jdbcType="DECIMAL" property="harm8ia" />
+    <result column="HARM9IA" jdbcType="DECIMAL" property="harm9ia" />
+    <result column="HARM10IA" jdbcType="DECIMAL" property="harm10ia" />
+    <result column="HARM11IA" jdbcType="DECIMAL" property="harm11ia" />
+    <result column="HARM12IA" jdbcType="DECIMAL" property="harm12ia" />
+    <result column="HARM13IA" jdbcType="DECIMAL" property="harm13ia" />
+    <result column="HARM14IA" jdbcType="DECIMAL" property="harm14ia" />
+    <result column="HARM15IA" jdbcType="DECIMAL" property="harm15ia" />
+    <result column="HARM16IA" jdbcType="DECIMAL" property="harm16ia" />
+    <result column="HARM17IA" jdbcType="DECIMAL" property="harm17ia" />
+    <result column="HARM18IA" jdbcType="DECIMAL" property="harm18ia" />
+    <result column="HARM19IA" jdbcType="DECIMAL" property="harm19ia" />
+    <result column="HARM20IA" jdbcType="DECIMAL" property="harm20ia" />
+    <result column="HARM21IA" jdbcType="DECIMAL" property="harm21ia" />
+    <result column="HARM22IA" jdbcType="DECIMAL" property="harm22ia" />
+    <result column="HARM23IA" jdbcType="DECIMAL" property="harm23ia" />
+    <result column="HARM24IA" jdbcType="DECIMAL" property="harm24ia" />
+    <result column="HARM25IA" jdbcType="DECIMAL" property="harm25ia" />
+    <result column="HARM26IA" jdbcType="DECIMAL" property="harm26ia" />
+    <result column="HARM27IA" jdbcType="DECIMAL" property="harm27ia" />
+    <result column="HARM28IA" jdbcType="DECIMAL" property="harm28ia" />
+    <result column="HARM29IA" jdbcType="DECIMAL" property="harm29ia" />
+    <result column="HARM30IA" jdbcType="DECIMAL" property="harm30ia" />
+    <result column="HARM31IA" jdbcType="DECIMAL" property="harm31ia" />
+    <result column="THDIA" jdbcType="DECIMAL" property="thdia" />
+    <result column="FDIA" jdbcType="DECIMAL" property="fdia" />
+    <result column="HARM2IB" jdbcType="DECIMAL" property="harm2ib" />
+    <result column="HARM3IB" jdbcType="DECIMAL" property="harm3ib" />
+    <result column="HARM4IB" jdbcType="DECIMAL" property="harm4ib" />
+    <result column="HARM5IB" jdbcType="DECIMAL" property="harm5ib" />
+    <result column="HARM6IB" jdbcType="DECIMAL" property="harm6ib" />
+    <result column="HARM7IB" jdbcType="DECIMAL" property="harm7ib" />
+    <result column="HARM8IB" jdbcType="DECIMAL" property="harm8ib" />
+    <result column="HARM9IB" jdbcType="DECIMAL" property="harm9ib" />
+    <result column="HARM10IB" jdbcType="DECIMAL" property="harm10ib" />
+    <result column="HARM11IB" jdbcType="DECIMAL" property="harm11ib" />
+    <result column="HARM12IB" jdbcType="DECIMAL" property="harm12ib" />
+    <result column="HARM13IB" jdbcType="DECIMAL" property="harm13ib" />
+    <result column="HARM14IB" jdbcType="DECIMAL" property="harm14ib" />
+    <result column="HARM15IB" jdbcType="DECIMAL" property="harm15ib" />
+    <result column="HARM16IB" jdbcType="DECIMAL" property="harm16ib" />
+    <result column="HARM17IB" jdbcType="DECIMAL" property="harm17ib" />
+    <result column="HARM18IB" jdbcType="DECIMAL" property="harm18ib" />
+    <result column="HARM19IB" jdbcType="DECIMAL" property="harm19ib" />
+    <result column="HARM20IB" jdbcType="DECIMAL" property="harm20ib" />
+    <result column="HARM21IB" jdbcType="DECIMAL" property="harm21ib" />
+    <result column="HARM22IB" jdbcType="DECIMAL" property="harm22ib" />
+    <result column="HARM23IB" jdbcType="DECIMAL" property="harm23ib" />
+    <result column="HARM24IB" jdbcType="DECIMAL" property="harm24ib" />
+    <result column="HARM25IB" jdbcType="DECIMAL" property="harm25ib" />
+    <result column="HARM26IB" jdbcType="DECIMAL" property="harm26ib" />
+    <result column="HARM27IB" jdbcType="DECIMAL" property="harm27ib" />
+    <result column="HARM28IB" jdbcType="DECIMAL" property="harm28ib" />
+    <result column="HARM29IB" jdbcType="DECIMAL" property="harm29ib" />
+    <result column="HARM30IB" jdbcType="DECIMAL" property="harm30ib" />
+    <result column="HARM31IB" jdbcType="DECIMAL" property="harm31ib" />
+    <result column="THDIB" jdbcType="DECIMAL" property="thdib" />
+    <result column="FDIB" jdbcType="DECIMAL" property="fdib" />
+    <result column="HARM2IC" jdbcType="DECIMAL" property="harm2ic" />
+    <result column="HARM3IC" jdbcType="DECIMAL" property="harm3ic" />
+    <result column="HARM4IC" jdbcType="DECIMAL" property="harm4ic" />
+    <result column="HARM5IC" jdbcType="DECIMAL" property="harm5ic" />
+    <result column="HARM6IC" jdbcType="DECIMAL" property="harm6ic" />
+    <result column="HARM7IC" jdbcType="DECIMAL" property="harm7ic" />
+    <result column="HARM8IC" jdbcType="DECIMAL" property="harm8ic" />
+    <result column="HARM9IC" jdbcType="DECIMAL" property="harm9ic" />
+    <result column="HARM10IC" jdbcType="DECIMAL" property="harm10ic" />
+    <result column="HARM11IC" jdbcType="DECIMAL" property="harm11ic" />
+    <result column="HARM12IC" jdbcType="DECIMAL" property="harm12ic" />
+    <result column="HARM13IC" jdbcType="DECIMAL" property="harm13ic" />
+    <result column="HARM14IC" jdbcType="DECIMAL" property="harm14ic" />
+    <result column="HARM15IC" jdbcType="DECIMAL" property="harm15ic" />
+    <result column="HARM16IC" jdbcType="DECIMAL" property="harm16ic" />
+    <result column="HARM17IC" jdbcType="DECIMAL" property="harm17ic" />
+    <result column="HARM18IC" jdbcType="DECIMAL" property="harm18ic" />
+    <result column="HARM19IC" jdbcType="DECIMAL" property="harm19ic" />
+    <result column="HARM20IC" jdbcType="DECIMAL" property="harm20ic" />
+    <result column="HARM21IC" jdbcType="DECIMAL" property="harm21ic" />
+    <result column="HARM22IC" jdbcType="DECIMAL" property="harm22ic" />
+    <result column="HARM23IC" jdbcType="DECIMAL" property="harm23ic" />
+    <result column="HARM24IC" jdbcType="DECIMAL" property="harm24ic" />
+    <result column="HARM25IC" jdbcType="DECIMAL" property="harm25ic" />
+    <result column="HARM26IC" jdbcType="DECIMAL" property="harm26ic" />
+    <result column="HARM27IC" jdbcType="DECIMAL" property="harm27ic" />
+    <result column="HARM28IC" jdbcType="DECIMAL" property="harm28ic" />
+    <result column="HARM29IC" jdbcType="DECIMAL" property="harm29ic" />
+    <result column="HARM30IC" jdbcType="DECIMAL" property="harm30ic" />
+    <result column="HARM31IC" jdbcType="DECIMAL" property="harm31ic" />
+    <result column="THDIC" jdbcType="DECIMAL" property="thdic" />
+    <result column="FDIC" jdbcType="DECIMAL" property="fdic" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--@mbg.generated-->
+    ID, HARM2IA, HARM3IA, HARM4IA, HARM5IA, HARM6IA, HARM7IA, HARM8IA, HARM9IA, HARM10IA, 
+    HARM11IA, HARM12IA, HARM13IA, HARM14IA, HARM15IA, HARM16IA, HARM17IA, HARM18IA, HARM19IA, 
+    HARM20IA, HARM21IA, HARM22IA, HARM23IA, HARM24IA, HARM25IA, HARM26IA, HARM27IA, HARM28IA, 
+    HARM29IA, HARM30IA, HARM31IA, THDIA, FDIA, HARM2IB, HARM3IB, HARM4IB, HARM5IB, HARM6IB, 
+    HARM7IB, HARM8IB, HARM9IB, HARM10IB, HARM11IB, HARM12IB, HARM13IB, HARM14IB, HARM15IB, 
+    HARM16IB, HARM17IB, HARM18IB, HARM19IB, HARM20IB, HARM21IB, HARM22IB, HARM23IB, HARM24IB, 
+    HARM25IB, HARM26IB, HARM27IB, HARM28IB, HARM29IB, HARM30IB, HARM31IB, THDIB, FDIB, 
+    HARM2IC, HARM3IC, HARM4IC, HARM5IC, HARM6IC, HARM7IC, HARM8IC, HARM9IC, HARM10IC, 
+    HARM11IC, HARM12IC, HARM13IC, HARM14IC, HARM15IC, HARM16IC, HARM17IC, HARM18IC, HARM19IC, 
+    HARM20IC, HARM21IC, HARM22IC, HARM23IC, HARM24IC, HARM25IC, HARM26IC, HARM27IC, HARM28IC, 
+    HARM29IC, HARM30IC, HARM31IC, THDIC, FDIC
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
+    <!--@mbg.generated-->
+    select 
+    <include refid="Base_Column_List" />
+    from HCC_REAL_TIME
+    where ID = #{id,jdbcType=VARCHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
+    <!--@mbg.generated-->
+    delete from HCC_REAL_TIME
+    where ID = #{id,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="com.crplingxi.httpapi.webapp.domain.HccRealTime">
+    <!--@mbg.generated-->
+    insert into HCC_REAL_TIME (ID, HARM2IA, HARM3IA, 
+      HARM4IA, HARM5IA, HARM6IA, 
+      HARM7IA, HARM8IA, HARM9IA, 
+      HARM10IA, HARM11IA, HARM12IA, 
+      HARM13IA, HARM14IA, HARM15IA, 
+      HARM16IA, HARM17IA, HARM18IA, 
+      HARM19IA, HARM20IA, HARM21IA, 
+      HARM22IA, HARM23IA, HARM24IA, 
+      HARM25IA, HARM26IA, HARM27IA, 
+      HARM28IA, HARM29IA, HARM30IA, 
+      HARM31IA, THDIA, FDIA, 
+      HARM2IB, HARM3IB, HARM4IB, 
+      HARM5IB, HARM6IB, HARM7IB, 
+      HARM8IB, HARM9IB, HARM10IB, 
+      HARM11IB, HARM12IB, HARM13IB, 
+      HARM14IB, HARM15IB, HARM16IB, 
+      HARM17IB, HARM18IB, HARM19IB, 
+      HARM20IB, HARM21IB, HARM22IB, 
+      HARM23IB, HARM24IB, HARM25IB, 
+      HARM26IB, HARM27IB, HARM28IB, 
+      HARM29IB, HARM30IB, HARM31IB, 
+      THDIB, FDIB, HARM2IC, 
+      HARM3IC, HARM4IC, HARM5IC, 
+      HARM6IC, HARM7IC, HARM8IC, 
+      HARM9IC, HARM10IC, HARM11IC, 
+      HARM12IC, HARM13IC, HARM14IC, 
+      HARM15IC, HARM16IC, HARM17IC, 
+      HARM18IC, HARM19IC, HARM20IC, 
+      HARM21IC, HARM22IC, HARM23IC, 
+      HARM24IC, HARM25IC, HARM26IC, 
+      HARM27IC, HARM28IC, HARM29IC, 
+      HARM30IC, HARM31IC, THDIC, 
+      FDIC)
+    values (#{id,jdbcType=VARCHAR}, #{harm2ia,jdbcType=DECIMAL}, #{harm3ia,jdbcType=DECIMAL}, 
+      #{harm4ia,jdbcType=DECIMAL}, #{harm5ia,jdbcType=DECIMAL}, #{harm6ia,jdbcType=DECIMAL}, 
+      #{harm7ia,jdbcType=DECIMAL}, #{harm8ia,jdbcType=DECIMAL}, #{harm9ia,jdbcType=DECIMAL}, 
+      #{harm10ia,jdbcType=DECIMAL}, #{harm11ia,jdbcType=DECIMAL}, #{harm12ia,jdbcType=DECIMAL}, 
+      #{harm13ia,jdbcType=DECIMAL}, #{harm14ia,jdbcType=DECIMAL}, #{harm15ia,jdbcType=DECIMAL}, 
+      #{harm16ia,jdbcType=DECIMAL}, #{harm17ia,jdbcType=DECIMAL}, #{harm18ia,jdbcType=DECIMAL}, 
+      #{harm19ia,jdbcType=DECIMAL}, #{harm20ia,jdbcType=DECIMAL}, #{harm21ia,jdbcType=DECIMAL}, 
+      #{harm22ia,jdbcType=DECIMAL}, #{harm23ia,jdbcType=DECIMAL}, #{harm24ia,jdbcType=DECIMAL}, 
+      #{harm25ia,jdbcType=DECIMAL}, #{harm26ia,jdbcType=DECIMAL}, #{harm27ia,jdbcType=DECIMAL}, 
+      #{harm28ia,jdbcType=DECIMAL}, #{harm29ia,jdbcType=DECIMAL}, #{harm30ia,jdbcType=DECIMAL}, 
+      #{harm31ia,jdbcType=DECIMAL}, #{thdia,jdbcType=DECIMAL}, #{fdia,jdbcType=DECIMAL}, 
+      #{harm2ib,jdbcType=DECIMAL}, #{harm3ib,jdbcType=DECIMAL}, #{harm4ib,jdbcType=DECIMAL}, 
+      #{harm5ib,jdbcType=DECIMAL}, #{harm6ib,jdbcType=DECIMAL}, #{harm7ib,jdbcType=DECIMAL}, 
+      #{harm8ib,jdbcType=DECIMAL}, #{harm9ib,jdbcType=DECIMAL}, #{harm10ib,jdbcType=DECIMAL}, 
+      #{harm11ib,jdbcType=DECIMAL}, #{harm12ib,jdbcType=DECIMAL}, #{harm13ib,jdbcType=DECIMAL}, 
+      #{harm14ib,jdbcType=DECIMAL}, #{harm15ib,jdbcType=DECIMAL}, #{harm16ib,jdbcType=DECIMAL}, 
+      #{harm17ib,jdbcType=DECIMAL}, #{harm18ib,jdbcType=DECIMAL}, #{harm19ib,jdbcType=DECIMAL}, 
+      #{harm20ib,jdbcType=DECIMAL}, #{harm21ib,jdbcType=DECIMAL}, #{harm22ib,jdbcType=DECIMAL}, 
+      #{harm23ib,jdbcType=DECIMAL}, #{harm24ib,jdbcType=DECIMAL}, #{harm25ib,jdbcType=DECIMAL}, 
+      #{harm26ib,jdbcType=DECIMAL}, #{harm27ib,jdbcType=DECIMAL}, #{harm28ib,jdbcType=DECIMAL}, 
+      #{harm29ib,jdbcType=DECIMAL}, #{harm30ib,jdbcType=DECIMAL}, #{harm31ib,jdbcType=DECIMAL}, 
+      #{thdib,jdbcType=DECIMAL}, #{fdib,jdbcType=DECIMAL}, #{harm2ic,jdbcType=DECIMAL}, 
+      #{harm3ic,jdbcType=DECIMAL}, #{harm4ic,jdbcType=DECIMAL}, #{harm5ic,jdbcType=DECIMAL}, 
+      #{harm6ic,jdbcType=DECIMAL}, #{harm7ic,jdbcType=DECIMAL}, #{harm8ic,jdbcType=DECIMAL}, 
+      #{harm9ic,jdbcType=DECIMAL}, #{harm10ic,jdbcType=DECIMAL}, #{harm11ic,jdbcType=DECIMAL}, 
+      #{harm12ic,jdbcType=DECIMAL}, #{harm13ic,jdbcType=DECIMAL}, #{harm14ic,jdbcType=DECIMAL}, 
+      #{harm15ic,jdbcType=DECIMAL}, #{harm16ic,jdbcType=DECIMAL}, #{harm17ic,jdbcType=DECIMAL}, 
+      #{harm18ic,jdbcType=DECIMAL}, #{harm19ic,jdbcType=DECIMAL}, #{harm20ic,jdbcType=DECIMAL}, 
+      #{harm21ic,jdbcType=DECIMAL}, #{harm22ic,jdbcType=DECIMAL}, #{harm23ic,jdbcType=DECIMAL}, 
+      #{harm24ic,jdbcType=DECIMAL}, #{harm25ic,jdbcType=DECIMAL}, #{harm26ic,jdbcType=DECIMAL}, 
+      #{harm27ic,jdbcType=DECIMAL}, #{harm28ic,jdbcType=DECIMAL}, #{harm29ic,jdbcType=DECIMAL}, 
+      #{harm30ic,jdbcType=DECIMAL}, #{harm31ic,jdbcType=DECIMAL}, #{thdic,jdbcType=DECIMAL}, 
+      #{fdic,jdbcType=DECIMAL})
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="com.crplingxi.httpapi.webapp.domain.HccRealTime">
+    <!--@mbg.generated-->
+    update HCC_REAL_TIME
+    set HARM2IA = #{harm2ia,jdbcType=DECIMAL},
+      HARM3IA = #{harm3ia,jdbcType=DECIMAL},
+      HARM4IA = #{harm4ia,jdbcType=DECIMAL},
+      HARM5IA = #{harm5ia,jdbcType=DECIMAL},
+      HARM6IA = #{harm6ia,jdbcType=DECIMAL},
+      HARM7IA = #{harm7ia,jdbcType=DECIMAL},
+      HARM8IA = #{harm8ia,jdbcType=DECIMAL},
+      HARM9IA = #{harm9ia,jdbcType=DECIMAL},
+      HARM10IA = #{harm10ia,jdbcType=DECIMAL},
+      HARM11IA = #{harm11ia,jdbcType=DECIMAL},
+      HARM12IA = #{harm12ia,jdbcType=DECIMAL},
+      HARM13IA = #{harm13ia,jdbcType=DECIMAL},
+      HARM14IA = #{harm14ia,jdbcType=DECIMAL},
+      HARM15IA = #{harm15ia,jdbcType=DECIMAL},
+      HARM16IA = #{harm16ia,jdbcType=DECIMAL},
+      HARM17IA = #{harm17ia,jdbcType=DECIMAL},
+      HARM18IA = #{harm18ia,jdbcType=DECIMAL},
+      HARM19IA = #{harm19ia,jdbcType=DECIMAL},
+      HARM20IA = #{harm20ia,jdbcType=DECIMAL},
+      HARM21IA = #{harm21ia,jdbcType=DECIMAL},
+      HARM22IA = #{harm22ia,jdbcType=DECIMAL},
+      HARM23IA = #{harm23ia,jdbcType=DECIMAL},
+      HARM24IA = #{harm24ia,jdbcType=DECIMAL},
+      HARM25IA = #{harm25ia,jdbcType=DECIMAL},
+      HARM26IA = #{harm26ia,jdbcType=DECIMAL},
+      HARM27IA = #{harm27ia,jdbcType=DECIMAL},
+      HARM28IA = #{harm28ia,jdbcType=DECIMAL},
+      HARM29IA = #{harm29ia,jdbcType=DECIMAL},
+      HARM30IA = #{harm30ia,jdbcType=DECIMAL},
+      HARM31IA = #{harm31ia,jdbcType=DECIMAL},
+      THDIA = #{thdia,jdbcType=DECIMAL},
+      FDIA = #{fdia,jdbcType=DECIMAL},
+      HARM2IB = #{harm2ib,jdbcType=DECIMAL},
+      HARM3IB = #{harm3ib,jdbcType=DECIMAL},
+      HARM4IB = #{harm4ib,jdbcType=DECIMAL},
+      HARM5IB = #{harm5ib,jdbcType=DECIMAL},
+      HARM6IB = #{harm6ib,jdbcType=DECIMAL},
+      HARM7IB = #{harm7ib,jdbcType=DECIMAL},
+      HARM8IB = #{harm8ib,jdbcType=DECIMAL},
+      HARM9IB = #{harm9ib,jdbcType=DECIMAL},
+      HARM10IB = #{harm10ib,jdbcType=DECIMAL},
+      HARM11IB = #{harm11ib,jdbcType=DECIMAL},
+      HARM12IB = #{harm12ib,jdbcType=DECIMAL},
+      HARM13IB = #{harm13ib,jdbcType=DECIMAL},
+      HARM14IB = #{harm14ib,jdbcType=DECIMAL},
+      HARM15IB = #{harm15ib,jdbcType=DECIMAL},
+      HARM16IB = #{harm16ib,jdbcType=DECIMAL},
+      HARM17IB = #{harm17ib,jdbcType=DECIMAL},
+      HARM18IB = #{harm18ib,jdbcType=DECIMAL},
+      HARM19IB = #{harm19ib,jdbcType=DECIMAL},
+      HARM20IB = #{harm20ib,jdbcType=DECIMAL},
+      HARM21IB = #{harm21ib,jdbcType=DECIMAL},
+      HARM22IB = #{harm22ib,jdbcType=DECIMAL},
+      HARM23IB = #{harm23ib,jdbcType=DECIMAL},
+      HARM24IB = #{harm24ib,jdbcType=DECIMAL},
+      HARM25IB = #{harm25ib,jdbcType=DECIMAL},
+      HARM26IB = #{harm26ib,jdbcType=DECIMAL},
+      HARM27IB = #{harm27ib,jdbcType=DECIMAL},
+      HARM28IB = #{harm28ib,jdbcType=DECIMAL},
+      HARM29IB = #{harm29ib,jdbcType=DECIMAL},
+      HARM30IB = #{harm30ib,jdbcType=DECIMAL},
+      HARM31IB = #{harm31ib,jdbcType=DECIMAL},
+      THDIB = #{thdib,jdbcType=DECIMAL},
+      FDIB = #{fdib,jdbcType=DECIMAL},
+      HARM2IC = #{harm2ic,jdbcType=DECIMAL},
+      HARM3IC = #{harm3ic,jdbcType=DECIMAL},
+      HARM4IC = #{harm4ic,jdbcType=DECIMAL},
+      HARM5IC = #{harm5ic,jdbcType=DECIMAL},
+      HARM6IC = #{harm6ic,jdbcType=DECIMAL},
+      HARM7IC = #{harm7ic,jdbcType=DECIMAL},
+      HARM8IC = #{harm8ic,jdbcType=DECIMAL},
+      HARM9IC = #{harm9ic,jdbcType=DECIMAL},
+      HARM10IC = #{harm10ic,jdbcType=DECIMAL},
+      HARM11IC = #{harm11ic,jdbcType=DECIMAL},
+      HARM12IC = #{harm12ic,jdbcType=DECIMAL},
+      HARM13IC = #{harm13ic,jdbcType=DECIMAL},
+      HARM14IC = #{harm14ic,jdbcType=DECIMAL},
+      HARM15IC = #{harm15ic,jdbcType=DECIMAL},
+      HARM16IC = #{harm16ic,jdbcType=DECIMAL},
+      HARM17IC = #{harm17ic,jdbcType=DECIMAL},
+      HARM18IC = #{harm18ic,jdbcType=DECIMAL},
+      HARM19IC = #{harm19ic,jdbcType=DECIMAL},
+      HARM20IC = #{harm20ic,jdbcType=DECIMAL},
+      HARM21IC = #{harm21ic,jdbcType=DECIMAL},
+      HARM22IC = #{harm22ic,jdbcType=DECIMAL},
+      HARM23IC = #{harm23ic,jdbcType=DECIMAL},
+      HARM24IC = #{harm24ic,jdbcType=DECIMAL},
+      HARM25IC = #{harm25ic,jdbcType=DECIMAL},
+      HARM26IC = #{harm26ic,jdbcType=DECIMAL},
+      HARM27IC = #{harm27ic,jdbcType=DECIMAL},
+      HARM28IC = #{harm28ic,jdbcType=DECIMAL},
+      HARM29IC = #{harm29ic,jdbcType=DECIMAL},
+      HARM30IC = #{harm30ic,jdbcType=DECIMAL},
+      HARM31IC = #{harm31ic,jdbcType=DECIMAL},
+      THDIC = #{thdic,jdbcType=DECIMAL},
+      FDIC = #{fdic,jdbcType=DECIMAL}
+    where ID = #{id,jdbcType=VARCHAR}
+  </update>
+</mapper>

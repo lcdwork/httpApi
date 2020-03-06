@@ -24,7 +24,7 @@ public class DESUtil {
     /**
      * 默认编码
      */
-    private static final String CHARSET = "utf-8";
+    private static final String CHARSET = "UTF-8";
 
     /**
      * 生成key

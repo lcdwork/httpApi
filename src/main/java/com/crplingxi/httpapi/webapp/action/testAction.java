@@ -1,31 +1,34 @@
 package com.crplingxi.httpapi.webapp.action;
 
-import com.alibaba.fastjson.JSON;
-import com.crplingxi.httpapi.tools.Des;
-import com.crplingxi.httpapi.tools.ZlibUtils;
-import com.crplingxi.httpapi.webapp.domain.TestDomain;
-import org.springframework.scheduling.annotation.Scheduled;
-import org.springframework.stereotype.Component;
+import org.springframework.web.bind.annotation.ControllerAdvice;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 
-@Component
+@ControllerAdvice
+@RequestMapping("http")
 public class testAction {
 
-    @Scheduled(cron = "${test.cron}")
-    public void putTest() {
-        TestDomain testDomain = new TestDomain();
-        testDomain.setId(111);
-        testDomain.setName("测试");
-        testDomain.setSn("2886631868423312");
-
-        String jsonObject = JSON.toJSONString(testDomain);
-        System.out.println(jsonObject);
-        String encryptData = Des.encrypt(jsonObject, "utf8", "testtest");
-        System.out.println(encryptData);
-        byte[] zlibData = encryptData.getBytes();
-        byte[] lib = ZlibUtils.compress(zlibData);
-        byte[] output = ZlibUtils.decompress(lib);
-        String outStr = new String(output);
-        System.out.println(outStr);
+    @ResponseBody
+    @RequestMapping(params = "method=test")
+    public void putTest(@RequestBody String body) {
+        System.out.println("1111");
+//        TestDomain testDomain = new TestDomain();
+//        testDomain.setId(111);
+//        testDomain.setName("测试");
+//        testDomain.setSn("2886631868423312");
+//
+//        String jsonObject = JSON.toJSONString(testDomain);
+//        System.out.println(jsonObject);
+//        String encryptData1 = DESUtil.encrypt("testtest", jsonObject);
+//        String encryptData2 = DESUtils.encrypt(jsonObject, "testtest");
+//        System.out.println(encryptData1);
+//        System.out.println(encryptData2);
+//        byte[] zlibData = encryptData1.getBytes();
+//        byte[] lib = ZlibUtils.compress(zlibData);
+//        byte[] output = ZlibUtils.decompress(lib);
+//        String outStr = new String(output);
+//        System.out.println(outStr);
 
     }
 }

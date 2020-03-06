@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.crplingxi.httpapi.webapp.dao.ElectricRealTimeMapper">
+  <resultMap id="BaseResultMap" type="com.crplingxi.httpapi.webapp.domain.ElectricRealTime">
+    <!--@mbg.generated-->
+    <!--@Table ELECTRIC_REAL_TIME-->
+    <id column="ID" jdbcType="VARCHAR" property="id" />
+    <result column="PTTL" jdbcType="DECIMAL" property="pttl" />
+    <result column="PA" jdbcType="DECIMAL" property="pa" />
+    <result column="PB" jdbcType="DECIMAL" property="pb" />
+    <result column="PC" jdbcType="DECIMAL" property="pc" />
+    <result column="QTTL" jdbcType="DECIMAL" property="qttl" />
+    <result column="QA" jdbcType="DECIMAL" property="qa" />
+    <result column="QB" jdbcType="DECIMAL" property="qb" />
+    <result column="QC" jdbcType="DECIMAL" property="qc" />
+    <result column="SA" jdbcType="DECIMAL" property="sa" />
+    <result column="SB" jdbcType="DECIMAL" property="sb" />
+    <result column="SC" jdbcType="DECIMAL" property="sc" />
+    <result column="STTL" jdbcType="DECIMAL" property="sttl" />
+    <result column="COSTTL" jdbcType="DECIMAL" property="costtl" />
+    <result column="COSA" jdbcType="DECIMAL" property="cosa" />
+    <result column="COSB" jdbcType="DECIMAL" property="cosb" />
+    <result column="COSC" jdbcType="DECIMAL" property="cosc" />
+    <result column="IA" jdbcType="DECIMAL" property="ia" />
+    <result column="IB" jdbcType="DECIMAL" property="ib" />
+    <result column="IC" jdbcType="DECIMAL" property="ic" />
+    <result column="ZSC" jdbcType="DECIMAL" property="zsc" />
+    <result column="UA" jdbcType="DECIMAL" property="ua" />
+    <result column="UB" jdbcType="DECIMAL" property="ub" />
+    <result column="UC" jdbcType="DECIMAL" property="uc" />
+    <result column="UAB" jdbcType="DECIMAL" property="uab" />
+    <result column="UBC" jdbcType="DECIMAL" property="ubc" />
+    <result column="UCA" jdbcType="DECIMAL" property="uca" />
+    <result column="LR" jdbcType="DECIMAL" property="lr" />
+    <result column="FREQ" jdbcType="DECIMAL" property="freq" />
+    <result column="UBLI" jdbcType="DECIMAL" property="ubli" />
+    <result column="UBLU" jdbcType="DECIMAL" property="ublu" />
+    <result column="EUA" jdbcType="DECIMAL" property="eua" />
+    <result column="EUB" jdbcType="DECIMAL" property="eub" />
+    <result column="EUC" jdbcType="DECIMAL" property="euc" />
+    <result column="EUAB" jdbcType="DECIMAL" property="euab" />
+    <result column="EUBC" jdbcType="DECIMAL" property="eubc" />
+    <result column="EUCA" jdbcType="DECIMAL" property="euca" />
+    <result column="EFREQ" jdbcType="DECIMAL" property="efreq" />
+    <result column="TEM1" jdbcType="DECIMAL" property="tem1" />
+    <result column="TEM2" jdbcType="DECIMAL" property="tem2" />
+    <result column="TEM3" jdbcType="DECIMAL" property="tem3" />
+    <result column="TEM4" jdbcType="DECIMAL" property="tem4" />
+    <result column="TEM5" jdbcType="DECIMAL" property="tem5" />
+    <result column="TEM6" jdbcType="DECIMAL" property="tem6" />
+    <result column="TEM7" jdbcType="DECIMAL" property="tem7" />
+    <result column="TEM8" jdbcType="DECIMAL" property="tem8" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--@mbg.generated-->
+    ID, PTTL, PA, PB, PC, QTTL, QA, QB, QC, SA, SB, SC, STTL, COSTTL, COSA, COSB, COSC, 
+    IA, IB, IC, ZSC, UA, UB, UC, UAB, UBC, UCA, LR, FREQ, UBLI, UBLU, EUA, EUB, EUC, 
+    EUAB, EUBC, EUCA, EFREQ, TEM1, TEM2, TEM3, TEM4, TEM5, TEM6, TEM7, TEM8
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
+    <!--@mbg.generated-->
+    select 
+    <include refid="Base_Column_List" />
+    from ELECTRIC_REAL_TIME
+    where ID = #{id,jdbcType=VARCHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
+    <!--@mbg.generated-->
+    delete from ELECTRIC_REAL_TIME
+    where ID = #{id,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="com.crplingxi.httpapi.webapp.domain.ElectricRealTime">
+    <!--@mbg.generated-->
+    insert into ELECTRIC_REAL_TIME (ID, PTTL, PA, 
+      PB, PC, QTTL, QA, 
+      QB, QC, SA, SB, 
+      SC, STTL, COSTTL, COSA, 
+      COSB, COSC, IA, IB, 
+      IC, ZSC, UA, UB, 
+      UC, UAB, UBC, UCA, 
+      LR, FREQ, UBLI, UBLU, 
+      EUA, EUB, EUC, EUAB, 
+      EUBC, EUCA, EFREQ, 
+      TEM1, TEM2, TEM3, TEM4, 
+      TEM5, TEM6, TEM7, TEM8
+      )
+    values (#{id,jdbcType=VARCHAR}, #{pttl,jdbcType=DECIMAL}, #{pa,jdbcType=DECIMAL}, 
+      #{pb,jdbcType=DECIMAL}, #{pc,jdbcType=DECIMAL}, #{qttl,jdbcType=DECIMAL}, #{qa,jdbcType=DECIMAL}, 
+      #{qb,jdbcType=DECIMAL}, #{qc,jdbcType=DECIMAL}, #{sa,jdbcType=DECIMAL}, #{sb,jdbcType=DECIMAL}, 
+      #{sc,jdbcType=DECIMAL}, #{sttl,jdbcType=DECIMAL}, #{costtl,jdbcType=DECIMAL}, #{cosa,jdbcType=DECIMAL}, 
+      #{cosb,jdbcType=DECIMAL}, #{cosc,jdbcType=DECIMAL}, #{ia,jdbcType=DECIMAL}, #{ib,jdbcType=DECIMAL}, 
+      #{ic,jdbcType=DECIMAL}, #{zsc,jdbcType=DECIMAL}, #{ua,jdbcType=DECIMAL}, #{ub,jdbcType=DECIMAL}, 
+      #{uc,jdbcType=DECIMAL}, #{uab,jdbcType=DECIMAL}, #{ubc,jdbcType=DECIMAL}, #{uca,jdbcType=DECIMAL}, 
+      #{lr,jdbcType=DECIMAL}, #{freq,jdbcType=DECIMAL}, #{ubli,jdbcType=DECIMAL}, #{ublu,jdbcType=DECIMAL}, 
+      #{eua,jdbcType=DECIMAL}, #{eub,jdbcType=DECIMAL}, #{euc,jdbcType=DECIMAL}, #{euab,jdbcType=DECIMAL}, 
+      #{eubc,jdbcType=DECIMAL}, #{euca,jdbcType=DECIMAL}, #{efreq,jdbcType=DECIMAL}, 
+      #{tem1,jdbcType=DECIMAL}, #{tem2,jdbcType=DECIMAL}, #{tem3,jdbcType=DECIMAL}, #{tem4,jdbcType=DECIMAL}, 
+      #{tem5,jdbcType=DECIMAL}, #{tem6,jdbcType=DECIMAL}, #{tem7,jdbcType=DECIMAL}, #{tem8,jdbcType=DECIMAL}
+      )
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="com.crplingxi.httpapi.webapp.domain.ElectricRealTime">
+    <!--@mbg.generated-->
+    update ELECTRIC_REAL_TIME
+    set PTTL = #{pttl,jdbcType=DECIMAL},
+      PA = #{pa,jdbcType=DECIMAL},
+      PB = #{pb,jdbcType=DECIMAL},
+      PC = #{pc,jdbcType=DECIMAL},
+      QTTL = #{qttl,jdbcType=DECIMAL},
+      QA = #{qa,jdbcType=DECIMAL},
+      QB = #{qb,jdbcType=DECIMAL},
+      QC = #{qc,jdbcType=DECIMAL},
+      SA = #{sa,jdbcType=DECIMAL},
+      SB = #{sb,jdbcType=DECIMAL},
+      SC = #{sc,jdbcType=DECIMAL},
+      STTL = #{sttl,jdbcType=DECIMAL},
+      COSTTL = #{costtl,jdbcType=DECIMAL},
+      COSA = #{cosa,jdbcType=DECIMAL},
+      COSB = #{cosb,jdbcType=DECIMAL},
+      COSC = #{cosc,jdbcType=DECIMAL},
+      IA = #{ia,jdbcType=DECIMAL},
+      IB = #{ib,jdbcType=DECIMAL},
+      IC = #{ic,jdbcType=DECIMAL},
+      ZSC = #{zsc,jdbcType=DECIMAL},
+      UA = #{ua,jdbcType=DECIMAL},
+      UB = #{ub,jdbcType=DECIMAL},
+      UC = #{uc,jdbcType=DECIMAL},
+      UAB = #{uab,jdbcType=DECIMAL},
+      UBC = #{ubc,jdbcType=DECIMAL},
+      UCA = #{uca,jdbcType=DECIMAL},
+      LR = #{lr,jdbcType=DECIMAL},
+      FREQ = #{freq,jdbcType=DECIMAL},
+      UBLI = #{ubli,jdbcType=DECIMAL},
+      UBLU = #{ublu,jdbcType=DECIMAL},
+      EUA = #{eua,jdbcType=DECIMAL},
+      EUB = #{eub,jdbcType=DECIMAL},
+      EUC = #{euc,jdbcType=DECIMAL},
+      EUAB = #{euab,jdbcType=DECIMAL},
+      EUBC = #{eubc,jdbcType=DECIMAL},
+      EUCA = #{euca,jdbcType=DECIMAL},
+      EFREQ = #{efreq,jdbcType=DECIMAL},
+      TEM1 = #{tem1,jdbcType=DECIMAL},
+      TEM2 = #{tem2,jdbcType=DECIMAL},
+      TEM3 = #{tem3,jdbcType=DECIMAL},
+      TEM4 = #{tem4,jdbcType=DECIMAL},
+      TEM5 = #{tem5,jdbcType=DECIMAL},
+      TEM6 = #{tem6,jdbcType=DECIMAL},
+      TEM7 = #{tem7,jdbcType=DECIMAL},
+      TEM8 = #{tem8,jdbcType=DECIMAL}
+    where ID = #{id,jdbcType=VARCHAR}
+  </update>
+</mapper>
