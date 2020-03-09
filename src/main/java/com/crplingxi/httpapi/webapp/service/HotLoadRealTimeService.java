@@ -1,9 +1,13 @@
 package com.crplingxi.httpapi.webapp.service;
 
+import com.crplingxi.httpapi.webapp.domain.AirRealTime;
 import com.crplingxi.httpapi.webapp.domain.HotLoadRealTime;
+
+import java.util.List;
 
 public interface HotLoadRealTimeService {
 
+    List<HotLoadRealTime> findByWhere(HotLoadRealTime t);
 
     int deleteByPrimaryKey(String id);
 

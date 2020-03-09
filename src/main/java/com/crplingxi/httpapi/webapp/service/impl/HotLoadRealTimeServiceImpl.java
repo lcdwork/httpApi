@@ -8,11 +8,18 @@ import com.crplingxi.httpapi.webapp.dao.HotLoadRealTimeMapper;
 import com.crplingxi.httpapi.webapp.domain.HotLoadRealTime;
 import com.crplingxi.httpapi.webapp.service.HotLoadRealTimeService;
 
+import java.util.List;
+
 @TransactionService
 public class HotLoadRealTimeServiceImpl implements HotLoadRealTimeService {
 
-    @TransactionDAO("gffpOracle")
+    @TransactionDAO("httpOracle")
     private HotLoadRealTimeMapper hotLoadRealTimeMapper;
+
+    @Override
+    public List<HotLoadRealTime> findByWhere(HotLoadRealTime t) {
+        return hotLoadRealTimeMapper.findByWhere(t);
+    }
 
     @Override
     public int deleteByPrimaryKey(String id) {

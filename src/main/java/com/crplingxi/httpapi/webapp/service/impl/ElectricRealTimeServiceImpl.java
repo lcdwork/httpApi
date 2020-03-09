@@ -8,11 +8,18 @@ import com.crplingxi.httpapi.webapp.domain.ElectricRealTime;
 import com.crplingxi.httpapi.webapp.dao.ElectricRealTimeMapper;
 import com.crplingxi.httpapi.webapp.service.ElectricRealTimeService;
 
+import java.util.List;
+
 @TransactionService
 public class ElectricRealTimeServiceImpl implements ElectricRealTimeService {
 
-    @TransactionDAO("gffpOracle")
+    @TransactionDAO("httpOracle")
     private ElectricRealTimeMapper electricRealTimeMapper;
+
+    @Override
+    public List<ElectricRealTime> findByWhere(ElectricRealTime t) {
+        return electricRealTimeMapper.findByWhere(t);
+    }
 
     @Override
     public int deleteByPrimaryKey(String id) {

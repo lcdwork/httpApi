@@ -1,10 +1,20 @@
 package com.crplingxi.httpapi.webapp.dao;
 
 import com.crplingxi.httpapi.webapp.domain.PowerRealTime;
+import com.crplingxi.httpapi.webapp.domain.WaterRealTime;
 import com.riozenc.titanTool.annotation.TransactionDAO;
 import com.riozenc.titanTool.spring.webapp.dao.AbstractTransactionDAOSupport;
+
+import java.util.List;
+
 @TransactionDAO
 public class PowerRealTimeMapper extends AbstractTransactionDAOSupport {
+
+    public List<PowerRealTime> findByWhere(PowerRealTime t) {
+        // TODO Auto-generated method stub
+        return getPersistanceManager().find(getNamespace() + ".findByWhere", t);
+    }
+
     public int deleteByPrimaryKey(String id) {
         return 0;
     }

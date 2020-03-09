@@ -12,9 +12,14 @@
     <!--@mbg.generated-->
     ID, CLOAD, CTPC
   </sql>
+  <select id="findByWhere" parameterType="com.crplingxi.httpapi.webapp.domain.ColdLoadRealTime" resultType="com.crplingxi.httpapi.webapp.domain.ColdLoadRealTime" useCache="true">
+    select
+    <include refid="Base_Column_List" />
+    from COLD_LOAD_REAL_TIME
+  </select>
   <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
     <!--@mbg.generated-->
-    select 
+    select
     <include refid="Base_Column_List" />
     from COLD_LOAD_REAL_TIME
     where ID = #{id,jdbcType=VARCHAR}

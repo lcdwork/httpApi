@@ -12,9 +12,14 @@
     <!--@mbg.generated-->
     ID, ELOAD, ETPC
   </sql>
+  <select id="findByWhere" parameterType="com.crplingxi.httpapi.webapp.domain.PowerLoadRealTime" resultType="com.crplingxi.httpapi.webapp.domain.PowerLoadRealTime" useCache="true">
+    select
+    <include refid="Base_Column_List" />
+    from POWER_LOAD_REAL_TIME
+  </select>
   <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
     <!--@mbg.generated-->
-    select 
+    select
     <include refid="Base_Column_List" />
     from POWER_LOAD_REAL_TIME
     where ID = #{id,jdbcType=VARCHAR}

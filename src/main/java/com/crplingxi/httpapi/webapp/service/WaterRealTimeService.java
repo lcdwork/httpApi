@@ -1,9 +1,13 @@
 package com.crplingxi.httpapi.webapp.service;
 
+import com.crplingxi.httpapi.webapp.domain.AirRealTime;
 import com.crplingxi.httpapi.webapp.domain.WaterRealTime;
+
+import java.util.List;
 
 public interface WaterRealTimeService {
 
+    List<WaterRealTime> findByWhere(WaterRealTime t);
 
     int deleteByPrimaryKey(String id);
 

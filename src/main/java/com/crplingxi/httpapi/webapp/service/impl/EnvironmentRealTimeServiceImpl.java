@@ -8,11 +8,18 @@ import com.crplingxi.httpapi.webapp.dao.EnvironmentRealTimeMapper;
 import com.crplingxi.httpapi.webapp.domain.EnvironmentRealTime;
 import com.crplingxi.httpapi.webapp.service.EnvironmentRealTimeService;
 
+import java.util.List;
+
 @TransactionService
 public class EnvironmentRealTimeServiceImpl implements EnvironmentRealTimeService {
 
-    @TransactionDAO("gffpOracle")
+    @TransactionDAO("httpOracle")
     private EnvironmentRealTimeMapper environmentRealTimeMapper;
+
+    @Override
+    public List<EnvironmentRealTime> findByWhere(EnvironmentRealTime t) {
+        return environmentRealTimeMapper.findByWhere(t);
+    }
 
     @Override
     public int deleteByPrimaryKey(String id) {

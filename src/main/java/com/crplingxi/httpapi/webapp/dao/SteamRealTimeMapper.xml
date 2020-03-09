@@ -17,9 +17,14 @@
     <!--@mbg.generated-->
     ID, STEAMIF, STEAMSF, STEAMTEMP, STEAMPR, STEAMSH, STEAMIH, DENS
   </sql>
+  <select id="findByWhere" parameterType="com.crplingxi.httpapi.webapp.domain.SteamRealTime" resultType="com.crplingxi.httpapi.webapp.domain.SteamRealTime" useCache="true">
+    select
+    <include refid="Base_Column_List" />
+    from STEAM_REAL_TIME
+  </select>
   <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
     <!--@mbg.generated-->
-    select 
+    select
     <include refid="Base_Column_List" />
     from STEAM_REAL_TIME
     where ID = #{id,jdbcType=VARCHAR}
@@ -31,11 +36,11 @@
   </delete>
   <insert id="insert" parameterType="com.crplingxi.httpapi.webapp.domain.SteamRealTime">
     <!--@mbg.generated-->
-    insert into STEAM_REAL_TIME (ID, STEAMIF, STEAMSF, 
-      STEAMTEMP, STEAMPR, STEAMSH, 
+    insert into STEAM_REAL_TIME (ID, STEAMIF, STEAMSF,
+      STEAMTEMP, STEAMPR, STEAMSH,
       STEAMIH, DENS)
-    values (#{id,jdbcType=VARCHAR}, #{steamif,jdbcType=DECIMAL}, #{steamsf,jdbcType=DECIMAL}, 
-      #{steamtemp,jdbcType=DECIMAL}, #{steampr,jdbcType=DECIMAL}, #{steamsh,jdbcType=DECIMAL}, 
+    values (#{id,jdbcType=VARCHAR}, #{steamif,jdbcType=DECIMAL}, #{steamsf,jdbcType=DECIMAL},
+      #{steamtemp,jdbcType=DECIMAL}, #{steampr,jdbcType=DECIMAL}, #{steamsh,jdbcType=DECIMAL},
       #{steamih,jdbcType=DECIMAL}, #{dens,jdbcType=DECIMAL})
   </insert>
   <update id="updateByPrimaryKey" parameterType="com.crplingxi.httpapi.webapp.domain.SteamRealTime">

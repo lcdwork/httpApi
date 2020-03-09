@@ -53,13 +53,18 @@
   </resultMap>
   <sql id="Base_Column_List">
     <!--@mbg.generated-->
-    ID, PTTL, PA, PB, PC, QTTL, QA, QB, QC, SA, SB, SC, STTL, COSTTL, COSA, COSB, COSC, 
-    IA, IB, IC, ZSC, UA, UB, UC, UAB, UBC, UCA, LR, FREQ, UBLI, UBLU, EUA, EUB, EUC, 
+    ID, PTTL, PA, PB, PC, QTTL, QA, QB, QC, SA, SB, SC, STTL, COSTTL, COSA, COSB, COSC,
+    IA, IB, IC, ZSC, UA, UB, UC, UAB, UBC, UCA, LR, FREQ, UBLI, UBLU, EUA, EUB, EUC,
     EUAB, EUBC, EUCA, EFREQ, TEM1, TEM2, TEM3, TEM4, TEM5, TEM6, TEM7, TEM8
   </sql>
+  <select id="findByWhere" parameterType="com.crplingxi.httpapi.webapp.domain.ElectricRealTime" resultType="com.crplingxi.httpapi.webapp.domain.ElectricRealTime" useCache="true">
+    select
+    <include refid="Base_Column_List" />
+    from ELECTRIC_REAL_TIME
+  </select>
   <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
     <!--@mbg.generated-->
-    select 
+    select
     <include refid="Base_Column_List" />
     from ELECTRIC_REAL_TIME
     where ID = #{id,jdbcType=VARCHAR}
@@ -71,30 +76,30 @@
   </delete>
   <insert id="insert" parameterType="com.crplingxi.httpapi.webapp.domain.ElectricRealTime">
     <!--@mbg.generated-->
-    insert into ELECTRIC_REAL_TIME (ID, PTTL, PA, 
-      PB, PC, QTTL, QA, 
-      QB, QC, SA, SB, 
-      SC, STTL, COSTTL, COSA, 
-      COSB, COSC, IA, IB, 
-      IC, ZSC, UA, UB, 
-      UC, UAB, UBC, UCA, 
-      LR, FREQ, UBLI, UBLU, 
-      EUA, EUB, EUC, EUAB, 
-      EUBC, EUCA, EFREQ, 
-      TEM1, TEM2, TEM3, TEM4, 
+    insert into ELECTRIC_REAL_TIME (ID, PTTL, PA,
+      PB, PC, QTTL, QA,
+      QB, QC, SA, SB,
+      SC, STTL, COSTTL, COSA,
+      COSB, COSC, IA, IB,
+      IC, ZSC, UA, UB,
+      UC, UAB, UBC, UCA,
+      LR, FREQ, UBLI, UBLU,
+      EUA, EUB, EUC, EUAB,
+      EUBC, EUCA, EFREQ,
+      TEM1, TEM2, TEM3, TEM4,
       TEM5, TEM6, TEM7, TEM8
       )
-    values (#{id,jdbcType=VARCHAR}, #{pttl,jdbcType=DECIMAL}, #{pa,jdbcType=DECIMAL}, 
-      #{pb,jdbcType=DECIMAL}, #{pc,jdbcType=DECIMAL}, #{qttl,jdbcType=DECIMAL}, #{qa,jdbcType=DECIMAL}, 
-      #{qb,jdbcType=DECIMAL}, #{qc,jdbcType=DECIMAL}, #{sa,jdbcType=DECIMAL}, #{sb,jdbcType=DECIMAL}, 
-      #{sc,jdbcType=DECIMAL}, #{sttl,jdbcType=DECIMAL}, #{costtl,jdbcType=DECIMAL}, #{cosa,jdbcType=DECIMAL}, 
-      #{cosb,jdbcType=DECIMAL}, #{cosc,jdbcType=DECIMAL}, #{ia,jdbcType=DECIMAL}, #{ib,jdbcType=DECIMAL}, 
-      #{ic,jdbcType=DECIMAL}, #{zsc,jdbcType=DECIMAL}, #{ua,jdbcType=DECIMAL}, #{ub,jdbcType=DECIMAL}, 
-      #{uc,jdbcType=DECIMAL}, #{uab,jdbcType=DECIMAL}, #{ubc,jdbcType=DECIMAL}, #{uca,jdbcType=DECIMAL}, 
-      #{lr,jdbcType=DECIMAL}, #{freq,jdbcType=DECIMAL}, #{ubli,jdbcType=DECIMAL}, #{ublu,jdbcType=DECIMAL}, 
-      #{eua,jdbcType=DECIMAL}, #{eub,jdbcType=DECIMAL}, #{euc,jdbcType=DECIMAL}, #{euab,jdbcType=DECIMAL}, 
-      #{eubc,jdbcType=DECIMAL}, #{euca,jdbcType=DECIMAL}, #{efreq,jdbcType=DECIMAL}, 
-      #{tem1,jdbcType=DECIMAL}, #{tem2,jdbcType=DECIMAL}, #{tem3,jdbcType=DECIMAL}, #{tem4,jdbcType=DECIMAL}, 
+    values (#{id,jdbcType=VARCHAR}, #{pttl,jdbcType=DECIMAL}, #{pa,jdbcType=DECIMAL},
+      #{pb,jdbcType=DECIMAL}, #{pc,jdbcType=DECIMAL}, #{qttl,jdbcType=DECIMAL}, #{qa,jdbcType=DECIMAL},
+      #{qb,jdbcType=DECIMAL}, #{qc,jdbcType=DECIMAL}, #{sa,jdbcType=DECIMAL}, #{sb,jdbcType=DECIMAL},
+      #{sc,jdbcType=DECIMAL}, #{sttl,jdbcType=DECIMAL}, #{costtl,jdbcType=DECIMAL}, #{cosa,jdbcType=DECIMAL},
+      #{cosb,jdbcType=DECIMAL}, #{cosc,jdbcType=DECIMAL}, #{ia,jdbcType=DECIMAL}, #{ib,jdbcType=DECIMAL},
+      #{ic,jdbcType=DECIMAL}, #{zsc,jdbcType=DECIMAL}, #{ua,jdbcType=DECIMAL}, #{ub,jdbcType=DECIMAL},
+      #{uc,jdbcType=DECIMAL}, #{uab,jdbcType=DECIMAL}, #{ubc,jdbcType=DECIMAL}, #{uca,jdbcType=DECIMAL},
+      #{lr,jdbcType=DECIMAL}, #{freq,jdbcType=DECIMAL}, #{ubli,jdbcType=DECIMAL}, #{ublu,jdbcType=DECIMAL},
+      #{eua,jdbcType=DECIMAL}, #{eub,jdbcType=DECIMAL}, #{euc,jdbcType=DECIMAL}, #{euab,jdbcType=DECIMAL},
+      #{eubc,jdbcType=DECIMAL}, #{euca,jdbcType=DECIMAL}, #{efreq,jdbcType=DECIMAL},
+      #{tem1,jdbcType=DECIMAL}, #{tem2,jdbcType=DECIMAL}, #{tem3,jdbcType=DECIMAL}, #{tem4,jdbcType=DECIMAL},
       #{tem5,jdbcType=DECIMAL}, #{tem6,jdbcType=DECIMAL}, #{tem7,jdbcType=DECIMAL}, #{tem8,jdbcType=DECIMAL}
       )
   </insert>

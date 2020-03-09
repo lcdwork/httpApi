@@ -60,16 +60,21 @@
   </resultMap>
   <sql id="Base_Column_List">
     <!--@mbg.generated-->
-    ID, KVARHLI, KVARHLI1, KVARHLI2, KVARHLI3, KVARHLI4, KVARHLI5, KVARHLI6, KVARHLI7, 
-    KVARHLI8, KVARHLI9, KVARHLI10, KVARHLI11, KVARHLI12, KWHLE, KWHLE1, KWHLE2, KWHLE3, 
-    KWHLE4, KWHLE5, KWHLE6, KWHLE7, KWHLE8, KWHLE9, KWHLE10, KWHLE11, KWHLE12, KVARHLE, 
-    KVARHLE1, KVARHLE2, KVARHLE3, KVARHLE4, KVARHLE5, KVARHLE6, KVARHLE7, KVARHLE8, KVARHLE9, 
-    KVARHLE10, KVARHLE11, KVARHLE12, KWHLI, KWHLI1, KWHLI2, KWHLI3, KWHLI4, KWHLI5, KWHLI6, 
+    ID, KVARHLI, KVARHLI1, KVARHLI2, KVARHLI3, KVARHLI4, KVARHLI5, KVARHLI6, KVARHLI7,
+    KVARHLI8, KVARHLI9, KVARHLI10, KVARHLI11, KVARHLI12, KWHLE, KWHLE1, KWHLE2, KWHLE3,
+    KWHLE4, KWHLE5, KWHLE6, KWHLE7, KWHLE8, KWHLE9, KWHLE10, KWHLE11, KWHLE12, KVARHLE,
+    KVARHLE1, KVARHLE2, KVARHLE3, KVARHLE4, KVARHLE5, KVARHLE6, KVARHLE7, KVARHLE8, KVARHLE9,
+    KVARHLE10, KVARHLE11, KVARHLE12, KWHLI, KWHLI1, KWHLI2, KWHLI3, KWHLI4, KWHLI5, KWHLI6,
     KWHLI7, KWHLI8, KWHLI9, KWHLI10, KWHLI11, KWHLI12
   </sql>
+  <select id="findByWhere" parameterType="com.crplingxi.httpapi.webapp.domain.PowerRealTime" resultType="com.crplingxi.httpapi.webapp.domain.PowerRealTime" useCache="true">
+    select
+    <include refid="Base_Column_List" />
+    from POWER_REAL_TIME
+  </select>
   <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
     <!--@mbg.generated-->
-    select 
+    select
     <include refid="Base_Column_List" />
     from POWER_REAL_TIME
     where ID = #{id,jdbcType=VARCHAR}
@@ -81,41 +86,41 @@
   </delete>
   <insert id="insert" parameterType="com.crplingxi.httpapi.webapp.domain.PowerRealTime">
     <!--@mbg.generated-->
-    insert into POWER_REAL_TIME (ID, KVARHLI, KVARHLI1, 
-      KVARHLI2, KVARHLI3, KVARHLI4, 
-      KVARHLI5, KVARHLI6, KVARHLI7, 
-      KVARHLI8, KVARHLI9, KVARHLI10, 
-      KVARHLI11, KVARHLI12, KWHLE, 
-      KWHLE1, KWHLE2, KWHLE3, 
-      KWHLE4, KWHLE5, KWHLE6, 
-      KWHLE7, KWHLE8, KWHLE9, 
-      KWHLE10, KWHLE11, KWHLE12, 
-      KVARHLE, KVARHLE1, KVARHLE2, 
-      KVARHLE3, KVARHLE4, KVARHLE5, 
-      KVARHLE6, KVARHLE7, KVARHLE8, 
-      KVARHLE9, KVARHLE10, KVARHLE11, 
-      KVARHLE12, KWHLI, KWHLI1, 
-      KWHLI2, KWHLI3, KWHLI4, 
-      KWHLI5, KWHLI6, KWHLI7, 
-      KWHLI8, KWHLI9, KWHLI10, 
+    insert into POWER_REAL_TIME (ID, KVARHLI, KVARHLI1,
+      KVARHLI2, KVARHLI3, KVARHLI4,
+      KVARHLI5, KVARHLI6, KVARHLI7,
+      KVARHLI8, KVARHLI9, KVARHLI10,
+      KVARHLI11, KVARHLI12, KWHLE,
+      KWHLE1, KWHLE2, KWHLE3,
+      KWHLE4, KWHLE5, KWHLE6,
+      KWHLE7, KWHLE8, KWHLE9,
+      KWHLE10, KWHLE11, KWHLE12,
+      KVARHLE, KVARHLE1, KVARHLE2,
+      KVARHLE3, KVARHLE4, KVARHLE5,
+      KVARHLE6, KVARHLE7, KVARHLE8,
+      KVARHLE9, KVARHLE10, KVARHLE11,
+      KVARHLE12, KWHLI, KWHLI1,
+      KWHLI2, KWHLI3, KWHLI4,
+      KWHLI5, KWHLI6, KWHLI7,
+      KWHLI8, KWHLI9, KWHLI10,
       KWHLI11, KWHLI12)
-    values (#{id,jdbcType=VARCHAR}, #{kvarhli,jdbcType=DECIMAL}, #{kvarhli1,jdbcType=DECIMAL}, 
-      #{kvarhli2,jdbcType=DECIMAL}, #{kvarhli3,jdbcType=DECIMAL}, #{kvarhli4,jdbcType=DECIMAL}, 
-      #{kvarhli5,jdbcType=DECIMAL}, #{kvarhli6,jdbcType=DECIMAL}, #{kvarhli7,jdbcType=DECIMAL}, 
-      #{kvarhli8,jdbcType=DECIMAL}, #{kvarhli9,jdbcType=DECIMAL}, #{kvarhli10,jdbcType=DECIMAL}, 
-      #{kvarhli11,jdbcType=DECIMAL}, #{kvarhli12,jdbcType=DECIMAL}, #{kwhle,jdbcType=DECIMAL}, 
-      #{kwhle1,jdbcType=DECIMAL}, #{kwhle2,jdbcType=DECIMAL}, #{kwhle3,jdbcType=DECIMAL}, 
-      #{kwhle4,jdbcType=DECIMAL}, #{kwhle5,jdbcType=DECIMAL}, #{kwhle6,jdbcType=DECIMAL}, 
-      #{kwhle7,jdbcType=DECIMAL}, #{kwhle8,jdbcType=DECIMAL}, #{kwhle9,jdbcType=DECIMAL}, 
-      #{kwhle10,jdbcType=DECIMAL}, #{kwhle11,jdbcType=DECIMAL}, #{kwhle12,jdbcType=DECIMAL}, 
-      #{kvarhle,jdbcType=DECIMAL}, #{kvarhle1,jdbcType=DECIMAL}, #{kvarhle2,jdbcType=DECIMAL}, 
-      #{kvarhle3,jdbcType=DECIMAL}, #{kvarhle4,jdbcType=DECIMAL}, #{kvarhle5,jdbcType=DECIMAL}, 
-      #{kvarhle6,jdbcType=DECIMAL}, #{kvarhle7,jdbcType=DECIMAL}, #{kvarhle8,jdbcType=DECIMAL}, 
-      #{kvarhle9,jdbcType=DECIMAL}, #{kvarhle10,jdbcType=DECIMAL}, #{kvarhle11,jdbcType=DECIMAL}, 
-      #{kvarhle12,jdbcType=DECIMAL}, #{kwhli,jdbcType=DECIMAL}, #{kwhli1,jdbcType=DECIMAL}, 
-      #{kwhli2,jdbcType=DECIMAL}, #{kwhli3,jdbcType=DECIMAL}, #{kwhli4,jdbcType=DECIMAL}, 
-      #{kwhli5,jdbcType=DECIMAL}, #{kwhli6,jdbcType=DECIMAL}, #{kwhli7,jdbcType=DECIMAL}, 
-      #{kwhli8,jdbcType=DECIMAL}, #{kwhli9,jdbcType=DECIMAL}, #{kwhli10,jdbcType=DECIMAL}, 
+    values (#{id,jdbcType=VARCHAR}, #{kvarhli,jdbcType=DECIMAL}, #{kvarhli1,jdbcType=DECIMAL},
+      #{kvarhli2,jdbcType=DECIMAL}, #{kvarhli3,jdbcType=DECIMAL}, #{kvarhli4,jdbcType=DECIMAL},
+      #{kvarhli5,jdbcType=DECIMAL}, #{kvarhli6,jdbcType=DECIMAL}, #{kvarhli7,jdbcType=DECIMAL},
+      #{kvarhli8,jdbcType=DECIMAL}, #{kvarhli9,jdbcType=DECIMAL}, #{kvarhli10,jdbcType=DECIMAL},
+      #{kvarhli11,jdbcType=DECIMAL}, #{kvarhli12,jdbcType=DECIMAL}, #{kwhle,jdbcType=DECIMAL},
+      #{kwhle1,jdbcType=DECIMAL}, #{kwhle2,jdbcType=DECIMAL}, #{kwhle3,jdbcType=DECIMAL},
+      #{kwhle4,jdbcType=DECIMAL}, #{kwhle5,jdbcType=DECIMAL}, #{kwhle6,jdbcType=DECIMAL},
+      #{kwhle7,jdbcType=DECIMAL}, #{kwhle8,jdbcType=DECIMAL}, #{kwhle9,jdbcType=DECIMAL},
+      #{kwhle10,jdbcType=DECIMAL}, #{kwhle11,jdbcType=DECIMAL}, #{kwhle12,jdbcType=DECIMAL},
+      #{kvarhle,jdbcType=DECIMAL}, #{kvarhle1,jdbcType=DECIMAL}, #{kvarhle2,jdbcType=DECIMAL},
+      #{kvarhle3,jdbcType=DECIMAL}, #{kvarhle4,jdbcType=DECIMAL}, #{kvarhle5,jdbcType=DECIMAL},
+      #{kvarhle6,jdbcType=DECIMAL}, #{kvarhle7,jdbcType=DECIMAL}, #{kvarhle8,jdbcType=DECIMAL},
+      #{kvarhle9,jdbcType=DECIMAL}, #{kvarhle10,jdbcType=DECIMAL}, #{kvarhle11,jdbcType=DECIMAL},
+      #{kvarhle12,jdbcType=DECIMAL}, #{kwhli,jdbcType=DECIMAL}, #{kwhli1,jdbcType=DECIMAL},
+      #{kwhli2,jdbcType=DECIMAL}, #{kwhli3,jdbcType=DECIMAL}, #{kwhli4,jdbcType=DECIMAL},
+      #{kwhli5,jdbcType=DECIMAL}, #{kwhli6,jdbcType=DECIMAL}, #{kwhli7,jdbcType=DECIMAL},
+      #{kwhli8,jdbcType=DECIMAL}, #{kwhli9,jdbcType=DECIMAL}, #{kwhli10,jdbcType=DECIMAL},
       #{kwhli11,jdbcType=DECIMAL}, #{kwhli12,jdbcType=DECIMAL})
   </insert>
   <update id="updateByPrimaryKey" parameterType="com.crplingxi.httpapi.webapp.domain.PowerRealTime">

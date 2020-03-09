@@ -19,9 +19,14 @@
     <!--@mbg.generated-->
     ID, ENVTPR, ENVP, DUST, H, WS, WC, WD, CCO2, GZQD
   </sql>
+  <select id="findByWhere" parameterType="com.crplingxi.httpapi.webapp.domain.EnvironmentRealTime" resultType="com.crplingxi.httpapi.webapp.domain.EnvironmentRealTime" useCache="true">
+    select
+    <include refid="Base_Column_List" />
+    from ENVIRONMENT_REAL_TIME
+  </select>
   <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
     <!--@mbg.generated-->
-    select 
+    select
     <include refid="Base_Column_List" />
     from ENVIRONMENT_REAL_TIME
     where ID = #{id,jdbcType=VARCHAR}
@@ -33,11 +38,11 @@
   </delete>
   <insert id="insert" parameterType="com.crplingxi.httpapi.webapp.domain.EnvironmentRealTime">
     <!--@mbg.generated-->
-    insert into ENVIRONMENT_REAL_TIME (ID, ENVTPR, ENVP, 
-      DUST, H, WS, WC, 
+    insert into ENVIRONMENT_REAL_TIME (ID, ENVTPR, ENVP,
+      DUST, H, WS, WC,
       WD, CCO2, GZQD)
-    values (#{id,jdbcType=VARCHAR}, #{envtpr,jdbcType=DECIMAL}, #{envp,jdbcType=DECIMAL}, 
-      #{dust,jdbcType=DECIMAL}, #{h,jdbcType=DECIMAL}, #{ws,jdbcType=DECIMAL}, #{wc,jdbcType=VARCHAR}, 
+    values (#{id,jdbcType=VARCHAR}, #{envtpr,jdbcType=DECIMAL}, #{envp,jdbcType=DECIMAL},
+      #{dust,jdbcType=DECIMAL}, #{h,jdbcType=DECIMAL}, #{ws,jdbcType=DECIMAL}, #{wc,jdbcType=VARCHAR},
       #{wd,jdbcType=VARCHAR}, #{cco2,jdbcType=DECIMAL}, #{gzqd,jdbcType=DECIMAL})
   </insert>
   <update id="updateByPrimaryKey" parameterType="com.crplingxi.httpapi.webapp.domain.EnvironmentRealTime">

@@ -8,11 +8,18 @@ import com.crplingxi.httpapi.webapp.dao.PowerRealTimeMapper;
 import com.crplingxi.httpapi.webapp.domain.PowerRealTime;
 import com.crplingxi.httpapi.webapp.service.PowerRealTimeService;
 
+import java.util.List;
+
 @TransactionService
 public class PowerRealTimeServiceImpl implements PowerRealTimeService {
 
-    @TransactionDAO("gffpOracle")
+    @TransactionDAO("httpOracle")
     private PowerRealTimeMapper powerRealTimeMapper;
+
+    @Override
+    public List<PowerRealTime> findByWhere(PowerRealTime t) {
+        return powerRealTimeMapper.findByWhere(t);
+    }
 
     @Override
     public int deleteByPrimaryKey(String id) {

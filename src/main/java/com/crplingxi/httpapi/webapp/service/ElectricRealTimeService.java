@@ -1,9 +1,13 @@
 package com.crplingxi.httpapi.webapp.service;
 
+import com.crplingxi.httpapi.webapp.domain.AirRealTime;
 import com.crplingxi.httpapi.webapp.domain.ElectricRealTime;
+
+import java.util.List;
 
 public interface ElectricRealTimeService {
 
+    List<ElectricRealTime> findByWhere(ElectricRealTime t);
 
     int deleteByPrimaryKey(String id);
 

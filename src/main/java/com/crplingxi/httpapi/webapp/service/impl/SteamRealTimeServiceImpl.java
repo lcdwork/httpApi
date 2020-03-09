@@ -8,11 +8,18 @@ import com.crplingxi.httpapi.webapp.dao.SteamRealTimeMapper;
 import com.crplingxi.httpapi.webapp.domain.SteamRealTime;
 import com.crplingxi.httpapi.webapp.service.SteamRealTimeService;
 
+import java.util.List;
+
 @TransactionService
 public class SteamRealTimeServiceImpl implements SteamRealTimeService {
 
-    @TransactionDAO("gffpOracle")
+    @TransactionDAO("httpOracle")
     private SteamRealTimeMapper steamRealTimeMapper;
+
+    @Override
+    public List<SteamRealTime> findByWhere(SteamRealTime t) {
+        return steamRealTimeMapper.findByWhere(t);
+    }
 
     @Override
     public int deleteByPrimaryKey(String id) {

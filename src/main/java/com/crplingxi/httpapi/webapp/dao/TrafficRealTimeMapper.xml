@@ -20,9 +20,14 @@
     <!--@mbg.generated-->
     ID, IV, IFR, CD, P, TPR, CV, DAYSYSTEMCOP, MONSYSTEMCOP, YEARSYSTEMCOP, INSTSYSTEMCOP
   </sql>
+  <select id="findByWhere" parameterType="com.crplingxi.httpapi.webapp.domain.TrafficRealTime" resultType="com.crplingxi.httpapi.webapp.domain.TrafficRealTime" useCache="true">
+    select
+    <include refid="Base_Column_List" />
+    from TRAFFIC_REAL_TIME
+  </select>
   <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
     <!--@mbg.generated-->
-    select 
+    select
     <include refid="Base_Column_List" />
     from TRAFFIC_REAL_TIME
     where ID = #{id,jdbcType=VARCHAR}
@@ -34,13 +39,13 @@
   </delete>
   <insert id="insert" parameterType="com.crplingxi.httpapi.webapp.domain.TrafficRealTime">
     <!--@mbg.generated-->
-    insert into TRAFFIC_REAL_TIME (ID, IV, IFR, 
-      CD, P, TPR, CV, 
-      DAYSYSTEMCOP, MONSYSTEMCOP, YEARSYSTEMCOP, 
+    insert into TRAFFIC_REAL_TIME (ID, IV, IFR,
+      CD, P, TPR, CV,
+      DAYSYSTEMCOP, MONSYSTEMCOP, YEARSYSTEMCOP,
       INSTSYSTEMCOP)
-    values (#{id,jdbcType=VARCHAR}, #{iv,jdbcType=DECIMAL}, #{ifr,jdbcType=DECIMAL}, 
-      #{cd,jdbcType=DECIMAL}, #{p,jdbcType=DECIMAL}, #{tpr,jdbcType=DECIMAL}, #{cv,jdbcType=DECIMAL}, 
-      #{daysystemcop,jdbcType=DECIMAL}, #{monsystemcop,jdbcType=DECIMAL}, #{yearsystemcop,jdbcType=DECIMAL}, 
+    values (#{id,jdbcType=VARCHAR}, #{iv,jdbcType=DECIMAL}, #{ifr,jdbcType=DECIMAL},
+      #{cd,jdbcType=DECIMAL}, #{p,jdbcType=DECIMAL}, #{tpr,jdbcType=DECIMAL}, #{cv,jdbcType=DECIMAL},
+      #{daysystemcop,jdbcType=DECIMAL}, #{monsystemcop,jdbcType=DECIMAL}, #{yearsystemcop,jdbcType=DECIMAL},
       #{instsystemcop,jdbcType=DECIMAL})
   </insert>
   <update id="updateByPrimaryKey" parameterType="com.crplingxi.httpapi.webapp.domain.TrafficRealTime">

@@ -8,11 +8,18 @@ import com.crplingxi.httpapi.webapp.dao.TrafficRealTimeMapper;
 import com.crplingxi.httpapi.webapp.domain.TrafficRealTime;
 import com.crplingxi.httpapi.webapp.service.TrafficRealTimeService;
 
+import java.util.List;
+
 @TransactionService
 public class TrafficRealTimeServiceImpl implements TrafficRealTimeService {
 
-    @TransactionDAO("gffpOracle")
+    @TransactionDAO("httpOracle")
     private TrafficRealTimeMapper trafficRealTimeMapper;
+
+    @Override
+    public List<TrafficRealTime> findByWhere(TrafficRealTime t) {
+        return trafficRealTimeMapper.findByWhere(t);
+    }
 
     @Override
     public int deleteByPrimaryKey(String id) {

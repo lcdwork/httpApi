@@ -10,6 +10,11 @@
     <result column="CCO" jdbcType="DECIMAL" property="cco" />
     <result column="C" jdbcType="DECIMAL" property="c" />
   </resultMap>
+  <select id="findByWhere" parameterType="com.crplingxi.httpapi.webapp.domain.AirRealTime" resultType="com.crplingxi.httpapi.webapp.domain.AirRealTime" useCache="true">
+    select
+    <include refid="Base_Column_List" />
+    from AIR_REAL_TIME
+  </select>
   <sql id="Base_Column_List">
     <!--@mbg.generated-->
     ID, CSO2, CNOX, CCO, "C"

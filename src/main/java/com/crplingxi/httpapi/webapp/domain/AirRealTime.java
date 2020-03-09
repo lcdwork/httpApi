@@ -1,10 +1,12 @@
 package com.crplingxi.httpapi.webapp.domain;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.riozenc.titanTool.mybatis.MybatisEntity;
 import java.math.BigDecimal;
 
 public class AirRealTime implements MybatisEntity {
     private static final long serialVersionUID = 1L;
+
     private String id;
 
     /**

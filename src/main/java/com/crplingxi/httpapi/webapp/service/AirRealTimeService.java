@@ -2,8 +2,11 @@ package com.crplingxi.httpapi.webapp.service;
 
 import com.crplingxi.httpapi.webapp.domain.AirRealTime;
 
+import java.util.List;
+
 public interface AirRealTimeService {
 
+    List<AirRealTime> findByWhere(AirRealTime t);
 
     int deleteByPrimaryKey(String id);
 

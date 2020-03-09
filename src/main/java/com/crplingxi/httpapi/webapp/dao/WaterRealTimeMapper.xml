@@ -13,9 +13,14 @@
     <!--@mbg.generated-->
     ID, WATERIF, WATERSF, WATERTEMP
   </sql>
+  <select id="findByWhere" parameterType="com.crplingxi.httpapi.webapp.domain.WaterRealTime" resultType="com.crplingxi.httpapi.webapp.domain.WaterRealTime" useCache="true">
+    select
+    <include refid="Base_Column_List" />
+    from WATER_REAL_TIME
+  </select>
   <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
     <!--@mbg.generated-->
-    select 
+    select
     <include refid="Base_Column_List" />
     from WATER_REAL_TIME
     where ID = #{id,jdbcType=VARCHAR}
@@ -27,9 +32,9 @@
   </delete>
   <insert id="insert" parameterType="com.crplingxi.httpapi.webapp.domain.WaterRealTime">
     <!--@mbg.generated-->
-    insert into WATER_REAL_TIME (ID, WATERIF, WATERSF, 
+    insert into WATER_REAL_TIME (ID, WATERIF, WATERSF,
       WATERTEMP)
-    values (#{id,jdbcType=VARCHAR}, #{waterif,jdbcType=DECIMAL}, #{watersf,jdbcType=DECIMAL}, 
+    values (#{id,jdbcType=VARCHAR}, #{waterif,jdbcType=DECIMAL}, #{watersf,jdbcType=DECIMAL},
       #{watertemp,jdbcType=DECIMAL})
   </insert>
   <update id="updateByPrimaryKey" parameterType="com.crplingxi.httpapi.webapp.domain.WaterRealTime">

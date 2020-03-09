@@ -8,11 +8,18 @@ import com.crplingxi.httpapi.webapp.dao.HccRateRealTimeMapper;
 import com.crplingxi.httpapi.webapp.domain.HccRateRealTime;
 import com.crplingxi.httpapi.webapp.service.HccRateRealTimeService;
 
+import java.util.List;
+
 @TransactionService
 public class HccRateRealTimeServiceImpl implements HccRateRealTimeService {
 
-    @TransactionDAO("gffpOracle")
+    @TransactionDAO("httpOracle")
     private HccRateRealTimeMapper hccRateRealTimeMapper;
+
+    @Override
+    public List<HccRateRealTime> findByWhere(HccRateRealTime t) {
+        return hccRateRealTimeMapper.findByWhere(t);
+    }
 
     @Override
     public int deleteByPrimaryKey(String id) {

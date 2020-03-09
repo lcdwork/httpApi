@@ -13,13 +13,13 @@ public class HttpTools {
 
     // 推送数据方法
     @Retryable
-    public static String postData(String url) {
+    public static String postData(String url, String json) {
         RestTemplate restTemplate = new RestTemplate();
         HttpHeaders headers = new HttpHeaders();
         headers.setContentType(MediaType.APPLICATION_JSON);
 
         try {
-             HttpEntity<String> request = new HttpEntity<>(null, headers);
+             HttpEntity<String> request = new HttpEntity<>(json, headers);
              ResponseEntity<String> response = restTemplate.postForEntity( url, request , String.class );
             // ResponseEntity<Map> response = restTemplate.postForEntity( url, request , Map.class );
              return response.getBody();

@@ -1,9 +1,13 @@
 package com.crplingxi.httpapi.webapp.service;
 
+import com.crplingxi.httpapi.webapp.domain.AirRealTime;
 import com.crplingxi.httpapi.webapp.domain.PowerLoadRealTime;
+
+import java.util.List;
 
 public interface PowerLoadRealTimeService {
 
+    List<PowerLoadRealTime> findByWhere(PowerLoadRealTime t);
 
     int deleteByPrimaryKey(String id);
 

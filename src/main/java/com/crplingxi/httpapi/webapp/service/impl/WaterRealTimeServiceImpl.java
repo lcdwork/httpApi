@@ -8,11 +8,18 @@ import com.crplingxi.httpapi.webapp.dao.WaterRealTimeMapper;
 import com.crplingxi.httpapi.webapp.domain.WaterRealTime;
 import com.crplingxi.httpapi.webapp.service.WaterRealTimeService;
 
+import java.util.List;
+
 @TransactionService
 public class WaterRealTimeServiceImpl implements WaterRealTimeService {
 
-    @TransactionDAO("gffpOracle")
+    @TransactionDAO("httpOracle")
     private WaterRealTimeMapper waterRealTimeMapper;
+
+    @Override
+    public List<WaterRealTime> findByWhere(WaterRealTime t) {
+        return waterRealTimeMapper.findByWhere(t);
+    }
 
     @Override
     public int deleteByPrimaryKey(String id) {

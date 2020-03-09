@@ -3,16 +3,21 @@ package com.crplingxi.httpapi.webapp.service.impl;
 import com.crplingxi.httpapi.webapp.service.AirRealTimeService;
 import com.riozenc.titanTool.annotation.TransactionDAO;
 import com.riozenc.titanTool.annotation.TransactionService;
-import org.springframework.stereotype.Service;
-import javax.annotation.Resource;
 import com.crplingxi.httpapi.webapp.domain.AirRealTime;
 import com.crplingxi.httpapi.webapp.dao.AirRealTimeMapper;
+
+import java.util.List;
 
 @TransactionService
 public class AirRealTimeServiceImpl implements AirRealTimeService {
 
-    @TransactionDAO("gffpOracle")
+    @TransactionDAO("httpOracle")
     private AirRealTimeMapper airRealTimeMapper;
+
+    @Override
+    public List<AirRealTime> findByWhere(AirRealTime t) {
+        return airRealTimeMapper.findByWhere(t);
+    }
 
     @Override
     public int deleteByPrimaryKey(String id) {

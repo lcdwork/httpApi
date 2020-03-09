@@ -1,9 +1,13 @@
 package com.crplingxi.httpapi.webapp.service;
 
+import com.crplingxi.httpapi.webapp.domain.AirRealTime;
 import com.crplingxi.httpapi.webapp.domain.HcvRateRealTime;
+
+import java.util.List;
 
 public interface HcvRateRealTimeService {
 
+    List<HcvRateRealTime> findByWhere(HcvRateRealTime t);
 
     int deleteByPrimaryKey(String id);
 
