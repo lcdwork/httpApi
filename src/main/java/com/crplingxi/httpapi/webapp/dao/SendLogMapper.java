@@ -9,4 +9,8 @@ public class SendLogMapper extends AbstractTransactionDAOSupport {
     public int insert(SendLog record) {
         return getPersistanceManager().insert(getNamespace() + ".insert", record);
     }
+
+    public SendLog getLastLog(SendLog record){
+        return getPersistanceManager().load(getNamespace() + ".findLast", record);
+    }
 }

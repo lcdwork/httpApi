@@ -19,4 +19,16 @@
     values (#{tableName,jdbcType=VARCHAR}, #{errCode,jdbcType=VARCHAR}, #{errMsg,jdbcType=VARCHAR}, #{errData,jdbcType=VARCHAR}, #{sendSize,jdbcType=INTEGER}, #{sendTime,jdbcType=DATE},
       #{status,jdbcType=SMALLINT})
   </insert>
+  <select id="findLast" parameterType="com.crplingxi.httpapi.webapp.domain.SendLog" resultType="com.crplingxi.httpapi.webapp.domain.SendLog" useCache="true">
+    select
+    "TABLE_NAME", ERR_CODE, ERR_MSG, ERR_DATA, SEND_SIZE, SEND_TIME,
+    "STATUS"
+    from(select * from SEND_LOG order by SEND_TIME desc) where rownum = 1
+    <if test="tableName !=null">
+      and "TABLE_NAME" = #{tableName}
+    </if>
+    <if test="status !=null">
+      and "STATUS" = #{status}
+    </if>
+  </select>
 </mapper>

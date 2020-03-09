@@ -6,4 +6,8 @@ public interface SendLogService{
 
     int insert(SendLog record);
 
+    int insertByRes(String tableName, int size, String jsonList, String res);
+
+    SendLog getLastLog(SendLog record);
+
 }

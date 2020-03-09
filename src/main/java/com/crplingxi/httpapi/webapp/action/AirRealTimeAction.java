@@ -46,40 +46,23 @@ public class AirRealTimeAction {
     @Scheduled(cron = "${test.cron}")
     public String putTest() {
 
-        List<AirRealTime> dataList = airRealTimeService.findByWhere(null);
-        if(dataList.size() > 0) {
-            // 操作记录
-            SendLog sendLog = new SendLog();
-            sendLog.setTableName("AirRealTime");
-            sendLog.setSendTime(new Date());
-            sendLog.setSendSize(dataList.size());
-            // List装Json
-            String jsonDataList = JSONObject.toJSONString(dataList);
-            System.out.println(jsonDataList);
-            // post方式发送数据
-            String res = HttpTools.postData(url, jsonDataList);
-            if(res != null) {
-                JSONObject jsonObject = JSON.parseObject(res);
-                if (jsonObject.getBoolean("success")) {
-                    sendLog.setStatus((short) 1);
-                    sendLogService.insert(sendLog);
-                } else {
-                    sendLog.setErrCode(jsonObject.getString("errCode"));
-                    sendLog.setErrMsg(jsonObject.getString("errMsg"));
-                    sendLog.setErrData(jsonDataList);
-                    sendLog.setStatus((short) 0);
-                    sendLogService.insert(sendLog);
-                }
-            } else {
-                sendLog.setErrMsg("数据发送失败！请检查数据或本地网络！");
-                sendLog.setErrData(jsonDataList);
-                sendLog.setStatus((short) 0);
-                System.out.println("数据发送失败！请检查数据或本地网络！");
-            }
-            System.out.println(res);
-            return res;
-        } else {
-            return "没数数据可发送";
-        }
+        SendLog sendLog = new SendLog();
+        sendLog.setTableName("AirRealTime");
+        sendLogService.getLastLog(sendLog);
+        return null;
+
+//        List<AirRealTime> dataList = airRealTimeService.findByWhere(null);
+//        if(dataList.size() > 0) {
+//            // List装Json
+//            String jsonDataList = JSONObject.toJSONString(dataList);
+//            System.out.println(jsonDataList);
+//            // post方式发送数据
+//            String res = HttpTools.postData(url, jsonDataList);
+//            sendLogService.insertByRes("AirRealTime",dataList.size(),jsonDataList,res);
+//            System.out.println(res);
+//            return res;
+//        } else {
+//            return "没数数据可发送";
+//        }
     }
 }
