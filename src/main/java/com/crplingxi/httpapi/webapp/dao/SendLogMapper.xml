@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.crplingxi.httpapi.webapp.dao.SendLogMapper">
+  <resultMap id="BaseResultMap" type="com.crplingxi.httpapi.webapp.domain.SendLog">
+    <!--@mbg.generated-->
+    <!--@Table SEND_LOG-->
+    <result column="TABLE_NAME" jdbcType="VARCHAR" property="tableName" />
+    <result column="ERR_CODE" jdbcType="VARCHAR" property="errCode" />
+    <result column="ERR_MSG" jdbcType="VARCHAR" property="errMsg" />
+    <result column="ERR_DATA" jdbcType="VARCHAR" property="errData" />
+    <result column="SEND_SIZE" jdbcType="INTEGER" property="sendSize" />
+    <result column="SEND_TIME" jdbcType="DATE" property="sendTime" />
+    <result column="STATUS" jdbcType="SMALLINT" property="status" />
+  </resultMap>
+  <insert id="insert" parameterType="com.crplingxi.httpapi.webapp.domain.SendLog">
+    <!--@mbg.generated-->
+    insert into SEND_LOG ("TABLE_NAME", ERR_CODE, ERR_MSG, ERR_DATA, SEND_SIZE, SEND_TIME,
+      "STATUS")
+    values (#{tableName,jdbcType=VARCHAR}, #{errCode,jdbcType=VARCHAR}, #{errMsg,jdbcType=VARCHAR}, #{errData,jdbcType=VARCHAR}, #{sendSize,jdbcType=INTEGER}, #{sendTime,jdbcType=DATE},
+      #{status,jdbcType=SMALLINT})
+  </insert>
+</mapper>
