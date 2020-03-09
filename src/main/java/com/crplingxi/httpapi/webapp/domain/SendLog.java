@@ -1,7 +1,8 @@
 package com.crplingxi.httpapi.webapp.domain;
 
+import com.alibaba.fastjson.annotation.JSONField;
 import com.riozenc.titanTool.mybatis.MybatisEntity;
-import java.math.BigDecimal;
+
 import java.util.Date;
 
 public class SendLog implements MybatisEntity {
@@ -20,6 +21,8 @@ public class SendLog implements MybatisEntity {
     /**
      * 错误数据
      */
+//    @JSONField(name = "GCA_ID") //命名数据
+//    @JSONField(serialize = false) //忽略数据
     private String errData;
 
     /**

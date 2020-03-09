@@ -48,7 +48,8 @@ public class AirRealTimeAction {
 
         SendLog sendLog = new SendLog();
         sendLog.setTableName("AirRealTime");
-        sendLogService.getLastLog(sendLog);
+        String json = JSON.toJSONString(sendLogService.getLastLog(sendLog));
+        System.out.println(json);
         return null;
 
 //        List<AirRealTime> dataList = airRealTimeService.findByWhere(null);

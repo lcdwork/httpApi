@@ -1,5 +1,7 @@
 package com.crplingxi.httpapi.webapp.service.impl;
 
+import com.alibaba.fastjson.JSON;
+import com.alibaba.fastjson.JSONObject;
 import com.riozenc.titanTool.annotation.TransactionDAO;
 import com.riozenc.titanTool.annotation.TransactionService;
 import org.springframework.stereotype.Service;
@@ -7,6 +9,9 @@ import javax.annotation.Resource;
 import com.crplingxi.httpapi.webapp.domain.SendLog;
 import com.crplingxi.httpapi.webapp.dao.SendLogMapper;
 import com.crplingxi.httpapi.webapp.service.SendLogService;
+
+import java.util.Date;
+
 @TransactionService
 public class SendLogServiceImpl implements SendLogService{
 
@@ -16,6 +21,40 @@ public class SendLogServiceImpl implements SendLogService{
     @Override
     public int insert(SendLog record) {
         return sendLogMapper.insert(record);
+    }
+
+    @Override
+    public int insertByRes(String tableName, int size, String jsonList, String res) {
+        SendLog sendLog = new SendLog();
+        sendLog.setTableName(tableName);
+        sendLog.setSendTime(new Date());
+        sendLog.setSendSize(size);
+        int result = 0;
+        if(res != null) {
+            JSONObject jsonObject = JSON.parseObject(res);
+            if (jsonObject.getBoolean("success")) {
+                sendLog.setStatus((short) 1);
+                result = sendLogMapper.insert(sendLog);
+            } else {
+                sendLog.setErrCode(jsonObject.getString("errCode"));
+                sendLog.setErrMsg(jsonObject.getString("errMsg"));
+                sendLog.setErrData(jsonList);
+                sendLog.setStatus((short) 0);
+                result = sendLogMapper.insert(sendLog);
+            }
+        } else {
+            sendLog.setErrMsg("数据发送失败！请检查数据或本地网络！");
+            sendLog.setErrData(jsonList);
+            sendLog.setStatus((short) 0);
+            result = sendLogMapper.insert(sendLog);
+        }
+
+        return result;
+    }
+
+    @Override
+    public SendLog getLastLog(SendLog record) {
+        return sendLogMapper.getLastLog(record);
     }
 
 }
