@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.crplingxi.httpapi.webapp.dao.ELmpBmDayMapper">
+  <resultMap id="BaseResultMap" type="com.crplingxi.httpapi.webapp.domain.ELmpBmDay">
+    <!--@mbg.generated-->
+    <!--@Table E_LMP_BM_DAY-->
+    <result column="MPED_ID" jdbcType="DECIMAL" property="mpedId" />
+    <result column="DATA_TIME" jdbcType="TIMESTAMP" property="dataTime" />
+    <result column="MODIFY_FLAG" jdbcType="VARCHAR" property="modifyFlag" />
+    <result column="COL_TIME" jdbcType="TIMESTAMP" property="colTime" />
+    <result column="P1R0" jdbcType="DECIMAL" property="p1r0" />
+    <result column="P2R0" jdbcType="DECIMAL" property="p2r0" />
+    <result column="P3R0" jdbcType="DECIMAL" property="p3r0" />
+    <result column="P4R0" jdbcType="DECIMAL" property="p4r0" />
+    <result column="P1R1" jdbcType="DECIMAL" property="p1r1" />
+    <result column="P2R1" jdbcType="DECIMAL" property="p2r1" />
+    <result column="P3R1" jdbcType="DECIMAL" property="p3r1" />
+    <result column="P4R1" jdbcType="DECIMAL" property="p4r1" />
+    <result column="P1R2" jdbcType="DECIMAL" property="p1r2" />
+    <result column="P2R2" jdbcType="DECIMAL" property="p2r2" />
+    <result column="P3R2" jdbcType="DECIMAL" property="p3r2" />
+    <result column="P4R2" jdbcType="DECIMAL" property="p4r2" />
+    <result column="P1R3" jdbcType="DECIMAL" property="p1r3" />
+    <result column="P2R3" jdbcType="DECIMAL" property="p2r3" />
+    <result column="P3R3" jdbcType="DECIMAL" property="p3r3" />
+    <result column="P4R3" jdbcType="DECIMAL" property="p4r3" />
+    <result column="P1R4" jdbcType="DECIMAL" property="p1r4" />
+    <result column="P2R4" jdbcType="DECIMAL" property="p2r4" />
+    <result column="P3R4" jdbcType="DECIMAL" property="p3r4" />
+    <result column="P4R4" jdbcType="DECIMAL" property="p4r4" />
+    <result column="P1R5" jdbcType="DECIMAL" property="p1r5" />
+    <result column="P2R5" jdbcType="DECIMAL" property="p2r5" />
+    <result column="P3R5" jdbcType="DECIMAL" property="p3r5" />
+    <result column="P4R5" jdbcType="DECIMAL" property="p4r5" />
+    <result column="SAVEDATETIME" jdbcType="TIMESTAMP" property="savedatetime" />
+    <result column="AREA_CODE" jdbcType="VARCHAR" property="areaCode" />
+    <result column="STATUS" jdbcType="VARCHAR" property="status" />
+  </resultMap>
+  <insert id="insert" parameterType="com.crplingxi.httpapi.webapp.domain.ELmpBmDay">
+    <!--@mbg.generated-->
+    insert into E_LMP_BM_DAY (MPED_ID, DATA_TIME, MODIFY_FLAG,
+      COL_TIME, P1R0, P2R0,
+      P3R0, P4R0, P1R1, P2R1,
+      P3R1, P4R1, P1R2, P2R2,
+      P3R2, P4R2, P1R3, P2R3,
+      P3R3, P4R3, P1R4, P2R4,
+      P3R4, P4R4, P1R5, P2R5,
+      P3R5, P4R5, SAVEDATETIME,
+      AREA_CODE, "STATUS")
+    values (#{mpedId,jdbcType=DECIMAL}, #{dataTime,jdbcType=TIMESTAMP}, #{modifyFlag,jdbcType=VARCHAR},
+      #{colTime,jdbcType=TIMESTAMP}, #{p1r0,jdbcType=DECIMAL}, #{p2r0,jdbcType=DECIMAL},
+      #{p3r0,jdbcType=DECIMAL}, #{p4r0,jdbcType=DECIMAL}, #{p1r1,jdbcType=DECIMAL}, #{p2r1,jdbcType=DECIMAL},
+      #{p3r1,jdbcType=DECIMAL}, #{p4r1,jdbcType=DECIMAL}, #{p1r2,jdbcType=DECIMAL}, #{p2r2,jdbcType=DECIMAL},
+      #{p3r2,jdbcType=DECIMAL}, #{p4r2,jdbcType=DECIMAL}, #{p1r3,jdbcType=DECIMAL}, #{p2r3,jdbcType=DECIMAL},
+      #{p3r3,jdbcType=DECIMAL}, #{p4r3,jdbcType=DECIMAL}, #{p1r4,jdbcType=DECIMAL}, #{p2r4,jdbcType=DECIMAL},
+      #{p3r4,jdbcType=DECIMAL}, #{p4r4,jdbcType=DECIMAL}, #{p1r5,jdbcType=DECIMAL}, #{p2r5,jdbcType=DECIMAL},
+      #{p3r5,jdbcType=DECIMAL}, #{p4r5,jdbcType=DECIMAL}, #{savedatetime,jdbcType=TIMESTAMP},
+      #{areaCode,jdbcType=VARCHAR}, #{status,jdbcType=VARCHAR})
+  </insert>
+  <sql id="Base_Column_List">
+    MPED_ID, DATA_TIME, MODIFY_FLAG,COL_TIME, P1R0, P2R0,P3R0, P4R0, P1R1, P2R1,P3R1, P4R1, P1R2, P2R2,P3R2, P4R2, P1R3, P2R3,
+    P3R3, P4R3, P1R4, P2R4,P3R4, P4R4, P1R5, P2R5,P3R5, P4R5, SAVEDATETIME,AREA_CODE, "STATUS"
+  </sql>
+  <select id="findByWhere" parameterType="com.crplingxi.httpapi.webapp.domain.ELmpBmDay" resultType="com.crplingxi.httpapi.webapp.domain.ELmpBmDay" useCache="true">
+    select
+    <include refid="Base_Column_List" />
+    from E_LMP_BM_DAY_202002
+  </select>
+</mapper>

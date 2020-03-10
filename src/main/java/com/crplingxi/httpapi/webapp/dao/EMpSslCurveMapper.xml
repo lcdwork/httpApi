@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.crplingxi.httpapi.webapp.dao.EMpSslCurveMapper">
+  <resultMap id="BaseResultMap" type="com.crplingxi.httpapi.webapp.domain.EMpSslCurve">
+    <!--@mbg.generated-->
+    <!--@Table E_MP_SSL_CURVE-->
+    <result column="MPED_ID" jdbcType="DECIMAL" property="mpedId" />
+    <result column="DATA_TIME" jdbcType="TIMESTAMP" property="dataTime" />
+    <result column="PS_FLAG" jdbcType="VARCHAR" property="psFlag" />
+    <result column="UA" jdbcType="DECIMAL" property="ua" />
+    <result column="UB" jdbcType="DECIMAL" property="ub" />
+    <result column="UC" jdbcType="DECIMAL" property="uc" />
+    <result column="IA" jdbcType="DECIMAL" property="ia" />
+    <result column="IB" jdbcType="DECIMAL" property="ib" />
+    <result column="IC" jdbcType="DECIMAL" property="ic" />
+    <result column="I0" jdbcType="DECIMAL" property="i0" />
+    <result column="P" jdbcType="DECIMAL" property="p" />
+    <result column="PA" jdbcType="DECIMAL" property="pa" />
+    <result column="PB" jdbcType="DECIMAL" property="pb" />
+    <result column="PC" jdbcType="DECIMAL" property="pc" />
+    <result column="Q" jdbcType="DECIMAL" property="q" />
+    <result column="QA" jdbcType="DECIMAL" property="qa" />
+    <result column="QB" jdbcType="DECIMAL" property="qb" />
+    <result column="QC" jdbcType="DECIMAL" property="qc" />
+    <result column="COS" jdbcType="DECIMAL" property="cos" />
+    <result column="COSA" jdbcType="DECIMAL" property="cosa" />
+    <result column="COSB" jdbcType="DECIMAL" property="cosb" />
+    <result column="COSC" jdbcType="DECIMAL" property="cosc" />
+    <result column="SP" jdbcType="DECIMAL" property="sp" />
+    <result column="SPA" jdbcType="DECIMAL" property="spa" />
+    <result column="SPB" jdbcType="DECIMAL" property="spb" />
+    <result column="SPC" jdbcType="DECIMAL" property="spc" />
+    <result column="FN" jdbcType="DECIMAL" property="fn" />
+    <result column="PAIA" jdbcType="DECIMAL" property="paia" />
+    <result column="PAIB" jdbcType="DECIMAL" property="paib" />
+    <result column="PAIC" jdbcType="DECIMAL" property="paic" />
+    <result column="PAUA" jdbcType="DECIMAL" property="paua" />
+    <result column="PAUB" jdbcType="DECIMAL" property="paub" />
+    <result column="PAUC" jdbcType="DECIMAL" property="pauc" />
+    <result column="TEMPLE" jdbcType="DECIMAL" property="temple" />
+    <result column="AVGP" jdbcType="DECIMAL" property="avgp" />
+    <result column="AVGQ" jdbcType="DECIMAL" property="avgq" />
+    <result column="P_COEF" jdbcType="DECIMAL" property="pCoef" />
+    <result column="Q_COEF" jdbcType="DECIMAL" property="qCoef" />
+    <result column="V_COEF" jdbcType="DECIMAL" property="vCoef" />
+    <result column="C_COEF" jdbcType="DECIMAL" property="cCoef" />
+    <result column="FACTOR_COEF" jdbcType="DECIMAL" property="factorCoef" />
+    <result column="SAVEDATETIME" jdbcType="TIMESTAMP" property="savedatetime" />
+    <result column="AREA_CODE" jdbcType="VARCHAR" property="areaCode" />
+  </resultMap>
+  <insert id="insert" parameterType="com.crplingxi.httpapi.webapp.domain.EMpSslCurve">
+    <!--@mbg.generated-->
+    insert into E_MP_SSL_CURVE (MPED_ID, DATA_TIME, PS_FLAG,
+      UA, UB, UC, IA,
+      IB, IC, I0, P,
+      PA, PB, PC, Q,
+      QA, QB, QC, COS,
+      COSA, COSB, COSC, SP,
+      SPA, SPB, SPC, FN,
+      PAIA, PAIB, PAIC, PAUA,
+      PAUB, PAUC, TEMPLE,
+      AVGP, AVGQ, P_COEF,
+      Q_COEF, V_COEF, C_COEF,
+      FACTOR_COEF, SAVEDATETIME, AREA_CODE
+      )
+    values (#{mpedId,jdbcType=DECIMAL}, #{dataTime,jdbcType=TIMESTAMP}, #{psFlag,jdbcType=VARCHAR},
+      #{ua,jdbcType=DECIMAL}, #{ub,jdbcType=DECIMAL}, #{uc,jdbcType=DECIMAL}, #{ia,jdbcType=DECIMAL},
+      #{ib,jdbcType=DECIMAL}, #{ic,jdbcType=DECIMAL}, #{i0,jdbcType=DECIMAL}, #{p,jdbcType=DECIMAL},
+      #{pa,jdbcType=DECIMAL}, #{pb,jdbcType=DECIMAL}, #{pc,jdbcType=DECIMAL}, #{q,jdbcType=DECIMAL},
+      #{qa,jdbcType=DECIMAL}, #{qb,jdbcType=DECIMAL}, #{qc,jdbcType=DECIMAL}, #{cos,jdbcType=DECIMAL},
+      #{cosa,jdbcType=DECIMAL}, #{cosb,jdbcType=DECIMAL}, #{cosc,jdbcType=DECIMAL}, #{sp,jdbcType=DECIMAL},
+      #{spa,jdbcType=DECIMAL}, #{spb,jdbcType=DECIMAL}, #{spc,jdbcType=DECIMAL}, #{fn,jdbcType=DECIMAL},
+      #{paia,jdbcType=DECIMAL}, #{paib,jdbcType=DECIMAL}, #{paic,jdbcType=DECIMAL}, #{paua,jdbcType=DECIMAL},
+      #{paub,jdbcType=DECIMAL}, #{pauc,jdbcType=DECIMAL}, #{temple,jdbcType=DECIMAL},
+      #{avgp,jdbcType=DECIMAL}, #{avgq,jdbcType=DECIMAL}, #{pCoef,jdbcType=DECIMAL},
+      #{qCoef,jdbcType=DECIMAL}, #{vCoef,jdbcType=DECIMAL}, #{cCoef,jdbcType=DECIMAL},
+      #{factorCoef,jdbcType=DECIMAL}, #{savedatetime,jdbcType=TIMESTAMP}, #{areaCode,jdbcType=VARCHAR}
+      )
+  </insert>
+  <sql id="Base_Column_List">
+    MPED_ID, DATA_TIME, MODIFY_FLAG,P1R0, P1R0_P, P2R0,P2R0_P, P3R0, P3R0_P,P4R0, P4R0_P, P5R0,P5R0_P, P6R0, P6R0_P,P7R0, P7R0_P, P8R0,
+    P8R0_P, P1R1, P2R1,P3R1, P4R1, P5R1, P6R1,P7R1, P8R1, P1R2, P2R2,P3R2, P4R2, P5R2, P6R2,P7R2, P8R2, P1R3, P2R3,
+    P3R3, P4R3, P5R3, P6R3,P7R3, P8R3, P1R4, P2R4,P3R4, P4R4, P5R4, P6R4,P7R4, P8R4, P1R5, P2R5,P3R5, P4R5, P5R5, P6R5,
+    P7R5, P8R5, AP_COEF,RP_COEF, SAVEDATETIME, AREA_CODE,"STATUS"
+  </sql>
+  <select id="findByWhere" parameterType="com.crplingxi.httpapi.webapp.domain.EMpSslCurve" resultType="com.crplingxi.httpapi.webapp.domain.EMpSslCurve" useCache="true">
+    select
+    <include refid="Base_Column_List" />
+    from E_MP_SSL_CURVE
+  </select>
+</mapper>

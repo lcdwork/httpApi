@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.crplingxi.httpapi.webapp.dao.EMpEngyMinMapper">
+  <resultMap id="BaseResultMap" type="com.crplingxi.httpapi.webapp.domain.EMpEngyMin">
+    <!--@mbg.generated-->
+    <!--@Table E_MP_ENGY_MIN-->
+    <result column="MPED_ID" jdbcType="DECIMAL" property="mpedId" />
+    <result column="DATA_TIME" jdbcType="TIMESTAMP" property="dataTime" />
+    <result column="SCHEME_ID" jdbcType="DECIMAL" property="schemeId" />
+    <result column="E_TYPE" jdbcType="VARCHAR" property="eType" />
+    <result column="P1R0" jdbcType="DECIMAL" property="p1r0" />
+    <result column="P1R0_P" jdbcType="DECIMAL" property="p1r0P" />
+    <result column="P2R0" jdbcType="DECIMAL" property="p2r0" />
+    <result column="P2R0_P" jdbcType="DECIMAL" property="p2r0P" />
+    <result column="P3R0" jdbcType="DECIMAL" property="p3r0" />
+    <result column="P3R0_P" jdbcType="DECIMAL" property="p3r0P" />
+    <result column="P4R0" jdbcType="DECIMAL" property="p4r0" />
+    <result column="P4R0_P" jdbcType="DECIMAL" property="p4r0P" />
+    <result column="P5R0" jdbcType="DECIMAL" property="p5r0" />
+    <result column="P5R0_P" jdbcType="DECIMAL" property="p5r0P" />
+    <result column="P6R0" jdbcType="DECIMAL" property="p6r0" />
+    <result column="P6R0_P" jdbcType="DECIMAL" property="p6r0P" />
+    <result column="P7R0" jdbcType="DECIMAL" property="p7r0" />
+    <result column="P7R0_P" jdbcType="DECIMAL" property="p7r0P" />
+    <result column="P8R0" jdbcType="DECIMAL" property="p8r0" />
+    <result column="P8R0_P" jdbcType="DECIMAL" property="p8r0P" />
+    <result column="P1R1" jdbcType="DECIMAL" property="p1r1" />
+    <result column="P2R1" jdbcType="DECIMAL" property="p2r1" />
+    <result column="P3R1" jdbcType="DECIMAL" property="p3r1" />
+    <result column="P4R1" jdbcType="DECIMAL" property="p4r1" />
+    <result column="P5R1" jdbcType="DECIMAL" property="p5r1" />
+    <result column="P6R1" jdbcType="DECIMAL" property="p6r1" />
+    <result column="P7R1" jdbcType="DECIMAL" property="p7r1" />
+    <result column="P8R1" jdbcType="DECIMAL" property="p8r1" />
+    <result column="P1R2" jdbcType="DECIMAL" property="p1r2" />
+    <result column="P2R2" jdbcType="DECIMAL" property="p2r2" />
+    <result column="P3R2" jdbcType="DECIMAL" property="p3r2" />
+    <result column="P4R2" jdbcType="DECIMAL" property="p4r2" />
+    <result column="P5R2" jdbcType="DECIMAL" property="p5r2" />
+    <result column="P6R2" jdbcType="DECIMAL" property="p6r2" />
+    <result column="P7R2" jdbcType="DECIMAL" property="p7r2" />
+    <result column="P8R2" jdbcType="DECIMAL" property="p8r2" />
+    <result column="P1R3" jdbcType="DECIMAL" property="p1r3" />
+    <result column="P2R3" jdbcType="DECIMAL" property="p2r3" />
+    <result column="P3R3" jdbcType="DECIMAL" property="p3r3" />
+    <result column="P4R3" jdbcType="DECIMAL" property="p4r3" />
+    <result column="P5R3" jdbcType="DECIMAL" property="p5r3" />
+    <result column="P6R3" jdbcType="DECIMAL" property="p6r3" />
+    <result column="P7R3" jdbcType="DECIMAL" property="p7r3" />
+    <result column="P8R3" jdbcType="DECIMAL" property="p8r3" />
+    <result column="P1R4" jdbcType="DECIMAL" property="p1r4" />
+    <result column="P2R4" jdbcType="DECIMAL" property="p2r4" />
+    <result column="P3R4" jdbcType="DECIMAL" property="p3r4" />
+    <result column="P4R4" jdbcType="DECIMAL" property="p4r4" />
+    <result column="P5R4" jdbcType="DECIMAL" property="p5r4" />
+    <result column="P6R4" jdbcType="DECIMAL" property="p6r4" />
+    <result column="P7R4" jdbcType="DECIMAL" property="p7r4" />
+    <result column="P8R4" jdbcType="DECIMAL" property="p8r4" />
+    <result column="P1R5" jdbcType="DECIMAL" property="p1r5" />
+    <result column="P2R5" jdbcType="DECIMAL" property="p2r5" />
+    <result column="P3R5" jdbcType="DECIMAL" property="p3r5" />
+    <result column="P4R5" jdbcType="DECIMAL" property="p4r5" />
+    <result column="P5R5" jdbcType="DECIMAL" property="p5r5" />
+    <result column="P6R5" jdbcType="DECIMAL" property="p6r5" />
+    <result column="P7R5" jdbcType="DECIMAL" property="p7r5" />
+    <result column="P8R5" jdbcType="DECIMAL" property="p8r5" />
+    <result column="SAVEDATETIME" jdbcType="TIMESTAMP" property="savedatetime" />
+    <result column="AREA_CODE" jdbcType="VARCHAR" property="areaCode" />
+    <result column="STATUS" jdbcType="VARCHAR" property="status" />
+  </resultMap>
+  <insert id="insert" parameterType="com.crplingxi.httpapi.webapp.domain.EMpEngyMin">
+    <!--@mbg.generated-->
+    insert into E_MP_ENGY_MIN (MPED_ID, DATA_TIME, SCHEME_ID,
+      E_TYPE, P1R0, P1R0_P,
+      P2R0, P2R0_P, P3R0,
+      P3R0_P, P4R0, P4R0_P,
+      P5R0, P5R0_P, P6R0,
+      P6R0_P, P7R0, P7R0_P,
+      P8R0, P8R0_P, P1R1,
+      P2R1, P3R1, P4R1, P5R1,
+      P6R1, P7R1, P8R1, P1R2,
+      P2R2, P3R2, P4R2, P5R2,
+      P6R2, P7R2, P8R2, P1R3,
+      P2R3, P3R3, P4R3, P5R3,
+      P6R3, P7R3, P8R3, P1R4,
+      P2R4, P3R4, P4R4, P5R4,
+      P6R4, P7R4, P8R4, P1R5,
+      P2R5, P3R5, P4R5, P5R5,
+      P6R5, P7R5, P8R5, SAVEDATETIME,
+      AREA_CODE, "STATUS")
+    values (#{mpedId,jdbcType=DECIMAL}, #{dataTime,jdbcType=TIMESTAMP}, #{schemeId,jdbcType=DECIMAL},
+      #{eType,jdbcType=VARCHAR}, #{p1r0,jdbcType=DECIMAL}, #{p1r0P,jdbcType=DECIMAL},
+      #{p2r0,jdbcType=DECIMAL}, #{p2r0P,jdbcType=DECIMAL}, #{p3r0,jdbcType=DECIMAL},
+      #{p3r0P,jdbcType=DECIMAL}, #{p4r0,jdbcType=DECIMAL}, #{p4r0P,jdbcType=DECIMAL},
+      #{p5r0,jdbcType=DECIMAL}, #{p5r0P,jdbcType=DECIMAL}, #{p6r0,jdbcType=DECIMAL},
+      #{p6r0P,jdbcType=DECIMAL}, #{p7r0,jdbcType=DECIMAL}, #{p7r0P,jdbcType=DECIMAL},
+      #{p8r0,jdbcType=DECIMAL}, #{p8r0P,jdbcType=DECIMAL}, #{p1r1,jdbcType=DECIMAL},
+      #{p2r1,jdbcType=DECIMAL}, #{p3r1,jdbcType=DECIMAL}, #{p4r1,jdbcType=DECIMAL}, #{p5r1,jdbcType=DECIMAL},
+      #{p6r1,jdbcType=DECIMAL}, #{p7r1,jdbcType=DECIMAL}, #{p8r1,jdbcType=DECIMAL}, #{p1r2,jdbcType=DECIMAL},
+      #{p2r2,jdbcType=DECIMAL}, #{p3r2,jdbcType=DECIMAL}, #{p4r2,jdbcType=DECIMAL}, #{p5r2,jdbcType=DECIMAL},
+      #{p6r2,jdbcType=DECIMAL}, #{p7r2,jdbcType=DECIMAL}, #{p8r2,jdbcType=DECIMAL}, #{p1r3,jdbcType=DECIMAL},
+      #{p2r3,jdbcType=DECIMAL}, #{p3r3,jdbcType=DECIMAL}, #{p4r3,jdbcType=DECIMAL}, #{p5r3,jdbcType=DECIMAL},
+      #{p6r3,jdbcType=DECIMAL}, #{p7r3,jdbcType=DECIMAL}, #{p8r3,jdbcType=DECIMAL}, #{p1r4,jdbcType=DECIMAL},
+      #{p2r4,jdbcType=DECIMAL}, #{p3r4,jdbcType=DECIMAL}, #{p4r4,jdbcType=DECIMAL}, #{p5r4,jdbcType=DECIMAL},
+      #{p6r4,jdbcType=DECIMAL}, #{p7r4,jdbcType=DECIMAL}, #{p8r4,jdbcType=DECIMAL}, #{p1r5,jdbcType=DECIMAL},
+      #{p2r5,jdbcType=DECIMAL}, #{p3r5,jdbcType=DECIMAL}, #{p4r5,jdbcType=DECIMAL}, #{p5r5,jdbcType=DECIMAL},
+      #{p6r5,jdbcType=DECIMAL}, #{p7r5,jdbcType=DECIMAL}, #{p8r5,jdbcType=DECIMAL}, #{savedatetime,jdbcType=TIMESTAMP},
+      #{areaCode,jdbcType=VARCHAR}, #{status,jdbcType=VARCHAR})
+  </insert>
+  <sql id="Base_Column_List">
+    MPED_ID, DATA_TIME, MODIFY_FLAG,P1R0, P1R0_P, P2R0,P2R0_P, P3R0, P3R0_P,P4R0, P4R0_P, P5R0,P5R0_P, P6R0, P6R0_P,P7R0, P7R0_P, P8R0,
+    P8R0_P, P1R1, P2R1,P3R1, P4R1, P5R1, P6R1,P7R1, P8R1, P1R2, P2R2,P3R2, P4R2, P5R2, P6R2,P7R2, P8R2, P1R3, P2R3,
+    P3R3, P4R3, P5R3, P6R3,P7R3, P8R3, P1R4, P2R4,P3R4, P4R4, P5R4, P6R4,P7R4, P8R4, P1R5, P2R5,P3R5, P4R5, P5R5, P6R5,
+    P7R5, P8R5, AP_COEF,RP_COEF, SAVEDATETIME, AREA_CODE,"STATUS"
+  </sql>
+  <select id="findByWhere" parameterType="com.crplingxi.httpapi.webapp.domain.EMpEngyMin" resultType="com.crplingxi.httpapi.webapp.domain.EMpEngyMin" useCache="true">
+    select
+    <include refid="Base_Column_List" />
+    from E_MP_ENGY_MIN
+  </select>
+</mapper>

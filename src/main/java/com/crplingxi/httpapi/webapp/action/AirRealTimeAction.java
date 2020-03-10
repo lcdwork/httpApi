@@ -1,22 +1,16 @@
 package com.crplingxi.httpapi.webapp.action;
 
 import com.alibaba.fastjson.JSON;
-import com.alibaba.fastjson.JSONObject;
-import com.crplingxi.httpapi.tools.HttpTools;
-import com.crplingxi.httpapi.webapp.domain.AirRealTime;
+import com.crplingxi.httpapi.tools.DateUtils;
 import com.crplingxi.httpapi.webapp.domain.SendLog;
 import com.crplingxi.httpapi.webapp.service.AirRealTimeService;
 import com.crplingxi.httpapi.webapp.service.SendLogService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
-
-import java.util.Date;
-import java.util.List;
 
 /**
  * @author: LCD
@@ -43,13 +37,15 @@ public class AirRealTimeAction {
     @ResponseBody
     @RequestMapping("/send")
     // 定时设置
-    @Scheduled(cron = "${test.cron}")
+//    @Scheduled(cron = "${test.cron}")
     public String putTest() {
 
         SendLog sendLog = new SendLog();
         sendLog.setTableName("AirRealTime");
         String json = JSON.toJSONString(sendLogService.getLastLog(sendLog));
         System.out.println(json);
+        System.out.println(DateUtils.getLastMonth());
+        System.out.println(DateUtils.getNowMonth());
         return null;
 
 //        List<AirRealTime> dataList = airRealTimeService.findByWhere(null);
