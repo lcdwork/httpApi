@@ -7,132 +7,196 @@ import java.math.BigDecimal;
 import java.util.Date;
 
 public class EMpBmCurve implements MybatisEntity {
+    @JSONField(name = "sn")
     private Long mpedId;
 
+    @JSONField(name = "time")
     private Date dataTime;
 
+    @JSONField(serialize = false)
     private String modifyFlag;
 
+    @JSONField(name = "kwhli")
     private BigDecimal p1r0;
 
+    @JSONField(serialize = false)
     private Integer p1r0P;
 
+    @JSONField(name = "kwhle")
     private BigDecimal p2r0;
 
+    @JSONField(serialize = false)
     private Integer p2r0P;
 
+    @JSONField(name = "kvarhli")
     private BigDecimal p3r0;
 
+    @JSONField(serialize = false)
     private Integer p3r0P;
 
+    @JSONField(name = "kvarhle")
     private BigDecimal p4r0;
 
+    @JSONField(serialize = false)
     private Integer p4r0P;
 
+    @JSONField(serialize = false)
     private BigDecimal p5r0;
 
+    @JSONField(serialize = false)
     private Integer p5r0P;
 
+    @JSONField(serialize = false)
     private BigDecimal p6r0;
 
+    @JSONField(serialize = false)
     private Integer p6r0P;
 
+    @JSONField(serialize = false)
     private BigDecimal p7r0;
 
+    @JSONField(serialize = false)
     private Integer p7r0P;
 
+    @JSONField(serialize = false)
     private BigDecimal p8r0;
 
+    @JSONField(serialize = false)
     private Integer p8r0P;
 
+    @JSONField(name = "kwhli1")
     private BigDecimal p1r1;
 
+    @JSONField(name = "kwhle1")
     private BigDecimal p2r1;
 
+    @JSONField(name = "kvarhli1")
     private BigDecimal p3r1;
 
+    @JSONField(name = "kvarhle1")
     private BigDecimal p4r1;
 
+    @JSONField(serialize = false)
     private BigDecimal p5r1;
 
+    @JSONField(serialize = false)
     private BigDecimal p6r1;
 
+    @JSONField(serialize = false)
     private BigDecimal p7r1;
 
+    @JSONField(serialize = false)
     private BigDecimal p8r1;
 
+    @JSONField(name = "kwhli2")
     private BigDecimal p1r2;
 
+    @JSONField(name = "kwhle2")
     private BigDecimal p2r2;
 
+    @JSONField(name = "kvarhli2")
     private BigDecimal p3r2;
 
+    @JSONField(name = "kvarhle2")
     private BigDecimal p4r2;
 
+    @JSONField(serialize = false)
     private BigDecimal p5r2;
 
+    @JSONField(serialize = false)
     private BigDecimal p6r2;
 
+    @JSONField(serialize = false)
     private BigDecimal p7r2;
 
+    @JSONField(serialize = false)
     private BigDecimal p8r2;
 
+    @JSONField(name = "kwhli3")
     private BigDecimal p1r3;
 
+    @JSONField(name = "kwhle3")
     private BigDecimal p2r3;
 
+    @JSONField(name = "kvarhli3")
     private BigDecimal p3r3;
 
+    @JSONField(name = "kvarhle3")
     private BigDecimal p4r3;
 
+    @JSONField(serialize = false)
     private BigDecimal p5r3;
 
+    @JSONField(serialize = false)
     private BigDecimal p6r3;
 
+    @JSONField(serialize = false)
     private BigDecimal p7r3;
 
+    @JSONField(serialize = false)
     private BigDecimal p8r3;
 
+    @JSONField(name = "kwhli4")
     private BigDecimal p1r4;
 
+    @JSONField(name = "kwhle4")
     private BigDecimal p2r4;
 
+    @JSONField(name = "kvarhli4")
     private BigDecimal p3r4;
 
+    @JSONField(name = "kvarhle4")
     private BigDecimal p4r4;
 
+    @JSONField(serialize = false)
     private BigDecimal p5r4;
 
+    @JSONField(serialize = false)
     private BigDecimal p6r4;
 
+    @JSONField(serialize = false)
     private BigDecimal p7r4;
 
+    @JSONField(serialize = false)
     private BigDecimal p8r4;
 
+    @JSONField(serialize = false)
     private BigDecimal p1r5;
 
+    @JSONField(serialize = false)
     private BigDecimal p2r5;
 
+    @JSONField(serialize = false)
     private BigDecimal p3r5;
 
+    @JSONField(serialize = false)
     private BigDecimal p4r5;
 
+    @JSONField(serialize = false)
     private BigDecimal p5r5;
 
+    @JSONField(serialize = false)
     private BigDecimal p6r5;
 
+    @JSONField(serialize = false)
     private BigDecimal p7r5;
 
+    @JSONField(serialize = false)
     private BigDecimal p8r5;
 
+    @JSONField(serialize = false)
     private BigDecimal apCoef;
 
+    @JSONField(serialize = false)
     private BigDecimal rpCoef;
 
+    @JSONField(serialize = false)
     private Date savedatetime;
 
+    @JSONField(serialize = false)
     private String areaCode;
 
+    @JSONField(serialize = false)
     private String status;
 
     @JSONField(serialize = false)

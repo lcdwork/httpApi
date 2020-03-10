@@ -6,90 +6,133 @@ import java.math.BigDecimal;
 import java.util.Date;
 
 public class EMpSslCurve implements MybatisEntity {
+    @JSONField(name = "sn")
     private Long mpedId;
 
+    @JSONField(name = "time")
     private Date dataTime;
 
+    @JSONField(serialize = false)
     private String psFlag;
 
+    @JSONField(name = "ua")
     private BigDecimal ua;
 
+    @JSONField(name = "ub")
     private BigDecimal ub;
 
+    @JSONField(name = "uc")
     private BigDecimal uc;
 
+    @JSONField(name = "ia")
     private BigDecimal ia;
 
+    @JSONField(name = "ib")
     private BigDecimal ib;
 
+    @JSONField(name = "ic")
     private BigDecimal ic;
 
+    @JSONField(serialize = false)
     private BigDecimal i0;
 
+    @JSONField(name = "p")
     private BigDecimal p;
 
+    @JSONField(serialize = false)
     private BigDecimal pa;
 
+    @JSONField(serialize = false)
     private BigDecimal pb;
 
+    @JSONField(serialize = false)
     private BigDecimal pc;
 
+    @JSONField(name = "q")
     private BigDecimal q;
 
+    @JSONField(serialize = false)
     private BigDecimal qa;
 
+    @JSONField(serialize = false)
     private BigDecimal qb;
 
+    @JSONField(serialize = false)
     private BigDecimal qc;
 
+    @JSONField(name = "cos")
     private BigDecimal cos;
 
+    @JSONField(serialize = false)
     private BigDecimal cosa;
 
+    @JSONField(serialize = false)
     private BigDecimal cosb;
 
+    @JSONField(serialize = false)
     private BigDecimal cosc;
 
+    @JSONField(serialize = false)
     private BigDecimal sp;
 
+    @JSONField(serialize = false)
     private BigDecimal spa;
 
+    @JSONField(serialize = false)
     private BigDecimal spb;
 
+    @JSONField(serialize = false)
     private BigDecimal spc;
 
+    @JSONField(serialize = false)
     private BigDecimal fn;
 
+    @JSONField(serialize = false)
     private BigDecimal paia;
 
+    @JSONField(serialize = false)
     private BigDecimal paib;
 
+    @JSONField(serialize = false)
     private BigDecimal paic;
 
+    @JSONField(serialize = false)
     private BigDecimal paua;
 
+    @JSONField(serialize = false)
     private BigDecimal paub;
 
+    @JSONField(serialize = false)
     private BigDecimal pauc;
 
+    @JSONField(serialize = false)
     private BigDecimal temple;
 
+    @JSONField(serialize = false)
     private BigDecimal avgp;
 
+    @JSONField(serialize = false)
     private BigDecimal avgq;
 
+    @JSONField(serialize = false)
     private BigDecimal pCoef;
 
+    @JSONField(serialize = false)
     private BigDecimal qCoef;
 
+    @JSONField(serialize = false)
     private BigDecimal vCoef;
 
+    @JSONField(serialize = false)
     private BigDecimal cCoef;
 
+    @JSONField(serialize = false)
     private BigDecimal factorCoef;
 
+    @JSONField(serialize = false)
     private Date savedatetime;
 
+    @JSONField(serialize = false)
     private String areaCode;
 
     @JSONField(serialize = false)

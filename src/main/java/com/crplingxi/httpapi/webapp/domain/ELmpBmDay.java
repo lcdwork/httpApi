@@ -7,8 +7,10 @@ import java.math.BigDecimal;
 import java.util.Date;
 
 public class ELmpBmDay implements MybatisEntity {
+    @JSONField(name = "sn")
     private Long mpedId;
 
+    @JSONField(name = "time")
     private Date dataTime;
 
     private String modifyFlag;
