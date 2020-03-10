@@ -1,6 +1,5 @@
 package com.crplingxi.httpapi.webapp.service;
 
-import com.crplingxi.httpapi.webapp.domain.ELmpEngyDay;
 import com.crplingxi.httpapi.webapp.domain.EMpBmCurve;
 
 import java.util.List;

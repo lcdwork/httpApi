@@ -117,8 +117,18 @@
     P7R5, P8R5, AP_COEF,RP_COEF, SAVEDATETIME, AREA_CODE,"STATUS"
   </sql>
   <select id="findByWhere" parameterType="com.crplingxi.httpapi.webapp.domain.EMpBmCurve" resultType="com.crplingxi.httpapi.webapp.domain.EMpBmCurve" useCache="true">
-    select
-    <include refid="Base_Column_List" />
-    from E_MP_BM_CURVE
+    select <include refid="Base_Column_List" /> from ${tableName1}
+    <where>
+      <if test="savedatetime != null">
+        and savedatetime>= #{savedatetime}
+      </if>
+    </where>
+    union
+    select <include refid="Base_Column_List" /> from ${tableName2}
+    <where>
+      <if test="savedatetime != null">
+        and savedatetime>= #{savedatetime}
+      </if>
+    </where>
   </select>
 </mapper>

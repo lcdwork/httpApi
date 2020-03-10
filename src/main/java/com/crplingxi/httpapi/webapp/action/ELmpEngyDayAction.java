@@ -3,8 +3,8 @@ package com.crplingxi.httpapi.webapp.action;
 import com.alibaba.fastjson.JSONObject;
 import com.crplingxi.httpapi.tools.DateUtils;
 import com.crplingxi.httpapi.tools.HttpTools;
-import com.crplingxi.httpapi.webapp.domain.ELmpBmDay;
-import com.crplingxi.httpapi.webapp.service.ELmpBmDayService;
+import com.crplingxi.httpapi.webapp.domain.ELmpEngyDay;
+import com.crplingxi.httpapi.webapp.service.ELmpEngyDayService;
 import com.crplingxi.httpapi.webapp.service.SendLogService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
@@ -16,18 +16,18 @@ import java.util.List;
 
 /**
  * @author: LCD
- * @date Create in: 14:42 2020/3/10
+ * @date Create in: 19:05 2020/3/10
  * @description：
  * @modify:
  * @see: com.crplingxi.httpapi.webapp.action
  */
 @ControllerAdvice
-@RequestMapping("/elmpbmday")
-public class ELmpBmDayAction {
+@RequestMapping("/elmpengyday")
+public class ELmpEngyDayAction {
 
     @Autowired
-    @Qualifier("ELmpBmDayServiceImpl")
-    private ELmpBmDayService eLmpBmDayService;
+    @Qualifier("ELmpEngyDayServiceImpl")
+    private ELmpEngyDayService eLmpEngyDayService;
 
     @Autowired
     @Qualifier("sendLogServiceImpl")
@@ -39,14 +39,14 @@ public class ELmpBmDayAction {
     public String putTest() {
 
         // 表名前缀
-        String tableName = "E_LMP_BM_DAY";
+        String tableName = "E_LMP_ENGY_DAY";
 
         // 拼接查询对象
-        ELmpBmDay eLmpBmDay = new ELmpBmDay();
-        eLmpBmDay.setTableName1(tableName + "_" + DateUtils.getLastMonth());
-        eLmpBmDay.setTableName2(tableName + "_" + DateUtils.getNowMonth());
-        eLmpBmDay.setSavedatetime(sendLogService.getLastLog(tableName));
-        List<ELmpBmDay> dataList = eLmpBmDayService.findByWhere(eLmpBmDay);
+        ELmpEngyDay eLmpEngyDay = new ELmpEngyDay();
+        eLmpEngyDay.setTableName1(tableName + "_" + DateUtils.getLastMonth());
+        eLmpEngyDay.setTableName2(tableName + "_" + DateUtils.getNowMonth());
+        eLmpEngyDay.setSavedatetime(sendLogService.getLastLog(tableName));
+        List<ELmpEngyDay> dataList = eLmpEngyDayService.findByWhere(eLmpEngyDay);
 
         if(dataList.size() > 0) {
             // List装Json

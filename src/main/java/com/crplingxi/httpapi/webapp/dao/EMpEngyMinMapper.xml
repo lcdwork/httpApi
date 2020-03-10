@@ -108,14 +108,24 @@
       #{areaCode,jdbcType=VARCHAR}, #{status,jdbcType=VARCHAR})
   </insert>
   <sql id="Base_Column_List">
-    MPED_ID, DATA_TIME, MODIFY_FLAG,P1R0, P1R0_P, P2R0,P2R0_P, P3R0, P3R0_P,P4R0, P4R0_P, P5R0,P5R0_P, P6R0, P6R0_P,P7R0, P7R0_P, P8R0,
-    P8R0_P, P1R1, P2R1,P3R1, P4R1, P5R1, P6R1,P7R1, P8R1, P1R2, P2R2,P3R2, P4R2, P5R2, P6R2,P7R2, P8R2, P1R3, P2R3,
-    P3R3, P4R3, P5R3, P6R3,P7R3, P8R3, P1R4, P2R4,P3R4, P4R4, P5R4, P6R4,P7R4, P8R4, P1R5, P2R5,P3R5, P4R5, P5R5, P6R5,
-    P7R5, P8R5, AP_COEF,RP_COEF, SAVEDATETIME, AREA_CODE,"STATUS"
+    MPED_ID, DATA_TIME, SCHEME_ID,E_TYPE, P1R0, P1R0_P,P2R0, P2R0_P, P3R0,P3R0_P, P4R0, P4R0_P,P5R0, P5R0_P, P6R0,P6R0_P, P7R0, P7R0_P,
+    P8R0, P8R0_P, P1R1,P2R1, P3R1, P4R1, P5R1,P6R1, P7R1, P8R1, P1R2,P2R2, P3R2, P4R2, P5R2,P6R2, P7R2, P8R2, P1R3,
+    P2R3, P3R3, P4R3, P5R3,P6R3, P7R3, P8R3, P1R4,P2R4, P3R4, P4R4, P5R4,P6R4, P7R4, P8R4, P1R5,P2R5, P3R5, P4R5, P5R5,
+    P6R5, P7R5, P8R5, SAVEDATETIME,AREA_CODE, "STATUS"
   </sql>
   <select id="findByWhere" parameterType="com.crplingxi.httpapi.webapp.domain.EMpEngyMin" resultType="com.crplingxi.httpapi.webapp.domain.EMpEngyMin" useCache="true">
-    select
-    <include refid="Base_Column_List" />
-    from E_MP_ENGY_MIN
+    select <include refid="Base_Column_List" /> from ${tableName1}
+    <where>
+      <if test="savedatetime != null">
+        and savedatetime>= #{savedatetime}
+      </if>
+    </where>
+    union
+    select <include refid="Base_Column_List" /> from ${tableName2}
+    <where>
+      <if test="savedatetime != null">
+        and savedatetime>= #{savedatetime}
+      </if>
+    </where>
   </select>
 </mapper>

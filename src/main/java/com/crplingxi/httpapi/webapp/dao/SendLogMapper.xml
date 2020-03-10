@@ -23,12 +23,12 @@
     select
     "TABLE_NAME", ERR_CODE, ERR_MSG, ERR_DATA, SEND_SIZE, SEND_TIME,
     "STATUS"
-    from(select * from SEND_LOG order by SEND_TIME desc) where rownum = 1
+    from(select * from SEND_LOG order by SEND_TIME desc) where rownum = 1 and "STATUS" = 1
     <if test="tableName !=null">
       and "TABLE_NAME" = #{tableName}
     </if>
-    <if test="status !=null">
-      and "STATUS" = #{status}
-    </if>
+<!--    <if test="status !=null">-->
+<!--      and "STATUS" = #{status}-->
+<!--    </if>-->
   </select>
 </mapper>

@@ -1,9 +1,9 @@
 package com.crplingxi.httpapi.webapp.domain;
 
-import com.alibaba.fastjson.annotation.JSONField;
 import com.riozenc.titanTool.mybatis.MybatisEntity;
 
 import java.util.Date;
+
 
 public class SendLog implements MybatisEntity {
     /**
@@ -33,6 +33,8 @@ public class SendLog implements MybatisEntity {
     /**
     * 更新时间
     */
+//    @DateTimeFormat(pattern="yyy-MM-dd HH:mm:ss")
+//    @JsonFormat(pattern="yyyy-MM-dd HH:mm:ss")
     private Date sendTime;
 
     /**

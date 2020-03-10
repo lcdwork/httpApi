@@ -1,6 +1,8 @@
 package com.crplingxi.httpapi.webapp.domain;
 
+import com.alibaba.fastjson.annotation.JSONField;
 import com.riozenc.titanTool.mybatis.MybatisEntity;
+
 import java.math.BigDecimal;
 import java.util.Date;
 
@@ -66,6 +68,28 @@ public class ELmpBmDay implements MybatisEntity {
     private String areaCode;
 
     private String status;
+
+    @JSONField(serialize = false)
+    private String tableName1;
+
+    @JSONField(serialize = false)
+    private String tableName2;
+
+    public String getTableName2() {
+        return tableName2;
+    }
+
+    public void setTableName2(String tableName2) {
+        this.tableName2 = tableName2;
+    }
+
+    public String getTableName1() {
+        return tableName1;
+    }
+
+    public void setTableName1(String tableName1) {
+        this.tableName1 = tableName1;
+    }
 
     public Long getMpedId() {
         return mpedId;

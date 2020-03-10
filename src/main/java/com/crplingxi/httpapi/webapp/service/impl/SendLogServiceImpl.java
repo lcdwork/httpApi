@@ -2,13 +2,12 @@ package com.crplingxi.httpapi.webapp.service.impl;
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
+import com.crplingxi.httpapi.tools.DateUtils;
+import com.crplingxi.httpapi.webapp.dao.SendLogMapper;
+import com.crplingxi.httpapi.webapp.domain.SendLog;
+import com.crplingxi.httpapi.webapp.service.SendLogService;
 import com.riozenc.titanTool.annotation.TransactionDAO;
 import com.riozenc.titanTool.annotation.TransactionService;
-import org.springframework.stereotype.Service;
-import javax.annotation.Resource;
-import com.crplingxi.httpapi.webapp.domain.SendLog;
-import com.crplingxi.httpapi.webapp.dao.SendLogMapper;
-import com.crplingxi.httpapi.webapp.service.SendLogService;
 
 import java.util.Date;
 
@@ -53,8 +52,16 @@ public class SendLogServiceImpl implements SendLogService{
     }
 
     @Override
-    public SendLog getLastLog(SendLog record) {
-        return sendLogMapper.getLastLog(record);
+    public Date getLastLog(String tableName) {
+        SendLog sendLog = new SendLog();
+        sendLog.setTableName(tableName);
+        Date date = DateUtils.initDateByMonth();
+        System.out.println(date);
+        sendLog = sendLogMapper.getLastLog(sendLog);
+        if(sendLog != null) {
+            date = sendLog.getSendTime();
+        }
+        return date;
     }
 
 }

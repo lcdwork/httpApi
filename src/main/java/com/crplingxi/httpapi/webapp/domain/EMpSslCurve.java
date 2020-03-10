@@ -1,5 +1,6 @@
 package com.crplingxi.httpapi.webapp.domain;
 
+import com.alibaba.fastjson.annotation.JSONField;
 import com.riozenc.titanTool.mybatis.MybatisEntity;
 import java.math.BigDecimal;
 import java.util.Date;
@@ -90,6 +91,12 @@ public class EMpSslCurve implements MybatisEntity {
     private Date savedatetime;
 
     private String areaCode;
+
+    @JSONField(serialize = false)
+    private String tableName1;
+
+    @JSONField(serialize = false)
+    private String tableName2;
 
     public Long getMpedId() {
         return mpedId;
@@ -433,5 +440,21 @@ public class EMpSslCurve implements MybatisEntity {
 
     public void setAreaCode(String areaCode) {
         this.areaCode = areaCode;
+    }
+
+    public String getTableName1() {
+        return tableName1;
+    }
+
+    public void setTableName1(String tableName1) {
+        this.tableName1 = tableName1;
+    }
+
+    public String getTableName2() {
+        return tableName2;
+    }
+
+    public void setTableName2(String tableName2) {
+        this.tableName2 = tableName2;
     }
 }

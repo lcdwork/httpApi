@@ -1,6 +1,5 @@
 package com.crplingxi.httpapi.webapp.service;
 
-import com.crplingxi.httpapi.webapp.domain.EMpEngyMin;
 import com.crplingxi.httpapi.webapp.domain.EMpSslCurve;
 
 import java.util.List;

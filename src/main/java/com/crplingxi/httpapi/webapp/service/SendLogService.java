@@ -1,6 +1,9 @@
 package com.crplingxi.httpapi.webapp.service;
 
 import com.crplingxi.httpapi.webapp.domain.SendLog;
+
+import java.util.Date;
+
 public interface SendLogService{
 
 
@@ -8,6 +11,6 @@ public interface SendLogService{
 
     int insertByRes(String tableName, int size, String jsonList, String res);
 
-    SendLog getLastLog(SendLog record);
+    Date getLastLog(String tableName);
 
 }

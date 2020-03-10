@@ -1,18 +1,21 @@
 package com.crplingxi.httpapi.webapp.action;
 
+import com.crplingxi.httpapi.tools.DateUtils;
 import org.springframework.web.bind.annotation.ControllerAdvice;
-import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import java.util.Date;
+
 @ControllerAdvice
-@RequestMapping("http")
+@RequestMapping("/test")
 public class testAction {
 
     @ResponseBody
-    @RequestMapping(params = "method=test")
-    public void putTest(@RequestBody String body) {
-        System.out.println("1111");
+    @RequestMapping()
+    public void putTest() {
+        Date date = DateUtils.initDateByMonth();
+        System.out.println(date);
 //        TestDomain testDomain = new TestDomain();
 //        testDomain.setId(111);
 //        testDomain.setName("测试");

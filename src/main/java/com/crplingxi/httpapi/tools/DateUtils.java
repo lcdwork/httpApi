@@ -13,6 +13,27 @@ import java.util.Date;
  */
 public class DateUtils {
 
+    public static String formatTime(Date date) {
+        SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        String time = dateFormat.format(date);
+        return time;
+
+    }
+
+    /**
+     * 获得当月1号零时零分零秒
+     * @return
+     */
+    public static Date initDateByMonth(){
+        Calendar calendar = Calendar.getInstance();
+        calendar.setTime(new Date());
+        calendar.set(Calendar.DAY_OF_MONTH, 1);
+        calendar.set(Calendar.HOUR_OF_DAY, 0);
+        calendar.set(Calendar.MINUTE, 0);
+        calendar.set(Calendar.SECOND, 0);
+        return calendar.getTime();
+    }
+
     /**
      * 获取当前时间
      *
