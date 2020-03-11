@@ -204,7 +204,7 @@ public class EMpEngyMin implements MybatisEntity {
     private String dataType;
 
     public String getDataType() {
-        return "01";
+        return "02";
     }
 
     public void setDataType(String dataType) {

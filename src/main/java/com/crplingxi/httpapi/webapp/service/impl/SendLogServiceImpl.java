@@ -55,6 +55,9 @@ public class SendLogServiceImpl implements SendLogService{
     public Date getLastTime(String tableName) {
         SendLog sendLog = new SendLog();
         sendLog.setTableName(tableName);
+        // 获取当前时间
+//        Date date = new Date();
+        // 获取当月1号时间
         Date date = DateUtils.initDateByMonth();
         sendLog = sendLogMapper.getLastLog(sendLog);
         if(sendLog != null) {

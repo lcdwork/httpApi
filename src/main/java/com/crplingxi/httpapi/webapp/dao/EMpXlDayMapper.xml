@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.crplingxi.httpapi.webapp.dao.EMpXlDayMapper">
+  <resultMap id="BaseResultMap" type="com.crplingxi.httpapi.webapp.domain.EMpXlDay">
+    <!--@mbg.generated-->
+    <!--@Table E_MP_XL_DAY-->
+    <result column="MPED_ID" jdbcType="DECIMAL" property="mpedId" />
+    <result column="DATA_TIME" jdbcType="TIMESTAMP" property="dataTime" />
+    <result column="COL_TIME" jdbcType="TIMESTAMP" property="colTime" />
+    <result column="P1R0" jdbcType="DECIMAL" property="p1r0" />
+    <result column="P1R0_DT" jdbcType="VARCHAR" property="p1r0Dt" />
+    <result column="P2R0" jdbcType="DECIMAL" property="p2r0" />
+    <result column="P2R0_DT" jdbcType="VARCHAR" property="p2r0Dt" />
+    <result column="P1R1" jdbcType="DECIMAL" property="p1r1" />
+    <result column="P1R1_DT" jdbcType="VARCHAR" property="p1r1Dt" />
+    <result column="P2R1" jdbcType="DECIMAL" property="p2r1" />
+    <result column="P2R1_DT" jdbcType="VARCHAR" property="p2r1Dt" />
+    <result column="P1R2" jdbcType="DECIMAL" property="p1r2" />
+    <result column="P1R2_DT" jdbcType="VARCHAR" property="p1r2Dt" />
+    <result column="P2R2" jdbcType="DECIMAL" property="p2r2" />
+    <result column="P2R2_DT" jdbcType="VARCHAR" property="p2r2Dt" />
+    <result column="P1R3" jdbcType="DECIMAL" property="p1r3" />
+    <result column="P1R3_DT" jdbcType="VARCHAR" property="p1r3Dt" />
+    <result column="P2R3" jdbcType="DECIMAL" property="p2r3" />
+    <result column="P2R3_DT" jdbcType="VARCHAR" property="p2r3Dt" />
+    <result column="P1R4" jdbcType="DECIMAL" property="p1r4" />
+    <result column="P1R4_DT" jdbcType="VARCHAR" property="p1r4Dt" />
+    <result column="P2R4" jdbcType="DECIMAL" property="p2r4" />
+    <result column="P2R4_DT" jdbcType="VARCHAR" property="p2r4Dt" />
+    <result column="P1R5" jdbcType="DECIMAL" property="p1r5" />
+    <result column="P1R5_DT" jdbcType="VARCHAR" property="p1r5Dt" />
+    <result column="P2R5" jdbcType="DECIMAL" property="p2r5" />
+    <result column="P2R5_DT" jdbcType="VARCHAR" property="p2r5Dt" />
+    <result column="DEMAND_COEF" jdbcType="DECIMAL" property="demandCoef" />
+    <result column="SAVEDATETIME" jdbcType="TIMESTAMP" property="savedatetime" />
+    <result column="AREA_CODE" jdbcType="VARCHAR" property="areaCode" />
+  </resultMap>
+  <insert id="insert" parameterType="com.crplingxi.httpapi.webapp.domain.EMpXlDay">
+    <!--@mbg.generated-->
+    insert into E_MP_XL_DAY (MPED_ID, DATA_TIME, COL_TIME,
+      P1R0, P1R0_DT, P2R0,
+      P2R0_DT, P1R1, P1R1_DT,
+      P2R1, P2R1_DT, P1R2,
+      P1R2_DT, P2R2, P2R2_DT,
+      P1R3, P1R3_DT, P2R3,
+      P2R3_DT, P1R4, P1R4_DT,
+      P2R4, P2R4_DT, P1R5,
+      P1R5_DT, P2R5, P2R5_DT,
+      DEMAND_COEF, SAVEDATETIME, AREA_CODE
+      )
+    values (#{mpedId,jdbcType=DECIMAL}, #{dataTime,jdbcType=TIMESTAMP}, #{colTime,jdbcType=TIMESTAMP},
+      #{p1r0,jdbcType=DECIMAL}, #{p1r0Dt,jdbcType=VARCHAR}, #{p2r0,jdbcType=DECIMAL},
+      #{p2r0Dt,jdbcType=VARCHAR}, #{p1r1,jdbcType=DECIMAL}, #{p1r1Dt,jdbcType=VARCHAR},
+      #{p2r1,jdbcType=DECIMAL}, #{p2r1Dt,jdbcType=VARCHAR}, #{p1r2,jdbcType=DECIMAL},
+      #{p1r2Dt,jdbcType=VARCHAR}, #{p2r2,jdbcType=DECIMAL}, #{p2r2Dt,jdbcType=VARCHAR},
+      #{p1r3,jdbcType=DECIMAL}, #{p1r3Dt,jdbcType=VARCHAR}, #{p2r3,jdbcType=DECIMAL},
+      #{p2r3Dt,jdbcType=VARCHAR}, #{p1r4,jdbcType=DECIMAL}, #{p1r4Dt,jdbcType=VARCHAR},
+      #{p2r4,jdbcType=DECIMAL}, #{p2r4Dt,jdbcType=VARCHAR}, #{p1r5,jdbcType=DECIMAL},
+      #{p1r5Dt,jdbcType=VARCHAR}, #{p2r5,jdbcType=DECIMAL}, #{p2r5Dt,jdbcType=VARCHAR},
+      #{demandCoef,jdbcType=DECIMAL}, #{savedatetime,jdbcType=TIMESTAMP}, #{areaCode,jdbcType=VARCHAR}
+      )
+  </insert>
+  <sql id="Base_Column_List">
+    MPED_ID, DATA_TIME, COL_TIME, P1R0, P1R0_DT, P2R0, P2R0_DT, P1R1, P1R1_DT, P2R1, P2R1_DT, P1R2,
+    P1R2_DT, P2R2, P2R2_DT, P1R3, P1R3_DT, P2R3, P2R3_DT, P1R4, P1R4_DT, P2R4, P2R4_DT, P1R5,
+    P1R5_DT, P2R5, P2R5_DT, DEMAND_COEF, SAVEDATETIME, AREA_CODE
+  </sql>
+  <select id="findByWhere" parameterType="com.crplingxi.httpapi.webapp.domain.EMpXlDay" resultType="com.crplingxi.httpapi.webapp.domain.EMpXlDay" useCache="true">
+    select <include refid="Base_Column_List" /> from ${tableName1}
+    <where>
+      <if test="savedatetime != null">
+        and savedatetime>= #{savedatetime}
+      </if>
+    </where>
+    union
+    select <include refid="Base_Column_List" /> from ${tableName2}
+    <where>
+      <if test="savedatetime != null">
+        and savedatetime>= #{savedatetime}
+      </if>
+    </where>
+  </select>
+</mapper>

@@ -55,6 +55,16 @@ public class DateUtils {
         String lastMonth = dft.format(cal.getTime());
         return lastMonth;
     }
+    /**
+     * 获取当前年
+     *
+     */
+    public static String getNowYear() {
+        Calendar cal = Calendar.getInstance();
+        SimpleDateFormat dft = new SimpleDateFormat("yyyy");
+        String lastYear = dft.format(cal.getTime());
+        return lastYear;
+    }
 
     /**
      * 判断当天是否为本月第一天
@@ -126,6 +136,18 @@ public class DateUtils {
         SimpleDateFormat dft = new SimpleDateFormat("yyyyMM");
         String lastMonth = dft.format(cal.getTime());
         return lastMonth;
+    }
+    /**
+     * 获取上一年
+     *
+     * @return
+     */
+    public static String getLastYear() {
+        Calendar cal = Calendar.getInstance();
+        cal.add(Calendar.YEAR, -1);
+        SimpleDateFormat dft = new SimpleDateFormat("yyyy");
+        String lastYear = dft.format(cal.getTime());
+        return lastYear;
     }
 
     /**
