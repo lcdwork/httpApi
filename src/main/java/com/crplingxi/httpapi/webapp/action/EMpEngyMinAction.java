@@ -35,7 +35,7 @@ public class EMpEngyMinAction {
 
     @ResponseBody
     @RequestMapping()
-//    @Scheduled(cron = "${addr.cron}")
+//    @Scheduled(empengymin = "${addr.cron}")
     public String putTest() {
 
         // 表名前缀
@@ -45,7 +45,7 @@ public class EMpEngyMinAction {
         EMpEngyMin eMpEngyMin = new EMpEngyMin();
         eMpEngyMin.setTableName1(tableName + "_" + DateUtils.getLastMonth());
         eMpEngyMin.setTableName2(tableName + "_" + DateUtils.getNowMonth());
-        eMpEngyMin.setSavedatetime(sendLogService.getLastLog(tableName));
+        eMpEngyMin.setSavedatetime(sendLogService.getLastTime(tableName));
         List<EMpEngyMin> dataList = eMpEngyMinService.findByWhere(eMpEngyMin);
 
         if(dataList.size() > 0) {

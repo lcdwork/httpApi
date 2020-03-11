@@ -35,7 +35,7 @@ public class ELmpBmDayAction {
 
     @ResponseBody
     @RequestMapping()
-//    @Scheduled(cron = "${addr.cron}")
+//    @Scheduled(cron = "${elmpbmday.cron}")
     public String putTest() {
 
         // 表名前缀
@@ -45,7 +45,7 @@ public class ELmpBmDayAction {
         ELmpBmDay eLmpBmDay = new ELmpBmDay();
         eLmpBmDay.setTableName1(tableName + "_" + DateUtils.getLastMonth());
         eLmpBmDay.setTableName2(tableName + "_" + DateUtils.getNowMonth());
-        eLmpBmDay.setSavedatetime(sendLogService.getLastLog(tableName));
+        eLmpBmDay.setSavedatetime(sendLogService.getLastTime(tableName));
         List<ELmpBmDay> dataList = eLmpBmDayService.findByWhere(eLmpBmDay);
 
         if(dataList.size() > 0) {

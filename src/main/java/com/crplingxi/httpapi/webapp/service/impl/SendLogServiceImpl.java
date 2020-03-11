@@ -42,7 +42,7 @@ public class SendLogServiceImpl implements SendLogService{
                 result = sendLogMapper.insert(sendLog);
             }
         } else {
-            sendLog.setErrMsg("数据发送失败！请检查数据或本地网络！");
+            sendLog.setErrMsg("数据发送失败！请检查数据或网络！");
             sendLog.setErrData(jsonList);
             sendLog.setStatus((short) 0);
             result = sendLogMapper.insert(sendLog);
@@ -52,7 +52,7 @@ public class SendLogServiceImpl implements SendLogService{
     }
 
     @Override
-    public Date getLastLog(String tableName) {
+    public Date getLastTime(String tableName) {
         SendLog sendLog = new SendLog();
         sendLog.setTableName(tableName);
         Date date = DateUtils.initDateByMonth();

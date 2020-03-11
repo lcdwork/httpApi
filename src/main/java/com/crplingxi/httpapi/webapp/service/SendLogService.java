@@ -11,6 +11,6 @@ public interface SendLogService{
 
     int insertByRes(String tableName, int size, String jsonList, String res);
 
-    Date getLastLog(String tableName);
+    Date getLastTime(String tableName);
 
 }

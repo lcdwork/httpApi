@@ -35,7 +35,7 @@ public class EMpBmCurveAction {
 
     @ResponseBody
     @RequestMapping()
-//    @Scheduled(cron = "${addr.cron}")
+//    @Scheduled(cron = "${empbmcurve.cron}")
     public String putTest() {
 
         // 表名前缀
@@ -45,7 +45,7 @@ public class EMpBmCurveAction {
         EMpBmCurve eMpBmCurve = new EMpBmCurve();
         eMpBmCurve.setTableName1(tableName + "_" + DateUtils.getLastMonth());
         eMpBmCurve.setTableName2(tableName + "_" + DateUtils.getNowMonth());
-        eMpBmCurve.setSavedatetime(sendLogService.getLastLog(tableName));
+        eMpBmCurve.setSavedatetime(sendLogService.getLastTime(tableName));
         List<EMpBmCurve> dataList = eMpBmCurveService.findByWhere(eMpBmCurve);
 
         if(dataList.size() > 0) {

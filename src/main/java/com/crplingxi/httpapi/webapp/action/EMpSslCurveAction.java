@@ -35,7 +35,7 @@ public class EMpSslCurveAction {
 
     @ResponseBody
     @RequestMapping()
-//    @Scheduled(cron = "${addr.cron}")
+//    @Scheduled(cron = "${empsslcurve.cron}")
     public String putTest() {
 
         // 表名前缀
@@ -45,7 +45,7 @@ public class EMpSslCurveAction {
         EMpSslCurve eMpSslCurve = new EMpSslCurve();
         eMpSslCurve.setTableName1(tableName + "_" + DateUtils.getLastMonth());
         eMpSslCurve.setTableName2(tableName + "_" + DateUtils.getNowMonth());
-        eMpSslCurve.setSavedatetime(sendLogService.getLastLog(tableName));
+        eMpSslCurve.setSavedatetime(sendLogService.getLastTime(tableName));
         List<EMpSslCurve> dataList = eMpSslCurveService.findByWhere(eMpSslCurve);
 
         if(dataList.size() > 0) {

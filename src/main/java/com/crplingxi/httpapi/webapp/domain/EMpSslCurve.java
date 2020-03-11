@@ -141,6 +141,16 @@ public class EMpSslCurve implements MybatisEntity {
     @JSONField(serialize = false)
     private String tableName2;
 
+    private String datatype;
+
+    public String getDatatype() {
+        return "01";
+    }
+
+    public void setDatatype(String datatype) {
+        this.datatype = datatype;
+    }
+
     public Long getMpedId() {
         return mpedId;
     }
