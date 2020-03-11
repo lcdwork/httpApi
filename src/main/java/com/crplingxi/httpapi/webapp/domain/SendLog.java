@@ -21,8 +21,6 @@ public class SendLog implements MybatisEntity {
     /**
      * 错误数据
      */
-//    @JSONField(name = "GCA_ID") //命名数据
-//    @JSONField(serialize = false) //忽略数据
     private String errData;
 
     /**

@@ -107,14 +107,14 @@ public class ELmpBmDay implements MybatisEntity {
     @JSONField(serialize = false)
     private String tableName2;
 
-    private String datatype;
+    private String dataType;
 
-    public String getDatatype() {
+    public String getDataType() {
         return "01";
     }
 
-    public void setDatatype(String datatype) {
-        this.datatype = datatype;
+    public void setDataType(String dataType) {
+        this.dataType = dataType;
     }
 
     public String getTableName2() {

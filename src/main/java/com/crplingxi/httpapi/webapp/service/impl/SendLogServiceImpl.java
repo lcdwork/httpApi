@@ -56,7 +56,6 @@ public class SendLogServiceImpl implements SendLogService{
         SendLog sendLog = new SendLog();
         sendLog.setTableName(tableName);
         Date date = DateUtils.initDateByMonth();
-        System.out.println(date);
         sendLog = sendLogMapper.getLastLog(sendLog);
         if(sendLog != null) {
             date = sendLog.getSendTime();
