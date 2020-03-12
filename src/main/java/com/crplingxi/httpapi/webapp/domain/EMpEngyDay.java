@@ -28,16 +28,19 @@ public class EMpEngyDay implements MybatisEntity {
     @JSONField(name = "kwhttli")
     private BigDecimal p1r0;
 
+    @JSONField(serialize = false)
     private Integer p1r0P;
 
     @JSONField(name = "kwhttle")
     private BigDecimal p2r0;
 
+    @JSONField(serialize = false)
     private Integer p2r0P;
 
     @JSONField(name = "kvarhttli")
     private BigDecimal p3r0;
 
+    @JSONField(serialize = false)
     private Integer p3r0P;
 
     @JSONField(name = "kvarhttle")
@@ -208,7 +211,7 @@ public class EMpEngyDay implements MybatisEntity {
     private String dataType;
 
     public String getDataType() {
-        return "83";
+        return "82";
     }
 
     public void setDataType(String dataType) {
