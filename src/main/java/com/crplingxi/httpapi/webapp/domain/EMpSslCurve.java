@@ -7,7 +7,7 @@ import java.util.Date;
 
 public class EMpSslCurve implements MybatisEntity {
     @JSONField(name = "sn")
-    private Long mpedId;
+    private String mpedId;
 
     @JSONField(name = "time")
     private Date dataTime;
@@ -151,11 +151,11 @@ public class EMpSslCurve implements MybatisEntity {
         this.dataType = dataType;
     }
 
-    public Long getMpedId() {
-        return mpedId;
+    public String getMpedId() {
+        return "crphz" + mpedId;
     }
 
-    public void setMpedId(Long mpedId) {
+    public void setMpedId(String mpedId) {
         this.mpedId = mpedId;
     }
 

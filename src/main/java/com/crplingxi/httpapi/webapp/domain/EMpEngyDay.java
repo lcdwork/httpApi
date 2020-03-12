@@ -8,7 +8,7 @@ import java.util.Date;
 public class EMpEngyDay implements MybatisEntity {
 
     @JSONField(name = "sn")
-    private Long mpedId;
+    private String mpedId;
 
     @JSONField(name = "time")
     private Date dataTime;
@@ -234,11 +234,11 @@ public class EMpEngyDay implements MybatisEntity {
         this.tableName2 = tableName2;
     }
 
-    public Long getMpedId() {
-        return mpedId;
+    public String getMpedId() {
+        return "crphz" + mpedId;
     }
 
-    public void setMpedId(Long mpedId) {
+    public void setMpedId(String mpedId) {
         this.mpedId = mpedId;
     }
 
