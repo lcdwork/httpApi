@@ -8,6 +8,7 @@ import com.crplingxi.httpapi.webapp.service.EMpEngyMinService;
 import com.crplingxi.httpapi.webapp.service.SendLogService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -35,7 +36,7 @@ public class EMpEngyMinAction {
 
     @ResponseBody
     @RequestMapping()
-//    @Scheduled(empengymin = "${addr.cron}")
+//    @Scheduled(cron = "${addr.cron}")
     public String putTest() {
 
         // 表名前缀

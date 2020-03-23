@@ -8,6 +8,7 @@ import com.crplingxi.httpapi.webapp.service.EMpBmCurveService;
 import com.crplingxi.httpapi.webapp.service.SendLogService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -35,7 +36,7 @@ public class EMpBmCurveAction {
 
     @ResponseBody
     @RequestMapping()
-//    @Scheduled(cron = "${empbmcurve.cron}")
+    @Scheduled(cron = "${empbmcurve.cron}")
     public String putTest() {
 
         // 表名前缀

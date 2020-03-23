@@ -10,6 +10,7 @@ import com.crplingxi.httpapi.webapp.service.EMpEngyDayService;
 import com.crplingxi.httpapi.webapp.service.SendLogService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -37,7 +38,7 @@ public class EMpEngyDayAction {
 
     @ResponseBody
     @RequestMapping()
-//    @Scheduled(cron = "${elmpbmday.cron}")
+    @Scheduled(cron = "${empengyday.cron}")
     public String putTest() {
 
         // 表名前缀
