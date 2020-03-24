@@ -55,7 +55,7 @@ public class ELmpBmDayAction {
 //            System.out.println(jsonDataList);
             // post方式发送数据
             String res = HttpTools.postData(jsonDataList);
-            sendLogService.insertByRes(tableName,dataList.size(),jsonDataList,res);
+            sendLogService.insertByRes(tableName,dataList.size(),res);
 //            System.out.println(res);
             return res;
         } else {
