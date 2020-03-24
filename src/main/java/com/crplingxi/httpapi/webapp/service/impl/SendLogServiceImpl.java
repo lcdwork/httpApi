@@ -23,7 +23,7 @@ public class SendLogServiceImpl implements SendLogService{
     }
 
     @Override
-    public int insertByRes(String tableName, int size, String jsonList, String res) {
+    public int insertByRes(String tableName, int size, String res) {
         SendLog sendLog = new SendLog();
         sendLog.setTableName(tableName);
         sendLog.setSendTime(new Date());
@@ -37,13 +37,11 @@ public class SendLogServiceImpl implements SendLogService{
             } else {
                 sendLog.setErrCode(jsonObject.getString("errCode"));
                 sendLog.setErrMsg(jsonObject.getString("errMsg"));
-                sendLog.setErrData(jsonList);
                 sendLog.setStatus((short) 0);
                 result = sendLogMapper.insert(sendLog);
             }
         } else {
             sendLog.setErrMsg("数据发送失败！请检查数据或网络！");
-            sendLog.setErrData(jsonList);
             sendLog.setStatus((short) 0);
             result = sendLogMapper.insert(sendLog);
         }

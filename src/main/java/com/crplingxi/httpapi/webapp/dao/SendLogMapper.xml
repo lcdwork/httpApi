@@ -14,18 +14,18 @@
   </resultMap>
   <insert id="insert" parameterType="com.crplingxi.httpapi.webapp.domain.SendLog">
     <!--@mbg.generated-->
-    insert into SEND_LOG ("TABLE_NAME", ERR_CODE, ERR_MSG, ERR_DATA, SEND_SIZE, SEND_TIME,
-      "STATUS")
+    insert into SEND_LOG (TABLE_NAME, ERR_CODE, ERR_MSG, ERR_DATA, SEND_SIZE, SEND_TIME,
+      STATUS)
     values (#{tableName,jdbcType=VARCHAR}, #{errCode,jdbcType=VARCHAR}, #{errMsg,jdbcType=VARCHAR}, #{errData,jdbcType=VARCHAR}, #{sendSize,jdbcType=INTEGER}, #{sendTime,jdbcType=DATE},
       #{status,jdbcType=SMALLINT})
   </insert>
   <select id="findLast" parameterType="com.crplingxi.httpapi.webapp.domain.SendLog" resultType="com.crplingxi.httpapi.webapp.domain.SendLog" useCache="true">
     select
-    "TABLE_NAME", ERR_CODE, ERR_MSG, ERR_DATA, SEND_SIZE, SEND_TIME,
-    "STATUS"
-    from SEND_LOG where "STATUS" = 1
+    TABLE_NAME, ERR_CODE, ERR_MSG, ERR_DATA, SEND_SIZE, SEND_TIME,
+    STATUS
+    from SEND_LOG where STATUS = 1
     <if test="tableName !=null">
-      and "TABLE_NAME" = #{tableName}
+      and TABLE_NAME = #{tableName}
     </if>
     order by SEND_TIME desc limit 1
 <!--    <if test="status !=null">-->
