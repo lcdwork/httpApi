@@ -54,11 +54,11 @@ public class EMpEngyDayAction {
         if(dataList.size() > 0) {
             // List装Json
             String jsonDataList = JSONObject.toJSONString(dataList);
-            System.out.println(jsonDataList);
+//            System.out.println(jsonDataList);
             // post方式发送数据
             String res = HttpTools.postData(jsonDataList);
             sendLogService.insertByRes(tableName,dataList.size(),jsonDataList,res);
-            System.out.println(res);
+//            System.out.println(res);
             return res;
         } else {
             return "没数数据可发送";

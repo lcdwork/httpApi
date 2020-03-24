@@ -9,7 +9,7 @@ public interface SendLogService{
 
     int insert(SendLog record);
 
-    int insertByRes(String tableName, int size, String jsonList, String res);
+    int insertByRes(String tableName, int size, String res);
 
     Date getLastTime(String tableName);
 
