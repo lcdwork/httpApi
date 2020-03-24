@@ -9,14 +9,14 @@
     <result column="ERR_MSG" jdbcType="VARCHAR" property="errMsg" />
     <result column="ERR_DATA" jdbcType="VARCHAR" property="errData" />
     <result column="SEND_SIZE" jdbcType="INTEGER" property="sendSize" />
-    <result column="SEND_TIME" jdbcType="DATE" property="sendTime" />
+    <result column="SEND_TIME" jdbcType="TIMESTAMP" property="sendTime" />
     <result column="STATUS" jdbcType="SMALLINT" property="status" />
   </resultMap>
   <insert id="insert" parameterType="com.crplingxi.httpapi.webapp.domain.SendLog">
     <!--@mbg.generated-->
     insert into SEND_LOG (TABLE_NAME, ERR_CODE, ERR_MSG, ERR_DATA, SEND_SIZE, SEND_TIME,
       STATUS)
-    values (#{tableName,jdbcType=VARCHAR}, #{errCode,jdbcType=VARCHAR}, #{errMsg,jdbcType=VARCHAR}, #{errData,jdbcType=VARCHAR}, #{sendSize,jdbcType=INTEGER}, #{sendTime,jdbcType=DATE},
+    values (#{tableName,jdbcType=VARCHAR}, #{errCode,jdbcType=VARCHAR}, #{errMsg,jdbcType=VARCHAR}, #{errData,jdbcType=VARCHAR}, #{sendSize,jdbcType=INTEGER}, #{sendTime,jdbcType=TIMESTAMP},
       #{status,jdbcType=SMALLINT})
   </insert>
   <select id="findLast" parameterType="com.crplingxi.httpapi.webapp.domain.SendLog" resultType="com.crplingxi.httpapi.webapp.domain.SendLog" useCache="true">
