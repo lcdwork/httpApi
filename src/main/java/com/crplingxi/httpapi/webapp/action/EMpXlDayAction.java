@@ -48,18 +48,15 @@ public class EMpXlDayAction {
         eMpXlDay.setTableName2(tableName + "_" + DateUtils.getNowYear());
         eMpXlDay.setSavedatetime(sendLogService.getLastTime(tableName));
         List<EMpXlDay> dataList = eMpXlDayService.findByWhere(eMpXlDay);
-        System.out.println(dataList.size());
 
         if(dataList.size() > 0) {
             // List装Json
             String jsonDataList = JSONObject.toJSONString(dataList);
 //            System.out.println(jsonDataList);
             // post方式发送数据
-            System.out.println("开始发送");
             String res = HttpTools.postData(jsonDataList);
-            System.out.println("发送完成");
             sendLogService.insertByRes(tableName,dataList.size(),res);
-            System.out.println(res);
+//            System.out.println(res);
             return res;
         } else {
             return "没数数据可发送";
