@@ -18,7 +18,7 @@ public class HttpTools {
     @Retryable
     public static String postData(String json) {
         SimpleClientHttpRequestFactory requestFactory = new SimpleClientHttpRequestFactory();
-        //6s
+        //60s
         requestFactory.setConnectTimeout(60*1000);
         requestFactory.setReadTimeout(60*1000);
         RestTemplate restTemplate = new RestTemplate(requestFactory);
